@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T17:08:30+00:00",
+  "generatedAt": "2026-09-01T17:20:34+00:00",
   "source": "Yahoo Finance (yfinance) - unofficial, ~15-20 min delayed for NSE",
   "companies": [
     {
@@ -14,8 +14,8 @@
       "return1y": -23.89,
       "return3y": -29.89,
       "return5y": -38.26,
-      "pe": 17.202816,
-      "divYieldPct": 278.0,
+      "pe": 17.201569,
+      "divYieldPct": 2.71,
       "asOf": "2026-09-01"
     },
     {
@@ -31,7 +31,7 @@
       "return3y": -19.94,
       "return5y": -31.56,
       "pe": 14.972154,
-      "divYieldPct": 441.0,
+      "divYieldPct": 4.41,
       "asOf": "2026-09-01"
     },
     {
@@ -46,8 +46,8 @@
       "return1y": -27.42,
       "return3y": -12.72,
       "return5y": -44.22,
-      "pe": 14.443561,
-      "divYieldPct": 442.0,
+      "pe": 14.432089,
+      "divYieldPct": 4.34,
       "asOf": "2026-09-01"
     },
     {
@@ -63,7 +63,7 @@
       "return3y": 13.97,
       "return5y": 15.23,
       "pe": 21.017107,
-      "divYieldPct": 457.0,
+      "divYieldPct": 4.57,
       "asOf": "2026-09-01"
     },
     {
@@ -79,7 +79,7 @@
       "return3y": 33.38,
       "return5y": 13.92,
       "pe": 28.344004,
-      "divYieldPct": 313.0,
+      "divYieldPct": 3.13,
       "asOf": "2026-09-01"
     },
     {
@@ -102,7 +102,7 @@
       "return3y": 109.26,
       "return5y": 242.9,
       "pe": 47.556576,
-      "divYieldPct": 64.0,
+      "divYieldPct": 0.64,
       "asOf": "2026-09-01"
     },
     {
@@ -118,7 +118,7 @@
       "return3y": 82.4,
       "return5y": 92.8,
       "pe": 40.722767,
-      "divYieldPct": 81.0,
+      "divYieldPct": 0.81,
       "asOf": "2026-09-01"
     },
     {
@@ -134,7 +134,7 @@
       "return3y": 2.97,
       "return5y": -13.26,
       "pe": 25.052494,
-      "divYieldPct": 255.0,
+      "divYieldPct": 2.55,
       "asOf": "2026-09-01"
     }
   ]
