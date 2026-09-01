@@ -82,7 +82,7 @@ def fetch_one(company: dict) -> dict:
             "return3y": pct_return(hist, 365 * 3),
             "return5y": pct_return(hist, 365 * 5),
             "pe": info.get("trailingPE"),
-            "divYieldPct": round(info.get("dividendYield") * 100, 2) if info.get("dividendYield") else None,
+             "divYieldPct": round(info.get("dividendYield"), 2) if info.get("dividendYield") else None,
             "asOf": hist.index[-1].strftime("%Y-%m-%d"),
         })
     except Exception as exc:  # keep going even if one ticker fails
