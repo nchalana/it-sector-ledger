@@ -8,6 +8,13 @@ typically ~15-20 minutes delayed for NSE tickers. This is a personal
 research tool; Yahoo Finance's Indian-market coverage is unofficial and can
 occasionally be missing or stale for a given run - the workflow just tries
 again on its next scheduled tick.
+
+In addition to price/returns, this script computes a "scenario" block per
+company: the real historical distribution of 1-day, 1-week (5 trading
+days), and 2-week (10 trading days) returns over roughly the last two
+years. This is NOT a prediction - it's what has actually happened before,
+used to show a realistic range of outcomes rather than a false single
+guaranteed number.
 """
 
 import json
@@ -30,6 +37,7 @@ COMPANIES = [
 ]
 
 OUTPUT_PATH = "data/latest.json"
+SCENARIO_WINDOW_DAYS = 504  # ~2 trading years
 
 
 def pct_return(hist: pd.DataFrame, days: int):
@@ -46,6 +54,36 @@ def pct_return(hist: pd.DataFrame, days: int):
     if past_price == 0:
         return None
     return round((latest_price - past_price) / past_price * 100, 2)
+
+
+def summarize(series: pd.Series):
+    """min / p10 / median / p90 / max of a return series, in %."""
+    series = series.dropna()
+    if series.empty:
+        return None
+    return {
+        "min": round(float(series.min()), 1),
+        "p10": round(float(series.quantile(0.10)), 1),
+        "median": round(float(series.median()), 1),
+        "p90": round(float(series.quantile(0.90)), 1),
+        "max": round(float(series.max()), 1),
+    }
+
+
+def scenario_stats(hist: pd.DataFrame):
+    """Real historical distribution of 1-day / 1-week / 2-week returns."""
+    window = hist.tail(SCENARIO_WINDOW_DAYS)["Close"]
+    if len(window) < 30:
+        return None
+    daily = window.pct_change().dropna() * 100
+    weekly = window.pct_change(5).dropna() * 100
+    two_week = window.pct_change(10).dropna() * 100
+    return {
+        "day": summarize(daily),
+        "week": summarize(weekly),
+        "twoWeek": summarize(two_week),
+        "sampleDays": int(len(window)),
+    }
 
 
 def fetch_one(company: dict) -> dict:
@@ -82,8 +120,11 @@ def fetch_one(company: dict) -> dict:
             "return3y": pct_return(hist, 365 * 3),
             "return5y": pct_return(hist, 365 * 5),
             "pe": info.get("trailingPE"),
-             "divYieldPct": round(info.get("dividendYield"), 2) if info.get("dividendYield") else None,
+            # Yahoo's dividendYield is already a percentage figure (e.g. 4.78 = 4.78%),
+            # not a fraction - do not multiply by 100 again.
+            "divYieldPct": round(info.get("dividendYield"), 2) if info.get("dividendYield") else None,
             "asOf": hist.index[-1].strftime("%Y-%m-%d"),
+            "scenario": scenario_stats(hist),
         })
     except Exception as exc:  # keep going even if one ticker fails
         row["error"] = str(exc)
