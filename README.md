@@ -5,15 +5,29 @@ A personal, read-only dashboard tracking nine NSE-listed Indian IT majors
 Persistent Systems, Coforge, Mphasis). Prices and returns refresh
 automatically from a free data feed; no server, no paid API, no trading.
 
+It has two views:
+- **The board** — live price, day change, and 1/3/5-year returns.
+- **"If you put ₹10,000 in today"** — a short-term (1-day / 1-week / 2-week)
+  view. This deliberately does **not** predict a return. No feed or model
+  can tell you what you'll get "for sure" over a day or a week — short-term
+  price moves are dominated by volatility, not predictable patterns. Instead
+  it shows the *real historical range* of outcomes that holding period has
+  actually produced over roughly the last two years (worst case, the middle
+  80% of outcomes, and best case), so you can see the actual risk you'd be
+  taking rather than a false promise.
+
 ## How it works
 
 - `scripts/fetch_quotes.py` pulls each ticker from Yahoo Finance (via the
-  `yfinance` library) and writes one snapshot to `data/latest.json`.
+  `yfinance` library), computes price/returns plus the historical
+  1-day/1-week/2-week return distribution (min, 10th percentile, median,
+  90th percentile, max over the trailing ~2 years), and writes one snapshot
+  to `data/latest.json`.
 - `.github/workflows/update-quotes.yml` runs that script every 30 minutes
   during NSE trading hours (Mon–Fri) using GitHub Actions, and commits the
   updated JSON back to the repo.
 - `index.html` is a static page that fetches `data/latest.json` in the
-  browser and renders the table — no backend required.
+  browser and renders both views — no backend required.
 - GitHub Pages serves `index.html` straight from the repo.
 
 Total running cost: **$0**, within GitHub's free tier at this scale.
@@ -72,6 +86,15 @@ picks up the change next time it's opened (or on manual refresh).
 - This dashboard is informational only — see the disclaimer in the page
   footer. It doesn't place trades and isn't a substitute for advice from a
   registered investment adviser.
+
+## Updating an existing deployment
+
+If you already set this up once and are pulling in a newer version of
+these files (e.g. the redesign / the ₹10,000 scenario feature), you don't
+need to recreate the repo — just replace the contents of the changed files
+in place (Code tab → open the file → pencil/edit icon → select all → paste
+the new version → commit), then re-run the workflow once by hand
+(Actions → Update stock quotes → Run workflow).
 
 ## Extending it later
 

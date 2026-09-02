@@ -5,126 +5,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IT Sector Ledger — Live</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,440;9..144,560;9..144,650&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
   :root{
-    --paper:#F6F1E7; --surface:#FCF8EF; --surface-raised:#FFFFFF;
-    --ink:#211D1A; --ink-soft:#4A433C; --muted:#8A8175; --line:#DED5C2;
-    --accent:#B5701A; --accent-ink:#3C2A0E; --good:#1E7A4C; --bad:#C13B3B;
-    --radius:10px;
-    --serif:"Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+    --bg:#F4F6F8; --surface:#FFFFFF; --surface-2:#EEF1F5;
+    --ink:#10151C; --ink-soft:#46505C; --muted:#7C8896; --line:#DDE3EA;
+    --accent:#1E5FD9; --accent-ink:#FFFFFF;
+    --good:#1E7A4C; --bad:#C13B3B;
+    --radius:12px;
+    --display:"Space Grotesk", "IBM Plex Sans", system-ui, sans-serif;
     --sans:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
     --mono:"IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
     color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --paper:#161C29; --surface:#1E2537; --surface-raised:#232B40;
-      --ink:#F0EDE6; --ink-soft:#C7C2D6; --muted:#8D93A6; --line:#323B54;
-      --accent:#D6A34F; --accent-ink:#241B0A; --good:#3DBE95; --bad:#F0727A;
+      --bg:#0E1420; --surface:#141B29; --surface-2:#1B2434;
+      --ink:#EAF0F8; --ink-soft:#B7C2D1; --muted:#7C8AA0; --line:#26324A;
+      --accent:#4C8DF6; --accent-ink:#071023;
+      --good:#2CA58D; --bad:#E2585C;
     }
   }
   :root[data-theme="dark"]{
-    --paper:#161C29; --surface:#1E2537; --surface-raised:#232B40;
-    --ink:#F0EDE6; --ink-soft:#C7C2D6; --muted:#8D93A6; --line:#323B54;
-    --accent:#D6A34F; --accent-ink:#241B0A; --good:#3DBE95; --bad:#F0727A;
+    --bg:#0E1420; --surface:#141B29; --surface-2:#1B2434;
+    --ink:#EAF0F8; --ink-soft:#B7C2D1; --muted:#7C8AA0; --line:#26324A;
+    --accent:#4C8DF6; --accent-ink:#071023;
+    --good:#2CA58D; --bad:#E2585C;
   }
 
-  *{box-sizing:border-box;}
-  body{
-    margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
-    font-size:16px; line-height:1.55;
-    background-image:linear-gradient(var(--line) 1px, transparent 1px),
-                      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size:64px 64px; background-position:-1px -1px; background-attachment:fixed;
-  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:15.5px; line-height:1.5; }
   a{ color:var(--accent); }
-  h1,h2,h3{ font-family:var(--serif); font-weight:650; text-wrap:balance; margin:0; }
-  .wrap{ max-width:1080px; margin:0 auto; padding:0 24px 96px; }
+  h1,h2,h3{ font-family:var(--display); font-weight:600; text-wrap:balance; margin:0; }
+  code{ font-family:var(--mono); }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px 80px; }
 
-  .masthead{ max-width:1080px; margin:0 auto; padding:56px 24px 40px; border-bottom:1px solid var(--line); }
-  .eyebrow{ font-family:var(--mono); font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 14px; }
-  .masthead h1{ font-size:clamp(2.2rem, 4.2vw, 3.4rem); letter-spacing:-.01em; }
-  .dek{ max-width:62ch; color:var(--ink-soft); font-size:1.08rem; margin-top:14px; }
+  .masthead{ max-width:1120px; margin:0 auto; padding:40px 24px 28px; }
+  .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 10px; }
+  .masthead h1{ font-size:clamp(1.9rem, 3.6vw, 2.6rem); letter-spacing:-.01em; }
+  .dek{ color:var(--ink-soft); font-size:1rem; margin-top:8px; max-width:60ch; }
 
   .live-badge{
-    display:inline-flex; align-items:center; gap:8px; margin-top:20px; padding:7px 14px;
-    border:1px solid var(--line); border-radius:999px; font-family:var(--mono); font-size:.82rem; color:var(--ink-soft);
+    display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:6px 12px;
+    border:1px solid var(--line); border-radius:999px; font-family:var(--mono); font-size:.78rem; color:var(--ink-soft);
     background:var(--surface);
   }
-  .live-dot{ width:8px; height:8px; border-radius:50%; background:var(--good); }
+  .live-dot{ width:7px; height:7px; border-radius:50%; background:var(--good); }
   .live-dot.stale{ background:var(--muted); }
 
-  section > h2{ font-size:1.5rem; margin-bottom:6px; }
-  .board{ margin-top:48px; }
-  .board-head{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:16px; }
-  .legend{ display:flex; align-items:center; gap:18px; font-size:.86rem; color:var(--ink-soft); font-family:var(--mono); }
-  .legend span.key{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:6px; vertical-align:-1px; }
-  .key.good{ background:var(--good); } .key.bad{ background:var(--bad); }
+  section{ margin-top:36px; }
+  section > .head{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:14px; }
+  section > .head h2{ font-size:1.25rem; }
+  .subtle{ color:var(--muted); font-size:.85rem; }
 
-  .table-scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); }
-  table{ border-collapse:collapse; width:100%; min-width:920px; }
-  thead th{
-    text-align:left; font-family:var(--mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase;
-    color:var(--muted); font-weight:500; padding:14px 14px 10px; border-bottom:1px solid var(--line); white-space:nowrap;
+  /* ---- callout ---- */
+  .callout{
+    background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius);
+    padding:14px 18px; font-size:.92rem; color:var(--ink-soft); margin-bottom:18px;
   }
-  tbody td{ padding:14px; border-bottom:1px solid var(--line); vertical-align:middle; }
+  .callout strong{ color:var(--ink); }
+
+  /* ---- segmented toggle ---- */
+  .segmented{ display:inline-flex; background:var(--surface-2); border:1px solid var(--line); border-radius:999px; padding:3px; gap:2px; }
+  .segmented button{
+    font-family:var(--mono); font-size:.82rem; padding:7px 16px; border-radius:999px; border:none;
+    background:transparent; color:var(--ink-soft); cursor:pointer;
+  }
+  .segmented button.active{ background:var(--accent); color:var(--accent-ink); font-weight:600; }
+
+  /* ---- panels / cards ---- */
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+
+  /* ---- scenario table ---- */
+  .scen-row{ display:grid; grid-template-columns:170px 110px 1fr 110px; gap:16px; align-items:center; padding:16px 18px; border-bottom:1px solid var(--line); }
+  .scen-row:last-child{ border-bottom:none; }
+  .scen-name{ font-weight:600; }
+  .scen-tick{ font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-top:2px; }
+  .scen-outcome{ font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:center; }
+  .scen-outcome .rupee{ font-size:1.02rem; font-weight:600; }
+  .scen-outcome .pct{ font-size:.76rem; display:block; margin-top:2px; }
+  .scen-outcome.worst .pct{ color:var(--bad); }
+  .scen-outcome.best .pct{ color:var(--good); }
+  .scen-range{ min-width:0; }
+  .range-track{ position:relative; height:20px; }
+  .range-zero{ position:absolute; top:0; bottom:0; left:50%; width:1px; background:var(--line); }
+  .range-whisker{ position:absolute; top:9px; height:2px; background:var(--muted); opacity:.5; border-radius:1px; }
+  .range-box{ position:absolute; top:6px; height:8px; border-radius:2px; }
+  .range-box.neg{ background:var(--bad); }
+  .range-box.pos{ background:var(--good); }
+  .range-median{ position:absolute; top:2px; width:2px; height:16px; background:var(--ink); border-radius:1px; }
+  .range-caption{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:.7rem; color:var(--muted); margin-top:4px; }
+
+  @media (max-width:680px){
+    .scen-row{ grid-template-columns:1fr; gap:8px; }
+    .scen-outcome{ text-align:left; }
+  }
+
+  /* ---- board table ---- */
+  .table-scroll{ overflow-x:auto; }
+  table{ border-collapse:collapse; width:100%; min-width:880px; }
+  thead th{
+    text-align:left; font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--muted); font-weight:500; padding:12px 14px 8px; border-bottom:1px solid var(--line); white-space:nowrap;
+  }
+  tbody td{ padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:middle; }
   tbody tr:last-child td{ border-bottom:none; }
-  tbody tr:hover{ background:var(--surface-raised); }
+  tbody tr:hover{ background:var(--surface-2); }
   .co-name{ font-weight:600; }
-  .co-tick{ font-family:var(--mono); font-size:11.5px; color:var(--muted); display:block; margin-top:2px; }
+  .co-tick{ font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-top:2px; }
   .price{ font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap; }
-  .chg{ font-family:var(--mono); font-size:.82rem; font-variant-numeric:tabular-nums; }
+  .chg{ font-family:var(--mono); font-size:.8rem; font-variant-numeric:tabular-nums; }
   .chg.up{ color:var(--good); } .chg.down{ color:var(--bad); }
   .num{ font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; }
 
-  .barcell{ min-width:150px; }
-  .track{ display:flex; align-items:center; height:14px; width:100%; }
-  .track .half{ flex:1; position:relative; height:6px; background:var(--line); border-radius:3px; }
+  .barcell{ min-width:130px; }
+  .track{ display:flex; align-items:center; height:12px; width:100%; }
+  .track .half{ flex:1; position:relative; height:5px; background:var(--line); border-radius:3px; }
   .track .half.negside{ margin-right:1px; display:flex; justify-content:flex-end; overflow:hidden; border-radius:3px 0 0 3px; }
   .track .half.posside{ margin-left:1px; overflow:hidden; border-radius:0 3px 3px 0; }
-  .fill{ height:100%; }
-  .fill.bad{ background:var(--bad); } .fill.good{ background:var(--good); }
-  .barlabel{ font-family:var(--mono); font-size:.82rem; margin-top:5px; font-variant-numeric:tabular-nums; }
+  .fill{ height:100%; } .fill.bad{ background:var(--bad); } .fill.good{ background:var(--good); }
+  .barlabel{ font-family:var(--mono); font-size:.78rem; margin-top:4px; font-variant-numeric:tabular-nums; }
   .barlabel.up{ color:var(--good); } .barlabel.down{ color:var(--bad); } .barlabel.flat{ color:var(--muted); }
-  .clip{ font-size:.72em; vertical-align:1px; opacity:.75; }
+  .clip{ font-size:.72em; opacity:.7; }
 
-  .chip{ display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:999px; font-size:.78rem; font-weight:600; white-space:nowrap; }
+  .chip{ display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:999px; font-size:.75rem; font-weight:600; white-space:nowrap; }
   .chip.bullish{ background:var(--accent); color:var(--accent-ink); }
   .chip.neutral{ border:1px solid var(--line); color:var(--ink-soft); }
   .chip.mixed{ border:1px dashed var(--accent); color:var(--accent); }
-  .signal-src{ display:block; font-size:.74rem; color:var(--muted); margin-top:4px; font-family:var(--mono); }
+  .signal-src{ display:block; font-size:.72rem; color:var(--muted); margin-top:3px; font-family:var(--mono); }
+  .table-note{ font-size:.8rem; color:var(--muted); margin-top:10px; max-width:74ch; }
+  .fetch-error{ padding:14px; color:var(--bad); font-family:var(--mono); font-size:.85rem; }
 
-  .table-note{ font-size:.84rem; color:var(--muted); margin-top:12px; max-width:74ch; }
+  /* ---- outlook: compact stat strip + phase chips ---- */
+  .stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+  .stat{ background:var(--surface); padding:16px; }
+  .stat .label{ font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+  .stat .value{ font-family:var(--display); font-size:1.5rem; font-weight:700; margin:6px 0 4px; }
+  .stat .cap{ font-size:.78rem; color:var(--ink-soft); }
 
-  .cards{ display:grid; gap:10px; margin-top:16px; }
-  details.card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:2px 20px; }
-  details.card summary{ cursor:pointer; list-style:none; padding:16px 0; font-family:var(--serif); font-size:1.1rem; font-weight:600; display:flex; align-items:center; gap:12px; }
+  .phases{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+  .phase{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; }
+  .phase .tag{ font-family:var(--mono); font-size:11px; letter-spacing:.04em; text-transform:uppercase; color:var(--accent); }
+  .phase p{ margin:6px 0 0; font-size:.85rem; color:var(--ink-soft); }
+  .outlook-note{ margin-top:14px; font-size:.9rem; color:var(--ink-soft); max-width:78ch; }
+
+  @media (max-width:720px){ .stats{ grid-template-columns:1fr 1fr; } .phases{ grid-template-columns:1fr; } }
+
+  /* ---- notes accordion (kept minimal) ---- */
+  details.card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:0 16px; margin-bottom:8px; }
+  details.card summary{ cursor:pointer; list-style:none; padding:12px 0; font-weight:600; display:flex; align-items:center; gap:10px; font-size:.92rem; }
   details.card summary::-webkit-details-marker{ display:none; }
-  details.card summary::before{ content:"+"; font-family:var(--mono); color:var(--accent); font-weight:600; width:1em; }
+  details.card summary::before{ content:"+"; font-family:var(--mono); color:var(--accent); width:1em; }
   details.card[open] summary::before{ content:"–"; }
-  details.card summary .tag{ font-family:var(--mono); font-size:.8rem; font-weight:400; color:var(--muted); }
-  details.card p{ margin:0 0 18px; max-width:70ch; color:var(--ink-soft); }
-  details.card .attrib{ font-family:var(--mono); font-size:.78rem; color:var(--muted); }
+  details.card summary .tag{ font-family:var(--mono); font-size:.72rem; font-weight:400; color:var(--muted); }
+  details.card p{ margin:0 0 14px; max-width:70ch; color:var(--ink-soft); font-size:.88rem; }
 
-  .outlook{ margin-top:64px; }
-  .outlook > p{ max-width:72ch; color:var(--ink-soft); }
-  .timeline{ list-style:none; margin:28px 0; padding:0; display:grid; gap:0; border-left:2px solid var(--line); }
-  .timeline li{ position:relative; padding:0 0 26px 26px; }
-  .timeline li::before{ content:""; position:absolute; left:-7px; top:4px; width:12px; height:12px; border-radius:50%; background:var(--surface); border:2px solid var(--accent); }
-  .timeline .phase{ font-family:var(--mono); font-size:.8rem; text-transform:uppercase; letter-spacing:.05em; color:var(--accent); display:block; margin-bottom:4px; }
-  .timeline p{ margin:0; max-width:64ch; color:var(--ink-soft); }
-
-  footer{ margin-top:72px; border-top:1px solid var(--line); padding-top:32px; }
-  .disclaimer{ font-size:.92rem; color:var(--ink-soft); max-width:74ch; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; margin-bottom:32px; }
+  footer{ margin-top:48px; border-top:1px solid var(--line); padding-top:24px; }
+  .disclaimer{ font-size:.85rem; color:var(--ink-soft); max-width:78ch; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; margin-bottom:24px; }
   .disclaimer strong{ color:var(--ink); }
-  .sources h3{ font-size:.9rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-family:var(--mono); font-weight:500; margin-bottom:10px; }
-  .sources ul{ columns:2; gap:32px; padding-left:18px; margin:0; font-size:.86rem; }
-  .sources li{ break-inside:avoid; margin-bottom:6px; }
+  .sources h3{ font-size:.82rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-family:var(--mono); font-weight:500; margin-bottom:8px; }
+  .sources ul{ columns:2; gap:32px; padding-left:16px; margin:0; font-size:.82rem; }
+  .sources li{ break-inside:avoid; margin-bottom:5px; }
   .sources a{ color:var(--ink-soft); text-decoration-color:var(--line); }
-  .sources a:hover{ color:var(--accent); }
-  .fetch-error{ padding:16px; color:var(--bad); font-family:var(--mono); font-size:.88rem; }
-
   @media (max-width:720px){ .sources ul{ columns:1; } }
 </style>
 </head>
@@ -133,116 +175,107 @@
 <div class="masthead">
   <p class="eyebrow">Personal research desk</p>
   <h1>IT Sector Ledger</h1>
-  <p class="dek">Nine NSE-listed Indian IT majors, side by side — live prices and returns, refreshed automatically, next to the sell-side outlook and Q1 FY27 notes gathered on 1&nbsp;Sep&nbsp;2026.</p>
+  <p class="dek">Nine NSE-listed Indian IT majors — live prices, and the real historical range of short-term outcomes, not a guess.</p>
   <div class="live-badge"><span class="live-dot" id="live-dot"></span><span id="live-text">Loading latest prices…</span></div>
 </div>
 
 <div class="wrap">
 
-  <section class="board" aria-label="Company comparison">
-    <div class="board-head">
-      <h2>The board</h2>
-      <div class="legend"><span class="key good"></span>Gain <span class="key bad"></span>Loss</div>
+  <section aria-label="Short-term scenario">
+    <div class="head">
+      <h2>If you put ₹10,000 in today</h2>
+      <div class="segmented" id="horizon-toggle">
+        <button data-h="day" class="active">Day</button>
+        <button data-h="week">Week</button>
+        <button data-h="twoWeek">2 Weeks</button>
+      </div>
     </div>
-    <div class="table-scroll">
+    <div class="callout">
+      <strong>No one can tell you what you'll get for sure.</strong> Short-term stock moves are driven by volatility, not predictable patterns — that's true for professional trading desks too. What follows is the <em>real historical range</em> of outcomes this holding period has actually produced over roughly the last two years: worst case, typical range (middle 80% of outcomes), and best case. It's a picture of risk, not a promise.
+    </div>
+    <div class="panel" id="scenario-body">
+      <div class="fetch-error">Loading…</div>
+    </div>
+    <p class="table-note" id="scenario-note"></p>
+  </section>
+
+  <section class="board" aria-label="Company comparison">
+    <div class="head">
+      <h2>The board</h2>
+      <span class="subtle">1/3/5-year price history</span>
+    </div>
+    <div class="panel table-scroll">
       <table>
         <thead>
           <tr>
             <th>Company</th><th>Price (₹)</th><th>1D</th>
-            <th>1-yr return</th><th>3-yr return</th><th>5-yr return</th>
-            <th>P/E</th><th>Div&nbsp;yield</th><th>Sell-side signal</th>
+            <th>1-yr</th><th>3-yr</th><th>5-yr</th>
+            <th>P/E</th><th>Div&nbsp;yld</th><th>Sell-side</th>
           </tr>
         </thead>
         <tbody id="board-body">
-          <tr><td colspan="9" class="fetch-error">Loading data/latest.json…</td></tr>
+          <tr><td colspan="9" class="fetch-error">Loading…</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="table-note">Prices, P/E and returns refresh automatically from Yahoo Finance (free, ~15&ndash;20 min delayed) via a scheduled job — see <code>generatedAt</code> in the badge above. Return bars share one scale within each column (1-yr: &plusmn;30%, 3-yr: &plusmn;60%, 5-yr: &plusmn;50%); a <span class="clip">&rsaquo;&rsaquo;</span> marks a bar clipped at that scale — the exact figure is always printed. Sell-side signal and company notes below are a manual snapshot from 1&nbsp;Sep&nbsp;2026, not part of the live feed.</p>
-  </section>
-
-  <section class="detail" aria-label="Company notes">
-    <h2>Company notes <span style="font-family:var(--mono);font-size:.7rem;color:var(--muted);text-transform:none;">— snapshot, 1 Sep 2026</span></h2>
-    <div class="cards">
-
-      <details class="card">
-        <summary>TCS <span class="tag">Tata Consultancy Services</span></summary>
-        <p>Q1 FY27 revenue rose 13.9% YoY to ₹72,275 cr and net profit 4.6% to ₹13,349 cr, with EBIT margin steady at 24.1%. TCS is already booking roughly $2.6B in annualised AI-linked revenue — the largest AI order book in the sector. ICICI Direct's Buy (₹3,140) is a bet that AI monetisation catches up with the price; Systematix's Hold (₹2,350) says wait and watch.</p>
-        <p class="attrib">TCS press release (Q1 FY27) · ICICI Direct sector note · Systematix via Business Today, 25 Aug 2026</p>
-      </details>
-
-      <details class="card">
-        <summary>Infosys <span class="tag">Infosys Ltd</span></summary>
-        <p>Q1 FY27 revenue reached $5,082M, up 2.4% in constant currency, with margin holding at 21.1%. Infosys signed $3.6B of large-deal value (61% net-new) and AI now accounts for 8.2% of revenue — but management kept full-year guidance to a cautious 1.5–3.0% constant-currency growth. Systematix rates it Hold at ₹1,150.</p>
-        <p class="attrib">Q1 FY27 earnings coverage · Systematix via Business Today, 25 Aug 2026</p>
-      </details>
-
-      <details class="card">
-        <summary>Wipro <span class="tag">Wipro Ltd</span></summary>
-        <p>The sector's softest print this quarter: revenue up just 1.0% YoY (down 1.2% sequentially), with margin compressed to 16.0% from 17.2% as the company absorbs salary increases and AI-infrastructure spend ahead of revenue from newly booked deals. Systematix rates it Hold at ₹170.</p>
-        <p class="attrib">Q1 FY27 earnings coverage · Systematix via Business Today, 25 Aug 2026</p>
-      </details>
-
-      <details class="card">
-        <summary>HCL Technologies <span class="tag">HCL Technologies Ltd</span></summary>
-        <p>Q1 FY27 revenue grew 14% YoY, and margin expanded 56 bps to 16.9% on a stronger software-and-platforms mix. Its annualised AI revenue of roughly $684M is about a quarter of TCS's book, but growing off a smaller base. Systematix rates it Hold at ₹1,180.</p>
-        <p class="attrib">Q1 FY27 earnings coverage · Systematix via Business Today, 25 Aug 2026</p>
-      </details>
-
-      <details class="card">
-        <summary>Tech Mahindra <span class="tag">Tech Mahindra Ltd</span></summary>
-        <p>The best 1- and 3-year return among the majors here. Both ICICI Direct and Systematix carry Buy ratings — Systematix targets ₹1,740, saying it holds "a more positive view" on the name than on sector peers.</p>
-        <p class="attrib">ICICI Direct sector note · Systematix via Business Today, 25 Aug 2026</p>
-      </details>
-
-      <details class="card">
-        <summary>LTIMindtree <span class="tag">LTIMindtree Ltd</span></summary>
-        <p>Down across every window shown, yet ICICI Direct has it as a top pick with a ₹5,200 target — a re-rating call on valuation, not a momentum one.</p>
-        <p class="attrib">ICICI Direct sector note, 2026</p>
-      </details>
-
-      <details class="card">
-        <summary>Persistent Systems <span class="tag">Persistent Systems Ltd</span></summary>
-        <p>The standout compounder on this board. It has just announced an all-cash €81-per-share acquisition of Nagarro, creating a combined entity with roughly $2.9B pro-forma revenue and 46,000+ staff across 40+ countries. ICICI Direct's Buy carries a ₹5,750 target.</p>
-        <p class="attrib">Company disclosures · ICICI Direct sector note, 2026</p>
-      </details>
-
-      <details class="card">
-        <summary>Coforge <span class="tag">Coforge Ltd</span></summary>
-        <p>The second-best momentum story here, now trading at 54x earnings — the richest multiple on this board. ICICI Direct rates it Buy.</p>
-        <p class="attrib">ICICI Direct sector note, 2026</p>
-      </details>
-
-      <details class="card">
-        <summary>Mphasis <span class="tag">Mphasis Ltd</span></summary>
-        <p>The quietest name here — roughly flat over 3 years, slightly down over 5. ICICI Direct rates it Buy.</p>
-        <p class="attrib">ICICI Direct sector note, 2026</p>
-      </details>
-
-    </div>
+    <p class="table-note">Prices and returns refresh automatically (Yahoo Finance, ~15–20 min delayed). Sell-side signal is a manual snapshot from 1 Sep 2026, not live.</p>
   </section>
 
   <section class="outlook" aria-label="Industry outlook">
-    <h2>Where the sector is headed</h2>
-    <p>The Nifty IT index has corrected roughly 25% year-to-date in 2026, even as India's overall IT spend is forecast to top $176 billion this year (Gartner) — a valuation reset happening alongside real, if uneven, industry growth. The tension is Gen AI: sell-side analysts widely expect it to shave 2–3% a year off services revenue for the next several years, even while the same technology is expected to open an incremental $300–400 billion addressable market by 2030.</p>
+    <div class="head"><h2>Where the sector is headed</h2></div>
+    <div class="stats">
+      <div class="stat"><div class="label">Nifty IT, YTD</div><div class="value">−25%</div><div class="cap">Valuation reset on GenAI deflation fears</div></div>
+      <div class="stat"><div class="label">India IT spend '26</div><div class="value">$176B</div><div class="cap">Gartner — data-centre &amp; AI buildout</div></div>
+      <div class="stat"><div class="label">AI TAM by 2030</div><div class="value">$300–400B</div><div class="cap">Incremental opportunity, per sell-side</div></div>
+      <div class="stat"><div class="label">Sector call</div><div class="value">Neutral</div><div class="cap">Recovery pencilled in FY28–29</div></div>
+    </div>
+    <div class="phases">
+      <div class="phase"><span class="tag">FY26</span><p>Deflation begins — AI pricing pressure on legacy services work.</p></div>
+      <div class="phase"><span class="tag">FY26–FY28</span><p>Peak disruption — legacy work shrinks faster than AI work scales.</p></div>
+      <div class="phase"><span class="tag">FY28–FY29</span><p>Recovery — AI revenue scales enough to flip headwind to tailwind.</p></div>
+    </div>
+    <p class="outlook-note">TCS is monetising AI fastest ($2.6B annualised run-rate); Wipro is still absorbing AI-infrastructure costs. The multi-year winners on the board below — Persistent, Coforge, Tech Mahindra — aren't the biggest AI books; they're mid-caps that found faster-growing niches.</p>
+  </section>
 
-    <ol class="timeline">
-      <li><span class="phase">FY26</span><p>Deflationary phase begins. AI-linked productivity gains start showing up as pricing pressure on traditional application and infrastructure work.</p></li>
-      <li><span class="phase">FY26–FY28</span><p>Peak disruption. This window is expected to be the roughest stretch for revenue growth, as legacy work shrinks faster than AI-linked work scales up.</p></li>
-      <li><span class="phase">FY28 (end)–FY29</span><p>Recovery expected. AI services revenue is projected to scale enough to offset the deflation, turning the multi-year headwind into a tailwind.</p></li>
-    </ol>
+  <section class="notes" aria-label="Company notes">
+    <div class="head"><h2>Company notes</h2><span class="subtle">snapshot, 1 Sep 2026</span></div>
 
-    <p>The Q1 FY27 results already show the split forming. TCS is monetising AI fastest, while Wipro is still in the cost-absorption phase. Worth reading the live return numbers above with that split in mind: the multi-year winners on this board — Persistent, Coforge, Tech Mahindra — aren't the largest AI revenue books. They're mid-caps that found faster-growing niches while the giants manage a bigger, slower-moving base.</p>
+    <details class="card"><summary>TCS <span class="tag">Q1 FY27: rev +13.9% YoY, $2.6B AI run-rate</span></summary>
+      <p>ICICI Direct: Buy, ₹3,140 target (+32%). Systematix: Hold, ₹2,350. The widest analyst split on the board — a bet on whether AI monetisation catches up to the price.</p></details>
+
+    <details class="card"><summary>Infosys <span class="tag">Q1 FY27: rev +2.4% CC, AI 8.2% of revenue</span></summary>
+      <p>Systematix: Hold, ₹1,150. $3.6B large-deal TCV signed, but guidance stayed cautious at 1.5–3.0% CC growth for the year.</p></details>
+
+    <details class="card"><summary>Wipro <span class="tag">Q1 FY27: rev +1.0% YoY, margin -1.2pp</span></summary>
+      <p>Systematix: Hold, ₹170. The sector's softest print — absorbing salary hikes and AI-infra spend ahead of revenue from newly booked deals.</p></details>
+
+    <details class="card"><summary>HCL Technologies <span class="tag">Q1 FY27: rev +14% YoY, margin +56bps</span></summary>
+      <p>Systematix: Hold, ₹1,180. Smaller AI book than TCS ($684M annualised) but the only large-cap here still up over both 3 and 5 years.</p></details>
+
+    <details class="card"><summary>Tech Mahindra <span class="tag">Best 1&amp;3-yr return on the board</span></summary>
+      <p>Both ICICI Direct and Systematix rate it Buy — Systematix target ₹1,740, calling it more positive than sector peers.</p></details>
+
+    <details class="card"><summary>LTIMindtree <span class="tag">Down 1/3/5-yr, but a re-rating pick</span></summary>
+      <p>ICICI Direct: Buy, ₹5,200 target (+21%) — a valuation call, not a momentum one.</p></details>
+
+    <details class="card"><summary>Persistent Systems <span class="tag">+108% 3-yr, +237% 5-yr</span></summary>
+      <p>ICICI Direct: Buy, ₹5,750 target. Just announced an all-cash €81/share Nagarro acquisition — combined entity ~$2.9B pro-forma revenue.</p></details>
+
+    <details class="card"><summary>Coforge <span class="tag">+82% 3-yr, richest multiple at 54x</span></summary>
+      <p>ICICI Direct: Buy. Second-best momentum story on the board, but priced for it.</p></details>
+
+    <details class="card"><summary>Mphasis <span class="tag">Flattest name on the board</span></summary>
+      <p>ICICI Direct: Buy. Roughly flat over 3 years, slightly down over 5 and 1.</p></details>
   </section>
 
   <footer>
     <div class="disclaimer">
-      <strong>What this is, and isn't.</strong> This page is a personal research aid, not investment advice — it doesn't execute trades and isn't distributed as a recommendation. Live prices come from an unofficial, free, ~15–20 min delayed feed and can occasionally be missing or stale; the sell-side signals and notes are a manual snapshot from 1 September 2026, not a live consensus. Publishing predictive stock analysis to others, or facilitating trades on the back of it, are separately regulated activities in India (SEBI's Research Analyst and Investment Adviser rules) — this dashboard does neither.
+      <strong>What this is, and isn't.</strong> Personal research aid, not investment advice — no trade execution, no distribution to others. The "₹10,000" section shows real historical statistics, not predictions; past ranges are not guarantees of future ones. Live prices are unofficial and ~15–20 min delayed; sell-side notes are a manual snapshot from 1 Sep 2026. Publishing predictive analysis to others or facilitating trades on it are separately regulated activities in India (SEBI Research Analyst / Investment Adviser rules) — this dashboard does neither.
     </div>
     <div class="sources">
       <h3>Sources</h3>
       <ul>
-        <li>Live prices: Yahoo Finance, via the <code>yfinance</code> library</li>
+        <li>Live prices &amp; historical ranges: Yahoo Finance, via <code>yfinance</code></li>
         <li><a href="https://easternherald.com/2026/08/28/india-it-sector-q1-fy27-tcs-infosys-wipro-hcl-tech/">Eastern Herald — India IT Sector Q1 FY27</a></li>
         <li><a href="https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q1-fy-2027">TCS — Q1 FY27 results press release</a></li>
         <li><a href="https://www.icicidirect.com/research/equity/finace/indian-it-sector-analysis-2026-valuation-growth-ai-risks-and-top-picks">ICICI Direct — Indian IT Sector Analysis 2026</a></li>
@@ -255,87 +288,156 @@
 </div>
 
 <script>
-// ---- static metadata not available from the free price feed ----
 const META = {
-  "TCS.NS":        { signal: "mixed",   label: "Mixed",   src: "ICICI Direct: Buy ₹3,140 · Systematix: Hold ₹2,350" },
+  "TCS.NS":        { signal: "mixed",   label: "Mixed",   src: "ICICI: Buy ₹3,140 · Systematix: Hold ₹2,350" },
   "INFY.NS":       { signal: "neutral", label: "Neutral", src: "Systematix: Hold ₹1,150" },
   "WIPRO.NS":      { signal: "neutral", label: "Neutral", src: "Systematix: Hold ₹170" },
   "HCLTECH.NS":    { signal: "neutral", label: "Neutral", src: "Systematix: Hold ₹1,180" },
-  "TECHM.NS":      { signal: "bullish", label: "Bullish", src: "Systematix: Buy ₹1,740 · ICICI Direct: Buy" },
-  "LTIM.NS":       { signal: "bullish", label: "Bullish", src: "ICICI Direct: Buy ₹5,200" },
-  "PERSISTENT.NS": { signal: "bullish", label: "Bullish", src: "ICICI Direct: Buy ₹5,750" },
-  "COFORGE.NS":    { signal: "bullish", label: "Bullish", src: "ICICI Direct: Buy" },
-  "MPHASIS.NS":    { signal: "bullish", label: "Bullish", src: "ICICI Direct: Buy" },
+  "TECHM.NS":      { signal: "bullish", label: "Bullish", src: "Systematix: Buy ₹1,740 · ICICI: Buy" },
+  "LTIM.NS":       { signal: "bullish", label: "Bullish", src: "ICICI: Buy ₹5,200" },
+  "PERSISTENT.NS": { signal: "bullish", label: "Bullish", src: "ICICI: Buy ₹5,750" },
+  "COFORGE.NS":    { signal: "bullish", label: "Bullish", src: "ICICI: Buy" },
+  "MPHASIS.NS":    { signal: "bullish", label: "Bullish", src: "ICICI: Buy" },
 };
 
-// column scales for the diverging bars — fixed so bars stay comparable run to run
-const DOMAIN = { return1y: 30, return3y: 60, return5y: 50 };
+const RETURN_DOMAIN = { return1y: 30, return3y: 60, return5y: 50 };
+const SCEN_DOMAIN = { day: 10, week: 20, twoWeek: 35 };
+const INVEST = 10000;
+let currentHorizon = "day";
+let latestData = null;
 
-function fmtPct(v, withSign = true) {
+function fmtPct(v) {
   if (v === null || v === undefined || Number.isNaN(v)) return "—";
-  const sign = withSign && v > 0 ? "+" : "";
-  return `${sign}${v.toFixed(1)}%`;
+  return `${v > 0 ? "+" : ""}${v.toFixed(1)}%`;
+}
+function fmtRupee(v) {
+  return "₹" + Math.round(v).toLocaleString("en-IN");
 }
 
-function barCell(value, domain) {
-  if (value === null || value === undefined || Number.isNaN(value)) {
+function returnBarCell(value, domain) {
+  if (value === null || value === undefined) {
     return `<div class="track"><div class="half negside"></div><div class="half posside"></div></div><div class="barlabel flat">—</div>`;
   }
   const clipped = Math.abs(value) > domain;
   const pct = Math.min(100, (Math.abs(value) / domain) * 100);
-  const cls = value < 0 ? "bad" : "good";
   const side = value < 0
     ? `<div class="half negside"><div class="fill bad" style="width:${pct}%"></div></div><div class="half posside"></div>`
     : `<div class="half negside"></div><div class="half posside"><div class="fill good" style="width:${pct}%"></div></div>`;
-  const labelCls = value < 0 ? "down" : "up";
-  const clipMark = clipped ? ` <span class="clip" title="Off the chart scale">››</span>` : "";
-  return `<div class="track">${side}</div><div class="barlabel ${labelCls}">${fmtPct(value)}${clipMark}</div>`;
+  return `<div class="track">${side}</div><div class="barlabel ${value < 0 ? "down" : "up"}">${fmtPct(value)}${clipped ? ' <span class="clip">››</span>' : ""}</div>`;
 }
 
-async function loadBoard() {
+function renderBoard(data) {
+  const body = document.getElementById("board-body");
+  body.innerHTML = data.companies.map(c => {
+    const meta = META[c.ticker] || { signal: "neutral", label: "—", src: "" };
+    if (!c.ok) {
+      return `<tr><td><span class="co-name">${c.name}</span><span class="co-tick">${c.ticker}</span></td><td colspan="8" class="fetch-error">No data this run${c.error ? ": " + c.error : ""}</td></tr>`;
+    }
+    const chgCls = c.dayChangePct > 0 ? "up" : c.dayChangePct < 0 ? "down" : "";
+    return `
+      <tr>
+        <td><span class="co-name">${c.name}</span><span class="co-tick">NSE: ${c.ticker.replace(".NS", "")}</span></td>
+        <td class="price">${c.price?.toLocaleString("en-IN", { minimumFractionDigits: 2 }) ?? "—"}</td>
+        <td class="chg ${chgCls}">${fmtPct(c.dayChangePct)}</td>
+        <td class="barcell">${returnBarCell(c.return1y, RETURN_DOMAIN.return1y)}</td>
+        <td class="barcell">${returnBarCell(c.return3y, RETURN_DOMAIN.return3y)}</td>
+        <td class="barcell">${returnBarCell(c.return5y, RETURN_DOMAIN.return5y)}</td>
+        <td class="num">${c.pe ? c.pe.toFixed(2) : "—"}</td>
+        <td class="num">${c.divYieldPct ? c.divYieldPct.toFixed(2) + "%" : "—"}</td>
+        <td><span class="chip ${meta.signal}">${meta.label}</span><span class="signal-src">${meta.src}</span></td>
+      </tr>`;
+  }).join("");
+}
+
+function renderScenario(data, horizon) {
+  const domain = SCEN_DOMAIN[horizon];
+  const body = document.getElementById("scenario-body");
+  const note = document.getElementById("scenario-note");
+  const withScenario = data.companies.filter(c => c.ok && c.scenario && c.scenario[horizon]);
+  const isPlaceholder = data.companies.some(c => c.scenario && c.scenario.placeholder);
+
+  if (withScenario.length === 0) {
+    body.innerHTML = `<div class="fetch-error">No scenario data yet — this fills in once the workflow has run at least once with the updated script.</div>`;
+    note.textContent = "";
+    return;
+  }
+
+  body.innerHTML = withScenario.map(c => {
+    const s = c.scenario[horizon];
+    const pct = v => Math.max(0, Math.min(100, ((v + domain) / (2 * domain)) * 100));
+    const zero = pct(0);
+    const whiskerLeft = pct(s.min), whiskerRight = pct(s.max);
+    const p10 = pct(s.p10), p90 = pct(s.p90), med = pct(s.median);
+
+    let boxes = "";
+    if (s.p10 < 0 && s.p90 > 0) {
+      boxes += `<div class="range-box neg" style="left:${p10}%; width:${zero - p10}%"></div>`;
+      boxes += `<div class="range-box pos" style="left:${zero}%; width:${p90 - zero}%"></div>`;
+    } else {
+      const cls = s.median < 0 ? "neg" : "pos";
+      boxes += `<div class="range-box ${cls}" style="left:${p10}%; width:${p90 - p10}%"></div>`;
+    }
+
+    return `
+      <div class="scen-row">
+        <div><span class="scen-name">${c.name}</span><span class="scen-tick">NSE: ${c.ticker.replace(".NS", "")}</span></div>
+        <div class="scen-outcome worst"><span class="rupee">${fmtRupee(INVEST * (1 + s.min / 100))}</span><span class="pct">${fmtPct(s.min)} worst</span></div>
+        <div class="scen-range">
+          <div class="range-track">
+            <div class="range-whisker" style="left:${whiskerLeft}%; width:${whiskerRight - whiskerLeft}%"></div>
+            ${boxes}
+            <div class="range-zero"></div>
+            <div class="range-median" style="left:${med}%"></div>
+          </div>
+          <div class="range-caption"><span>${fmtRupee(INVEST * (1 + s.p10 / 100))}</span><span>typical range</span><span>${fmtRupee(INVEST * (1 + s.p90 / 100))}</span></div>
+        </div>
+        <div class="scen-outcome best"><span class="rupee">${fmtRupee(INVEST * (1 + s.max / 100))}</span><span class="pct">${fmtPct(s.max)} best</span></div>
+      </div>`;
+  }).join("");
+
+  const sample = withScenario[0]?.scenario?.sampleDays;
+  note.textContent = isPlaceholder
+    ? "Seed values shown are modeled from assumed volatility, not real history — replaced by actual historical statistics on the first GitHub Actions run."
+    : `Based on real historical ${horizon === "day" ? "daily" : horizon === "week" ? "weekly" : "10-trading-day"} returns over the trailing ~${sample ?? 500} trading days. Figures scale linearly to any amount — for ₹1,00,000, multiply by 10.`;
+}
+
+function renderAll() {
+  if (!latestData) return;
+  renderBoard(latestData);
+  renderScenario(latestData, currentHorizon);
+}
+
+document.getElementById("horizon-toggle").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-h]");
+  if (!btn) return;
+  currentHorizon = btn.dataset.h;
+  document.querySelectorAll("#horizon-toggle button").forEach(b => b.classList.toggle("active", b === btn));
+  renderScenario(latestData, currentHorizon);
+});
+
+async function loadData() {
   const dot = document.getElementById("live-dot");
   const text = document.getElementById("live-text");
-  const body = document.getElementById("board-body");
   try {
     const res = await fetch("data/latest.json", { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+    latestData = await res.json();
 
-    const generated = new Date(data.generatedAt);
+    const generated = new Date(latestData.generatedAt);
     const ageMin = (Date.now() - generated.getTime()) / 60000;
     dot.classList.toggle("stale", ageMin > 90);
-    text.textContent = `Live prices as of ${generated.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })} (source: Yahoo Finance, ~15–20 min delayed)`;
+    text.textContent = `Live as of ${generated.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })} · Yahoo Finance, ~15–20 min delayed`;
 
-    body.innerHTML = data.companies.map(c => {
-      const meta = META[c.ticker] || { signal: "neutral", label: "—", src: "" };
-      if (!c.ok) {
-        return `<tr><td><span class="co-name">${c.name}</span><span class="co-tick">${c.ticker}</span></td><td colspan="8" class="fetch-error">No data this run${c.error ? ": " + c.error : ""}</td></tr>`;
-      }
-      const chgCls = c.dayChangePct > 0 ? "up" : c.dayChangePct < 0 ? "down" : "";
-      return `
-        <tr>
-          <td><span class="co-name">${c.name}</span><span class="co-tick">NSE: ${c.ticker.replace(".NS", "")}</span></td>
-          <td class="price">${c.price?.toLocaleString("en-IN", { minimumFractionDigits: 2 }) ?? "—"}</td>
-          <td class="chg ${chgCls}">${fmtPct(c.dayChangePct)}</td>
-          <td class="barcell">${barCell(c.return1y, DOMAIN.return1y)}</td>
-          <td class="barcell">${barCell(c.return3y, DOMAIN.return3y)}</td>
-          <td class="barcell">${barCell(c.return5y, DOMAIN.return5y)}</td>
-          <td class="num">${c.pe ? c.pe.toFixed(2) : "—"}</td>
-          <td class="num">${c.divYieldPct ? c.divYieldPct.toFixed(2) + "%" : "—"}</td>
-          <td>
-            <span class="chip ${meta.signal}">${meta.label}</span>
-            <span class="signal-src">${meta.src}</span>
-          </td>
-        </tr>`;
-    }).join("");
+    renderAll();
   } catch (err) {
     dot.classList.add("stale");
-    text.textContent = "Couldn't load data/latest.json yet — it fills in once the GitHub Action runs at least once.";
-    body.innerHTML = `<tr><td colspan="9" class="fetch-error">${err.message}</td></tr>`;
+    text.textContent = "Couldn't load data/latest.json yet.";
+    document.getElementById("board-body").innerHTML = `<tr><td colspan="9" class="fetch-error">${err.message}</td></tr>`;
+    document.getElementById("scenario-body").innerHTML = `<div class="fetch-error">${err.message}</div>`;
   }
 }
 
-loadBoard();
+loadData();
 </script>
 </body>
 </html>
