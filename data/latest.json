@@ -1,46 +1,45 @@
 {
-  "generatedAt": "2026-09-01T10:30:00+00:00",
-  "source": "Manual seed from the 1 Sep 2026 research pass, with modeled (not historical) scenario placeholders \u2014 everything here is overwritten by the first GitHub Actions run.",
+  "generatedAt": "2026-09-02T15:00:52+00:00",
+  "source": "Yahoo Finance (yfinance) - unofficial, ~15-20 min delayed for NSE",
   "companies": [
     {
       "ticker": "TCS.NS",
       "name": "TCS",
       "full": "Tata Consultancy Services",
       "ok": true,
-      "price": 2355.0,
-      "dayChangePct": 1.85,
+      "price": 2348.0,
+      "dayChangePct": -0.89,
       "week52High": 3350.0,
       "week52Low": 1976.8,
-      "return1y": -22.92,
-      "return3y": -28.52,
-      "return5y": -36.63,
-      "pe": 16.93,
-      "divYieldPct": 4.78,
-      "asOf": "2026-09-01",
+      "return1y": -24.54,
+      "return3y": -30.52,
+      "return5y": -38.89,
+      "pe": 17.058994,
+      "divYieldPct": 2.74,
+      "asOf": "2026-09-02",
       "scenario": {
         "day": {
-          "min": -5.0,
-          "p10": -2.4,
+          "min": -8.4,
+          "p10": -1.8,
           "median": -0.1,
-          "p90": 2.2,
-          "max": 4.8
+          "p90": 1.5,
+          "max": 6.5
         },
         "week": {
-          "min": -11.5,
-          "p10": -5.5,
-          "median": -0.5,
-          "p90": 4.6,
-          "max": 10.6
+          "min": -12.1,
+          "p10": -4.9,
+          "median": -0.7,
+          "p90": 3.7,
+          "max": 10.8
         },
         "twoWeek": {
-          "min": -16.5,
-          "p10": -8.1,
-          "median": -0.9,
-          "p90": 6.2,
-          "max": 14.7
+          "min": -15.7,
+          "p10": -7.0,
+          "median": -1.1,
+          "p90": 4.1,
+          "max": 11.8
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       }
     },
     {
@@ -48,40 +47,39 @@
       "name": "Infosys",
       "full": "Infosys Ltd",
       "ok": true,
-      "price": 1156.0,
-      "dayChangePct": 1.96,
+      "price": 1140.0,
+      "dayChangePct": -1.38,
       "week52High": 1728.0,
       "week52Low": 982.4,
-      "return1y": -23.46,
-      "return3y": -20.52,
-      "return5y": -31.6,
-      "pe": 15.42,
-      "divYieldPct": 4.28,
-      "asOf": "2026-09-01",
+      "return1y": -23.93,
+      "return3y": -21.04,
+      "return5y": -32.97,
+      "pe": 14.763015,
+      "divYieldPct": 4.33,
+      "asOf": "2026-09-02",
       "scenario": {
         "day": {
-          "min": -5.0,
-          "p10": -2.4,
+          "min": -7.3,
+          "p10": -2.0,
           "median": -0.1,
-          "p90": 2.2,
-          "max": 4.8
+          "p90": 1.9,
+          "max": 7.9
         },
         "week": {
-          "min": -11.5,
-          "p10": -5.5,
-          "median": -0.5,
-          "p90": 4.6,
-          "max": 10.6
+          "min": -12.4,
+          "p10": -5.4,
+          "median": -0.2,
+          "p90": 3.9,
+          "max": 10.3
         },
         "twoWeek": {
-          "min": -16.5,
-          "p10": -8.1,
-          "median": -0.9,
-          "p90": 6.2,
-          "max": 14.7
+          "min": -16.6,
+          "p10": -7.5,
+          "median": -0.2,
+          "p90": 4.9,
+          "max": 12.9
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       }
     },
     {
@@ -89,40 +87,39 @@
       "name": "Wipro",
       "full": "Wipro Ltd",
       "ok": true,
-      "price": 184.5,
-      "dayChangePct": 1.96,
+      "price": 177.09,
+      "dayChangePct": -2.54,
       "week52High": 273.1,
       "week52Low": 169.0,
-      "return1y": -26.31,
-      "return3y": -9.65,
-      "return5y": -42.43,
-      "pe": 13.55,
-      "divYieldPct": 6.45,
-      "asOf": "2026-09-01",
+      "return1y": -29.43,
+      "return3y": -14.93,
+      "return5y": -45.93,
+      "pe": 14.065925,
+      "divYieldPct": 4.4,
+      "asOf": "2026-09-02",
       "scenario": {
         "day": {
-          "min": -5.4,
-          "p10": -2.5,
-          "median": -0.1,
-          "p90": 2.3,
-          "max": 5.2
+          "min": -8.4,
+          "p10": -2.1,
+          "median": -0.0,
+          "p90": 1.8,
+          "max": 6.5
         },
         "week": {
-          "min": -12.4,
-          "p10": -5.9,
-          "median": -0.5,
-          "p90": 4.9,
-          "max": 11.3
+          "min": -13.4,
+          "p10": -4.4,
+          "median": -0.2,
+          "p90": 3.5,
+          "max": 13.5
         },
         "twoWeek": {
-          "min": -17.8,
-          "p10": -8.7,
-          "median": -1.0,
-          "p90": 6.6,
-          "max": 15.7
+          "min": -13.5,
+          "p10": -7.9,
+          "median": -0.4,
+          "p90": 5.1,
+          "max": 12.1
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       }
     },
     {
@@ -130,40 +127,39 @@
       "name": "HCL Technologies",
       "full": "HCL Technologies Ltd",
       "ok": true,
-      "price": 1362.0,
-      "dayChangePct": 3.8,
+      "price": 1331.5,
+      "dayChangePct": -1.47,
       "week52High": 1780.1,
       "week52Low": 1030.0,
-      "return1y": -10.64,
-      "return3y": 11.95,
-      "return5y": 10.99,
-      "pe": 21.18,
-      "divYieldPct": 4.16,
-      "asOf": "2026-09-01",
+      "return1y": -9.16,
+      "return3y": 12.29,
+      "return5y": 13.34,
+      "pe": 20.743105,
+      "divYieldPct": 4.44,
+      "asOf": "2026-09-02",
       "scenario": {
         "day": {
-          "min": -5.0,
-          "p10": -2.3,
+          "min": -10.8,
+          "p10": -1.8,
           "median": -0.0,
-          "p90": 2.2,
-          "max": 4.9
+          "p90": 1.7,
+          "max": 7.7
         },
         "week": {
-          "min": -11.3,
-          "p10": -5.3,
-          "median": -0.2,
-          "p90": 4.8,
-          "max": 10.8
+          "min": -17.0,
+          "p10": -5.1,
+          "median": 0.0,
+          "p90": 4.3,
+          "max": 11.7
         },
         "twoWeek": {
-          "min": -16.0,
-          "p10": -7.6,
-          "median": -0.4,
-          "p90": 6.7,
-          "max": 15.2
+          "min": -17.9,
+          "p10": -7.9,
+          "median": 0.2,
+          "p90": 5.8,
+          "max": 15.5
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       }
     },
     {
@@ -171,122 +167,86 @@
       "name": "Tech Mahindra",
       "full": "Tech Mahindra Ltd",
       "ok": true,
-      "price": 1628.0,
-      "dayChangePct": -0.79,
+      "price": 1623.0,
+      "dayChangePct": -0.92,
       "week52High": 1854.0,
       "week52Low": 1304.1,
-      "return1y": 8.14,
-      "return3y": 35.45,
-      "return5y": 12.46,
-      "pe": 32.27,
-      "divYieldPct": 2.91,
-      "asOf": "2026-09-01",
+      "return1y": 7.28,
+      "return3y": 32.16,
+      "return5y": 12.56,
+      "pe": 28.069872,
+      "divYieldPct": 3.11,
+      "asOf": "2026-09-02",
       "scenario": {
         "day": {
-          "min": -5.6,
-          "p10": -2.6,
+          "min": -6.6,
+          "p10": -1.9,
           "median": 0.0,
-          "p90": 2.6,
-          "max": 5.7
+          "p90": 2.0,
+          "max": 5.3
         },
         "week": {
-          "min": -12.5,
-          "p10": -5.6,
-          "median": 0.2,
-          "p90": 5.9,
-          "max": 12.8
+          "min": -11.7,
+          "p10": -4.8,
+          "median": 0.1,
+          "p90": 4.6,
+          "max": 11.9
         },
         "twoWeek": {
-          "min": -17.5,
-          "p10": -7.8,
+          "min": -18.2,
+          "p10": -7.1,
           "median": 0.3,
-          "p90": 8.5,
-          "max": 18.2
+          "p90": 7.1,
+          "max": 16.6
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       }
     },
     {
       "ticker": "LTIM.NS",
       "name": "LTIMindtree",
       "full": "LTIMindtree Ltd",
-      "ok": true,
-      "price": 4625.0,
-      "dayChangePct": 1.87,
-      "week52High": 6429.5,
-      "week52Low": 3528.0,
-      "return1y": -12.64,
-      "return3y": -14.39,
-      "return5y": -14.02,
-      "pe": null,
-      "divYieldPct": null,
-      "asOf": "2026-09-01",
-      "scenario": {
-        "day": {
-          "min": -5.3,
-          "p10": -2.5,
-          "median": -0.1,
-          "p90": 2.4,
-          "max": 5.2
-        },
-        "week": {
-          "min": -12.1,
-          "p10": -5.7,
-          "median": -0.3,
-          "p90": 5.2,
-          "max": 11.6
-        },
-        "twoWeek": {
-          "min": -17.2,
-          "p10": -8.2,
-          "median": -0.5,
-          "p90": 7.2,
-          "max": 16.2
-        },
-        "sampleDays": 504,
-        "placeholder": true
-      }
+      "ok": false,
+      "error": "no price history returned"
     },
     {
       "ticker": "PERSISTENT.NS",
       "name": "Persistent Systems",
       "full": "Persistent Systems Ltd",
       "ok": true,
-      "price": 5594.5,
-      "dayChangePct": 4.77,
+      "price": 5690.0,
+      "dayChangePct": -1.9,
       "week52High": 6599.0,
       "week52Low": 4244.5,
-      "return1y": 3.22,
-      "return3y": 108.33,
-      "return5y": 236.81,
-      "pe": 47.62,
-      "divYieldPct": 0.71,
-      "asOf": "2026-09-01",
+      "return1y": 5.32,
+      "return3y": 105.29,
+      "return5y": 230.68,
+      "pe": 46.494526,
+      "divYieldPct": 0.62,
+      "asOf": "2026-09-02",
       "scenario": {
         "day": {
-          "min": -6.7,
-          "p10": -3.1,
+          "min": -11.2,
+          "p10": -2.3,
           "median": 0.0,
-          "p90": 3.1,
-          "max": 6.7
+          "p90": 2.5,
+          "max": 10.9
         },
         "week": {
-          "min": -14.9,
-          "p10": -6.8,
-          "median": 0.1,
-          "p90": 6.9,
-          "max": 15.1
+          "min": -18.3,
+          "p10": -5.9,
+          "median": 0.5,
+          "p90": 6.4,
+          "max": 12.9
         },
         "twoWeek": {
-          "min": -21.1,
-          "p10": -9.6,
-          "median": 0.1,
-          "p90": 9.8,
-          "max": 21.3
+          "min": -20.8,
+          "p10": -8.7,
+          "median": 0.7,
+          "p90": 9.0,
+          "max": 20.8
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       }
     },
     {
@@ -294,40 +254,39 @@
       "name": "Coforge",
       "full": "Coforge Ltd",
       "ok": true,
-      "price": 1989.0,
-      "dayChangePct": 0.19,
+      "price": 1965.7,
+      "dayChangePct": -1.17,
       "week52High": 2021.2,
       "week52Low": 1008.1,
-      "return1y": 12.51,
-      "return3y": 81.59,
-      "return5y": 90.57,
-      "pe": 53.86,
-      "divYieldPct": 0.63,
-      "asOf": "2026-09-01",
+      "return1y": 12.03,
+      "return3y": 80.28,
+      "return5y": 87.45,
+      "pe": 40.3386,
+      "divYieldPct": 0.8,
+      "asOf": "2026-09-02",
       "scenario": {
         "day": {
-          "min": -6.7,
-          "p10": -3.0,
-          "median": 0.0,
-          "p90": 3.1,
-          "max": 6.8
+          "min": -9.4,
+          "p10": -2.4,
+          "median": 0.1,
+          "p90": 2.4,
+          "max": 11.8
         },
         "week": {
-          "min": -14.7,
+          "min": -21.8,
           "p10": -6.6,
-          "median": 0.2,
-          "p90": 7.1,
-          "max": 15.2
+          "median": 1.2,
+          "p90": 6.6,
+          "max": 21.3
         },
         "twoWeek": {
-          "min": -20.7,
-          "p10": -9.2,
-          "median": 0.5,
-          "p90": 10.2,
-          "max": 21.7
+          "min": -21.8,
+          "p10": -10.1,
+          "median": 2.3,
+          "p90": 9.9,
+          "max": 23.1
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       }
     },
     {
@@ -335,40 +294,39 @@
       "name": "Mphasis",
       "full": "Mphasis Ltd",
       "ok": true,
-      "price": 2505.5,
-      "dayChangePct": null,
-      "week52High": null,
-      "week52Low": null,
-      "return1y": -10.1,
-      "return3y": 1.0,
-      "return5y": -2.9,
-      "pe": 25.04,
-      "divYieldPct": null,
-      "asOf": "2026-09-01",
+      "price": 2480.0,
+      "dayChangePct": -1.02,
+      "week52High": 3037.2,
+      "week52Low": 2013.0,
+      "return1y": -14.56,
+      "return3y": 1.92,
+      "return5y": -16.0,
+      "pe": 24.807442,
+      "divYieldPct": 2.47,
+      "asOf": "2026-09-02",
       "scenario": {
         "day": {
-          "min": -5.3,
-          "p10": -2.5,
+          "min": -6.1,
+          "p10": -2.4,
           "median": -0.0,
           "p90": 2.4,
-          "max": 5.3
+          "max": 6.1
         },
         "week": {
-          "min": -12.0,
-          "p10": -5.6,
-          "median": -0.2,
+          "min": -15.9,
+          "p10": -5.5,
+          "median": -0.1,
           "p90": 5.2,
-          "max": 11.6
+          "max": 15.2
         },
         "twoWeek": {
-          "min": -17.1,
-          "p10": -8.1,
-          "median": -0.4,
-          "p90": 7.3,
-          "max": 16.3
+          "min": -16.4,
+          "p10": -8.4,
+          "median": -0.6,
+          "p90": 7.5,
+          "max": 18.9
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       }
     }
   ]
