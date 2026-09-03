@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IT Sector Ledger — Live</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
 
   :root{
     --bg:#F4F6F8; --surface:#FFFFFF; --surface-2:#EEF1F5;
     --ink:#10151C; --ink-soft:#46505C; --muted:#7C8896; --line:#DDE3EA;
     --accent:#1E5FD9; --accent-ink:#FFFFFF;
     --good:#1E7A4C; --bad:#C13B3B;
+    --series-2:#eb6834; --series-3:#1baf7a;
     --radius:12px;
-    --display:"Space Grotesk", "IBM Plex Sans", system-ui, sans-serif;
-    --sans:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --display:"Space Grotesk", "Noto Sans Devanagari", "IBM Plex Sans", system-ui, sans-serif;
+    --sans:"IBM Plex Sans", "Noto Sans Devanagari", "Segoe UI", system-ui, sans-serif;
     --mono:"IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
     color-scheme: light dark;
   }
@@ -24,6 +25,7 @@
       --ink:#EAF0F8; --ink-soft:#B7C2D1; --muted:#7C8AA0; --line:#26324A;
       --accent:#4C8DF6; --accent-ink:#071023;
       --good:#2CA58D; --bad:#E2585C;
+      --series-2:#d95926; --series-3:#199e70;
     }
   }
   :root[data-theme="dark"]{
@@ -31,19 +33,27 @@
     --ink:#EAF0F8; --ink-soft:#B7C2D1; --muted:#7C8AA0; --line:#26324A;
     --accent:#4C8DF6; --accent-ink:#071023;
     --good:#2CA58D; --bad:#E2585C;
+    --series-2:#d95926; --series-3:#199e70;
   }
 
   *{ box-sizing:border-box; }
   body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:15.5px; line-height:1.5; }
+  body[lang="hi"]{ line-height:1.7; }
   a{ color:var(--accent); }
   h1,h2,h3{ font-family:var(--display); font-weight:600; text-wrap:balance; margin:0; }
   code{ font-family:var(--mono); }
-  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px 80px; }
+  button{ font-family:inherit; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 24px 80px; }
 
-  .masthead{ max-width:1120px; margin:0 auto; padding:40px 24px 28px; }
+  .masthead{ max-width:1180px; margin:0 auto; padding:36px 24px 24px; display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap; }
+  .masthead-main{ flex:1; min-width:260px; }
   .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 10px; }
   .masthead h1{ font-size:clamp(1.9rem, 3.6vw, 2.6rem); letter-spacing:-.01em; }
-  .dek{ color:var(--ink-soft); font-size:1rem; margin-top:8px; max-width:60ch; }
+  .dek{ color:var(--ink-soft); font-size:1rem; margin-top:8px; max-width:64ch; }
+
+  .lang-toggle{ display:inline-flex; background:var(--surface-2); border:1px solid var(--line); border-radius:999px; padding:3px; gap:2px; height:fit-content; }
+  .lang-toggle button{ font-size:.82rem; padding:7px 14px; border-radius:999px; border:none; background:transparent; color:var(--ink-soft); cursor:pointer; }
+  .lang-toggle button.active{ background:var(--accent); color:var(--accent-ink); font-weight:600; }
 
   .live-badge{
     display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:6px 12px;
@@ -58,35 +68,40 @@
   section > .head h2{ font-size:1.25rem; }
   .subtle{ color:var(--muted); font-size:.85rem; }
 
-  /* ---- callout ---- */
-  .callout{
-    background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius);
-    padding:14px 18px; font-size:.92rem; color:var(--ink-soft); margin-bottom:18px;
+  /* ---- filter bar (shared by board + scenario) ---- */
+  .filterbar{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:20px 0; }
+  .filterbar select, .filterbar input{
+    font-family:inherit; font-size:.88rem; padding:9px 12px; border-radius:8px; border:1px solid var(--line);
+    background:var(--surface); color:var(--ink);
   }
+  .filterbar input{ flex:1; min-width:180px; }
+  .filterbar .count{ font-family:var(--mono); font-size:.78rem; color:var(--muted); white-space:nowrap; }
+  .watch-toggle{ display:inline-flex; align-items:center; gap:6px; font-size:.85rem; color:var(--ink-soft); cursor:pointer; white-space:nowrap; }
+  .watch-toggle input{ accent-color:var(--accent); width:15px; height:15px; }
+  .watch-star{ color:var(--accent); }
+
+  /* ---- callout ---- */
+  .callout{ background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius); padding:14px 18px; font-size:.92rem; color:var(--ink-soft); margin-bottom:18px; }
   .callout strong{ color:var(--ink); }
 
   /* ---- segmented toggle ---- */
   .segmented{ display:inline-flex; background:var(--surface-2); border:1px solid var(--line); border-radius:999px; padding:3px; gap:2px; }
-  .segmented button{
-    font-family:var(--mono); font-size:.82rem; padding:7px 16px; border-radius:999px; border:none;
-    background:transparent; color:var(--ink-soft); cursor:pointer;
-  }
+  .segmented button{ font-family:var(--mono); font-size:.82rem; padding:7px 16px; border-radius:999px; border:none; background:transparent; color:var(--ink-soft); cursor:pointer; }
   .segmented button.active{ background:var(--accent); color:var(--accent-ink); font-weight:600; }
 
-  /* ---- panels / cards ---- */
   .panel{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
 
   /* ---- scenario table ---- */
-  .scen-row{ display:grid; grid-template-columns:170px 110px 1fr 110px; gap:16px; align-items:center; padding:16px 18px; border-bottom:1px solid var(--line); }
+  .scen-row{ display:grid; grid-template-columns:190px 100px 1fr 100px; gap:16px; align-items:center; padding:14px 18px; border-bottom:1px solid var(--line); }
   .scen-row:last-child{ border-bottom:none; }
   .scen-name{ font-weight:600; }
   .scen-tick{ font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-top:2px; }
+  .scen-cat{ font-family:var(--mono); font-size:9.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--accent); display:block; margin-top:1px; }
   .scen-outcome{ font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:center; }
-  .scen-outcome .rupee{ font-size:1.02rem; font-weight:600; }
-  .scen-outcome .pct{ font-size:.76rem; display:block; margin-top:2px; }
+  .scen-outcome .amt{ font-size:.98rem; font-weight:600; }
+  .scen-outcome .pct{ font-size:.74rem; display:block; margin-top:2px; }
   .scen-outcome.worst .pct{ color:var(--bad); }
   .scen-outcome.best .pct{ color:var(--good); }
-  .scen-range{ min-width:0; }
   .range-track{ position:relative; height:20px; }
   .range-zero{ position:absolute; top:0; bottom:0; left:50%; width:1px; background:var(--line); }
   .range-whisker{ position:absolute; top:9px; height:2px; background:var(--muted); opacity:.5; border-radius:1px; }
@@ -96,29 +111,36 @@
   .range-median{ position:absolute; top:2px; width:2px; height:16px; background:var(--ink); border-radius:1px; }
   .range-caption{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:.7rem; color:var(--muted); margin-top:4px; }
 
-  @media (max-width:680px){
-    .scen-row{ grid-template-columns:1fr; gap:8px; }
-    .scen-outcome{ text-align:left; }
-  }
+  @media (max-width:680px){ .scen-row{ grid-template-columns:1fr; gap:8px; } .scen-outcome{ text-align:left; } }
 
   /* ---- board table ---- */
-  .table-scroll{ overflow-x:auto; }
-  table{ border-collapse:collapse; width:100%; min-width:880px; }
+  .table-scroll{ overflow-x:auto; max-height:640px; overflow-y:auto; }
+  table{ border-collapse:collapse; width:100%; min-width:1520px; }
   thead th{
+    position:sticky; top:0; background:var(--surface); z-index:1;
     text-align:left; font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase;
     color:var(--muted); font-weight:500; padding:12px 14px 8px; border-bottom:1px solid var(--line); white-space:nowrap;
   }
-  tbody td{ padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:middle; }
+  thead th.sortable{ cursor:pointer; user-select:none; }
+  thead th.sortable:hover{ color:var(--ink-soft); }
+  thead th.sortable.sorted{ color:var(--accent); }
+  thead th.sortable.sorted::after{ content:"\2009\25B2"; font-size:.9em; }
+  thead th.sortable.sorted[data-dir="desc"]::after{ content:"\2009\25BC"; }
+  th.th-star{ width:28px; }
+  .star-btn{ border:none; background:none; cursor:pointer; font-size:1rem; line-height:1; padding:2px; color:var(--muted); }
+  .star-btn.active{ color:var(--accent); }
+  tbody td{ padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:middle; }
   tbody tr:last-child td{ border-bottom:none; }
   tbody tr:hover{ background:var(--surface-2); }
   .co-name{ font-weight:600; }
   .co-tick{ font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-top:2px; }
+  .co-cat{ font-family:var(--mono); font-size:9.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--accent); display:block; margin-top:1px; }
   .price{ font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap; }
   .chg{ font-family:var(--mono); font-size:.8rem; font-variant-numeric:tabular-nums; }
   .chg.up{ color:var(--good); } .chg.down{ color:var(--bad); }
   .num{ font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; }
 
-  .barcell{ min-width:130px; }
+  .barcell{ min-width:120px; }
   .track{ display:flex; align-items:center; height:12px; width:100%; }
   .track .half{ flex:1; position:relative; height:5px; background:var(--line); border-radius:3px; }
   .track .half.negside{ margin-right:1px; display:flex; justify-content:flex-end; overflow:hidden; border-radius:3px 0 0 3px; }
@@ -132,11 +154,14 @@
   .chip.bullish{ background:var(--accent); color:var(--accent-ink); }
   .chip.neutral{ border:1px solid var(--line); color:var(--ink-soft); }
   .chip.mixed{ border:1px dashed var(--accent); color:var(--accent); }
+  .chip.pending{ border:1px solid var(--line); color:var(--muted); }
+  .chip.good{ background:var(--good); color:#fff; }
+  .chip.bad{ background:var(--bad); color:#fff; }
   .signal-src{ display:block; font-size:.72rem; color:var(--muted); margin-top:3px; font-family:var(--mono); }
-  .table-note{ font-size:.8rem; color:var(--muted); margin-top:10px; max-width:74ch; }
-  .fetch-error{ padding:14px; color:var(--bad); font-family:var(--mono); font-size:.85rem; }
+  .table-note{ font-size:.8rem; color:var(--muted); margin-top:10px; max-width:80ch; }
+  .fetch-error{ padding:14px; color:var(--muted); font-family:var(--mono); font-size:.85rem; }
 
-  /* ---- outlook: compact stat strip + phase chips ---- */
+  /* ---- outlook ---- */
   .stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
   .stat{ background:var(--surface); padding:16px; }
   .stat .label{ font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
@@ -151,7 +176,27 @@
 
   @media (max-width:720px){ .stats{ grid-template-columns:1fr 1fr; } .phases{ grid-template-columns:1fr; } }
 
-  /* ---- notes accordion (kept minimal) ---- */
+  /* ---- compare & correlate ---- */
+  .compare-layout{ display:grid; grid-template-columns:260px 1fr; gap:16px; align-items:start; }
+  .compare-picker{ padding:12px; }
+  .compare-picker input{ width:100%; font-family:inherit; font-size:.85rem; padding:8px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--ink); margin-bottom:8px; }
+  .compare-list{ max-height:320px; overflow-y:auto; }
+  .compare-row{ display:flex; align-items:center; gap:8px; padding:6px 4px; font-size:.85rem; border-radius:6px; cursor:pointer; }
+  .compare-row:hover{ background:var(--surface-2); }
+  .compare-row input[type=checkbox]{ flex:none; accent-color:var(--accent); }
+  .compare-row .crow-name{ font-weight:600; }
+  .compare-row .crow-tick{ font-family:var(--mono); font-size:10.5px; color:var(--muted); margin-left:4px; }
+  .compare-row.disabled{ opacity:.4; pointer-events:none; }
+  .compare-result{ padding:16px; min-height:220px; }
+  .compare-legend{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:10px; font-size:.82rem; color:var(--ink-soft); }
+  .swatch{ display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; }
+  .compare-chart{ position:relative; }
+  .compare-chart svg{ width:100%; height:240px; display:block; overflow:visible; cursor:crosshair; }
+  .compare-tooltip{ position:absolute; pointer-events:none; background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:.76rem; font-family:var(--mono); color:var(--ink-soft); box-shadow:0 4px 14px rgba(0,0,0,.16); white-space:nowrap; z-index:2; }
+  .compare-corr{ display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; font-family:var(--mono); font-size:.82rem; color:var(--ink-soft); }
+  .compare-corr b{ color:var(--ink); }
+  @media (max-width:720px){ .compare-layout{ grid-template-columns:1fr; } }
+
   details.card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:0 16px; margin-bottom:8px; }
   details.card summary{ cursor:pointer; list-style:none; padding:12px 0; font-weight:600; display:flex; align-items:center; gap:10px; font-size:.92rem; }
   details.card summary::-webkit-details-marker{ display:none; }
@@ -161,7 +206,7 @@
   details.card p{ margin:0 0 14px; max-width:70ch; color:var(--ink-soft); font-size:.88rem; }
 
   footer{ margin-top:48px; border-top:1px solid var(--line); padding-top:24px; }
-  .disclaimer{ font-size:.85rem; color:var(--ink-soft); max-width:78ch; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; margin-bottom:24px; }
+  .disclaimer{ font-size:.85rem; color:var(--ink-soft); max-width:80ch; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; margin-bottom:24px; }
   .disclaimer strong{ color:var(--ink); }
   .sources h3{ font-size:.82rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-family:var(--mono); font-weight:500; margin-bottom:8px; }
   .sources ul{ columns:2; gap:32px; padding-left:16px; margin:0; font-size:.82rem; }
@@ -170,75 +215,120 @@
   @media (max-width:720px){ .sources ul{ columns:1; } }
 </style>
 </head>
-<body>
+<body id="body-root">
 
 <div class="masthead">
-  <p class="eyebrow">Personal research desk</p>
-  <h1>IT Sector Ledger</h1>
-  <p class="dek">Nine NSE-listed Indian IT majors — live prices, and the real historical range of short-term outcomes, not a guess.</p>
-  <div class="live-badge"><span class="live-dot" id="live-dot"></span><span id="live-text">Loading latest prices…</span></div>
+  <div class="masthead-main">
+    <p class="eyebrow" data-i18n="eyebrow">Personal research desk</p>
+    <h1>IT Sector Ledger</h1>
+    <p class="dek" data-i18n="dek">100 IT-linked companies — Indian majors, ER&amp;D/OEM, global system integrators, and GCC-parent companies — with live prices and the real historical range of short-term outcomes, not a guess.</p>
+    <div class="live-badge"><span class="live-dot" id="live-dot"></span><span id="live-text">…</span></div>
+  </div>
+  <div class="lang-toggle" id="lang-toggle">
+    <button data-lang="en" class="active">EN</button>
+    <button data-lang="hi">हिं</button>
+  </div>
 </div>
 
 <div class="wrap">
 
+  <div class="filterbar">
+    <select id="category-filter">
+      <option value="all" data-i18n="cat_all">All categories</option>
+      <option value="Indian IT" data-i18n="cat_indian">Indian IT</option>
+      <option value="ER&amp;D / OEM" data-i18n="cat_erd">ER&amp;D / OEM</option>
+      <option value="GSI" data-i18n="cat_gsi">GSI</option>
+      <option value="GCC Parent" data-i18n="cat_gcc">GCC Parent</option>
+    </select>
+    <input type="text" id="search-box" data-i18n-placeholder="search_ph" placeholder="Search company or ticker…">
+    <label class="watch-toggle"><input type="checkbox" id="watchlist-filter"><span class="watch-star">★</span><span data-i18n="watchlist_only">Watchlist only</span></label>
+    <span class="count" id="result-count"></span>
+  </div>
+
   <section aria-label="Short-term scenario">
     <div class="head">
-      <h2>If you put ₹10,000 in today</h2>
+      <h2 data-i18n="scen_title">If you invest 10,000 today</h2>
       <div class="segmented" id="horizon-toggle">
-        <button data-h="day" class="active">Day</button>
-        <button data-h="week">Week</button>
-        <button data-h="twoWeek">2 Weeks</button>
+        <button data-h="day" class="active" data-i18n="h_day">Day</button>
+        <button data-h="week" data-i18n="h_week">Week</button>
+        <button data-h="twoWeek" data-i18n="h_2week">2 Weeks</button>
       </div>
     </div>
     <div class="callout">
-      <strong>No one can tell you what you'll get for sure.</strong> Short-term stock moves are driven by volatility, not predictable patterns — that's true for professional trading desks too. What follows is the <em>real historical range</em> of outcomes this holding period has actually produced over roughly the last two years: worst case, typical range (middle 80% of outcomes), and best case. It's a picture of risk, not a promise.
+      <strong data-i18n="callout_strong">No one can tell you what you'll get for sure.</strong>
+      <span data-i18n="callout_body"> Short-term stock moves are driven by volatility, not predictable patterns — that's true for professional trading desks too. What follows is the real historical range of outcomes this holding period has actually produced over roughly the last two years: worst case, typical range (middle 80% of outcomes), and best case. It's a picture of risk, not a promise.</span>
     </div>
-    <div class="panel" id="scenario-body">
-      <div class="fetch-error">Loading…</div>
-    </div>
+    <div class="panel" id="scenario-body"><div class="fetch-error">…</div></div>
     <p class="table-note" id="scenario-note"></p>
   </section>
 
   <section class="board" aria-label="Company comparison">
     <div class="head">
-      <h2>The board</h2>
-      <span class="subtle">1/3/5-year price history</span>
+      <h2 data-i18n="board_title">The board</h2>
+      <span class="subtle" data-i18n="board_sub">1/3/5-year price history, native currency per listing</span>
     </div>
     <div class="panel table-scroll">
       <table>
         <thead>
           <tr>
-            <th>Company</th><th>Price (₹)</th><th>1D</th>
-            <th>1-yr</th><th>3-yr</th><th>5-yr</th>
-            <th>P/E</th><th>Div&nbsp;yld</th><th>Sell-side</th>
+            <th class="th-star"></th>
+            <th class="sortable" data-sort="name" data-i18n="th_company">Company</th>
+            <th class="sortable" data-sort="price" data-i18n="th_price">Price</th>
+            <th class="sortable" data-sort="dayChangePct" data-i18n="th_1d">1D</th>
+            <th class="sortable" data-sort="return1y" data-i18n="th_1y">1-yr</th>
+            <th class="sortable" data-sort="return3y" data-i18n="th_3y">3-yr</th>
+            <th class="sortable" data-sort="return5y" data-i18n="th_5y">5-yr</th>
+            <th class="sortable" data-sort="pe">P/E</th>
+            <th class="sortable" data-sort="divYieldPct" data-i18n="th_div">Div&nbsp;yld</th>
+            <th class="sortable" data-sort="roePct" data-i18n="th_roe">ROE</th>
+            <th class="sortable" data-sort="netMarginPct" data-i18n="th_margin">Margin</th>
+            <th class="sortable" data-sort="debtEquity" data-i18n="th_de">D/E</th>
+            <th data-i18n="th_trend">Trend</th>
+            <th class="sortable" data-sort="rsi14" data-i18n="th_rsi">RSI</th>
+            <th data-i18n="th_signal">Sell-side</th>
           </tr>
         </thead>
-        <tbody id="board-body">
-          <tr><td colspan="9" class="fetch-error">Loading…</td></tr>
-        </tbody>
+        <tbody id="board-body"><tr><td colspan="15" class="fetch-error">…</td></tr></tbody>
       </table>
     </div>
-    <p class="table-note">Prices and returns refresh automatically (Yahoo Finance, ~15–20 min delayed). Sell-side signal is a manual snapshot from 1 Sep 2026, not live.</p>
+    <p class="table-note" data-i18n="board_note">Prices and returns refresh automatically (Yahoo Finance, ~15–20 min delayed). Sell-side signal is a manual snapshot for the original 9 Indian majors only, not live.</p>
+  </section>
+
+  <section class="compare" aria-label="Compare and correlate">
+    <div class="head">
+      <h2 data-i18n="compare_title">Compare &amp; correlate</h2>
+      <span class="subtle" data-i18n="compare_sub">Pick 2 or 3 companies to see their combined trend and how closely they move together</span>
+    </div>
+    <div class="compare-layout">
+      <div class="panel compare-picker">
+        <input type="text" id="compare-search" data-i18n-placeholder="compare_search_ph" placeholder="Search to add…">
+        <div class="compare-list" id="compare-list"></div>
+      </div>
+      <div class="panel compare-result" id="compare-result">
+        <div class="fetch-error" data-i18n="compare_empty">Pick 2 or 3 companies to compare.</div>
+      </div>
+    </div>
+    <p class="table-note" data-i18n="compare_note">Indexed to 100 at the start of the shared window, so different price levels and currencies are comparable by shape, not level. Correlation uses daily returns over the same window. This view updates once a day, separately from live prices.</p>
   </section>
 
   <section class="outlook" aria-label="Industry outlook">
-    <div class="head"><h2>Where the sector is headed</h2></div>
+    <div class="head"><h2 data-i18n="outlook_title">Where the sector is headed</h2></div>
     <div class="stats">
-      <div class="stat"><div class="label">Nifty IT, YTD</div><div class="value">−25%</div><div class="cap">Valuation reset on GenAI deflation fears</div></div>
-      <div class="stat"><div class="label">India IT spend '26</div><div class="value">$176B</div><div class="cap">Gartner — data-centre &amp; AI buildout</div></div>
-      <div class="stat"><div class="label">AI TAM by 2030</div><div class="value">$300–400B</div><div class="cap">Incremental opportunity, per sell-side</div></div>
-      <div class="stat"><div class="label">Sector call</div><div class="value">Neutral</div><div class="cap">Recovery pencilled in FY28–29</div></div>
+      <div class="stat"><div class="label" data-i18n="stat1_l">Nifty IT, YTD</div><div class="value">−25%</div><div class="cap" data-i18n="stat1_c">Valuation reset on GenAI deflation fears</div></div>
+      <div class="stat"><div class="label" data-i18n="stat2_l">India IT spend '26</div><div class="value">$176B</div><div class="cap" data-i18n="stat2_c">Gartner — data-centre &amp; AI buildout</div></div>
+      <div class="stat"><div class="label" data-i18n="stat3_l">AI TAM by 2030</div><div class="value">$300–400B</div><div class="cap" data-i18n="stat3_c">Incremental opportunity, per sell-side</div></div>
+      <div class="stat"><div class="label" data-i18n="stat4_l">Sector call</div><div class="value" data-i18n="stat4_v">Neutral</div><div class="cap" data-i18n="stat4_c">Recovery pencilled in FY28–29</div></div>
     </div>
     <div class="phases">
-      <div class="phase"><span class="tag">FY26</span><p>Deflation begins — AI pricing pressure on legacy services work.</p></div>
-      <div class="phase"><span class="tag">FY26–FY28</span><p>Peak disruption — legacy work shrinks faster than AI work scales.</p></div>
-      <div class="phase"><span class="tag">FY28–FY29</span><p>Recovery — AI revenue scales enough to flip headwind to tailwind.</p></div>
+      <div class="phase"><span class="tag">FY26</span><p data-i18n="phase1">Deflation begins — AI pricing pressure on legacy services work.</p></div>
+      <div class="phase"><span class="tag">FY26–FY28</span><p data-i18n="phase2">Peak disruption — legacy work shrinks faster than AI work scales.</p></div>
+      <div class="phase"><span class="tag">FY28–FY29</span><p data-i18n="phase3">Recovery — AI revenue scales enough to flip headwind to tailwind.</p></div>
     </div>
-    <p class="outlook-note">TCS is monetising AI fastest ($2.6B annualised run-rate); Wipro is still absorbing AI-infrastructure costs. The multi-year winners on the board below — Persistent, Coforge, Tech Mahindra — aren't the biggest AI books; they're mid-caps that found faster-growing niches.</p>
+    <p class="outlook-note" data-i18n="outlook_note">TCS is monetising AI fastest ($2.6B annualised run-rate); Wipro is still absorbing AI-infrastructure costs. The multi-year winners among the Indian majors — Persistent, Coforge, Tech Mahindra — aren't the biggest AI books; they're mid-caps that found faster-growing niches.</p>
   </section>
 
   <section class="notes" aria-label="Company notes">
-    <div class="head"><h2>Company notes</h2><span class="subtle">snapshot, 1 Sep 2026</span></div>
+    <div class="head"><h2 data-i18n="notes_title">Company notes</h2><span class="subtle" data-i18n="notes_sub">Indian IT majors only, snapshot 1 Sep 2026 · English only</span></div>
 
     <details class="card"><summary>TCS <span class="tag">Q1 FY27: rev +13.9% YoY, $2.6B AI run-rate</span></summary>
       <p>ICICI Direct: Buy, ₹3,140 target (+32%). Systematix: Hold, ₹2,350. The widest analyst split on the board — a bet on whether AI monetisation catches up to the price.</p></details>
@@ -252,7 +342,7 @@
     <details class="card"><summary>HCL Technologies <span class="tag">Q1 FY27: rev +14% YoY, margin +56bps</span></summary>
       <p>Systematix: Hold, ₹1,180. Smaller AI book than TCS ($684M annualised) but the only large-cap here still up over both 3 and 5 years.</p></details>
 
-    <details class="card"><summary>Tech Mahindra <span class="tag">Best 1&amp;3-yr return on the board</span></summary>
+    <details class="card"><summary>Tech Mahindra <span class="tag">Best 1&amp;3-yr return among the Indian majors</span></summary>
       <p>Both ICICI Direct and Systematix rate it Buy — Systematix target ₹1,740, calling it more positive than sector peers.</p></details>
 
     <details class="card"><summary>LTIMindtree <span class="tag">Down 1/3/5-yr, but a re-rating pick</span></summary>
@@ -264,18 +354,19 @@
     <details class="card"><summary>Coforge <span class="tag">+82% 3-yr, richest multiple at 54x</span></summary>
       <p>ICICI Direct: Buy. Second-best momentum story on the board, but priced for it.</p></details>
 
-    <details class="card"><summary>Mphasis <span class="tag">Flattest name on the board</span></summary>
+    <details class="card"><summary>Mphasis <span class="tag">Flattest of the Indian majors</span></summary>
       <p>ICICI Direct: Buy. Roughly flat over 3 years, slightly down over 5 and 1.</p></details>
   </section>
 
   <footer>
     <div class="disclaimer">
-      <strong>What this is, and isn't.</strong> Personal research aid, not investment advice — no trade execution, no distribution to others. The "₹10,000" section shows real historical statistics, not predictions; past ranges are not guarantees of future ones. Live prices are unofficial and ~15–20 min delayed; sell-side notes are a manual snapshot from 1 Sep 2026. Publishing predictive analysis to others or facilitating trades on it are separately regulated activities in India (SEBI Research Analyst / Investment Adviser rules) — this dashboard does neither.
+      <strong data-i18n="disc_strong">What this is, and isn't.</strong>
+      <span data-i18n="disc_body"> Personal research aid, not investment advice — no trade execution, no distribution to others. The "10,000" section shows real historical statistics, not predictions; past ranges are not guarantees of future ones. Live prices are unofficial, ~15–20 min delayed, and shown in each company's own listing currency (no FX conversion). Sell-side notes cover only the original 9 Indian majors and are a manual snapshot from 1 Sep 2026, not live. Publishing predictive analysis to others or facilitating trades on it are separately regulated activities in India (SEBI Research Analyst / Investment Adviser rules) — this dashboard does neither.</span>
     </div>
     <div class="sources">
-      <h3>Sources</h3>
+      <h3 data-i18n="sources_title">Sources</h3>
       <ul>
-        <li>Live prices &amp; historical ranges: Yahoo Finance, via <code>yfinance</code></li>
+        <li data-i18n="src_yahoo">Live prices &amp; historical ranges: Yahoo Finance, via <code>yfinance</code></li>
         <li><a href="https://easternherald.com/2026/08/28/india-it-sector-q1-fy27-tcs-infosys-wipro-hcl-tech/">Eastern Herald — India IT Sector Q1 FY27</a></li>
         <li><a href="https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q1-fy-2027">TCS — Q1 FY27 results press release</a></li>
         <li><a href="https://www.icicidirect.com/research/equity/finace/indian-it-sector-analysis-2026-valuation-growth-ai-risks-and-top-picks">ICICI Direct — Indian IT Sector Analysis 2026</a></li>
@@ -288,6 +379,120 @@
 </div>
 
 <script>
+// ============================== i18n ==============================
+const I18N = {
+  en: {
+    eyebrow: "Personal research desk",
+    dek: "100 IT-linked companies — Indian majors, ER&D/OEM, global system integrators, and GCC-parent companies — with live prices and the real historical range of short-term outcomes, not a guess.",
+    cat_all: "All categories", cat_indian: "Indian IT", cat_erd: "ER&D / OEM", cat_gsi: "GSI", cat_gcc: "GCC Parent",
+    search_ph: "Search company or ticker…",
+    watchlist_only: "Watchlist only",
+    scen_title: "If you invest 10,000 today", h_day: "Day", h_week: "Week", h_2week: "2 Weeks",
+    callout_strong: "No one can tell you what you'll get for sure.",
+    callout_body: " Short-term stock moves are driven by volatility, not predictable patterns — that's true for professional trading desks too. What follows is the real historical range of outcomes this holding period has actually produced over roughly the last two years: worst case, typical range (middle 80% of outcomes), and best case. It's a picture of risk, not a promise.",
+    worst: "worst", best: "best", typical: "typical range",
+    scen_note_placeholder: "Pending first live fetch for most of these tickers — real historical statistics will appear once the workflow has run.",
+    scen_note_real: (h, n) => `Based on real historical ${h} returns over the trailing ~${n} trading days. Amounts are 10,000 units of each company's own listing currency — not converted between currencies.`,
+    board_title: "The board", board_sub: "1/3/5-year price history, native currency per listing — click a column to sort",
+    th_company: "Company", th_price: "Price", th_1d: "1D", th_1y: "1-yr", th_3y: "3-yr", th_5y: "5-yr", th_div: "Div yld", th_signal: "Sell-side",
+    th_roe: "ROE", th_margin: "Margin", th_de: "D/E", th_trend: "Trend", th_rsi: "RSI",
+    trend_up: "Above MA", trend_down: "Below MA", trend_mixed: "Mixed",
+    board_note: "Prices and returns refresh automatically (Yahoo Finance, ~15–20 min delayed). ROE/margin/D-E coverage varies by market and may be missing for some tickers. Trend compares price to its 50/200-day average; RSI is a 14-day momentum reading — both are descriptive, not a buy/sell signal. Sell-side signal is a manual snapshot for the original 9 Indian majors only, not live.",
+    pending: "Pending first fetch", no_data: "No data this run",
+    compare_title: "Compare & correlate", compare_sub: "Pick 2 or 3 companies to see their combined trend and how closely they move together",
+    compare_search_ph: "Search to add…", compare_empty: "Pick 2 or 3 companies to compare.",
+    compare_loading: "Loading history…",
+    compare_pending: "No history data yet for these companies — the daily history workflow hasn't run in this repo, or hasn't reached them yet.",
+    compare_partial: (tickers) => `No history yet for: ${tickers}. Showing the rest.`,
+    compare_note: "Indexed to 100 at the start of the shared window, so different price levels and currencies are comparable by shape, not level. Correlation uses daily returns over the same window. This view updates once a day, separately from live prices.",
+    outlook_title: "Where the sector is headed",
+    stat1_l: "Nifty IT, YTD", stat1_c: "Valuation reset on GenAI deflation fears",
+    stat2_l: "India IT spend '26", stat2_c: "Gartner — data-centre & AI buildout",
+    stat3_l: "AI TAM by 2030", stat3_c: "Incremental opportunity, per sell-side",
+    stat4_l: "Sector call", stat4_v: "Neutral", stat4_c: "Recovery pencilled in FY28–29",
+    phase1: "Deflation begins — AI pricing pressure on legacy services work.",
+    phase2: "Peak disruption — legacy work shrinks faster than AI work scales.",
+    phase3: "Recovery — AI revenue scales enough to flip headwind to tailwind.",
+    outlook_note: "TCS is monetising AI fastest ($2.6B annualised run-rate); Wipro is still absorbing AI-infrastructure costs. The multi-year winners among the Indian majors — Persistent, Coforge, Tech Mahindra — aren't the biggest AI books; they're mid-caps that found faster-growing niches.",
+    notes_title: "Company notes", notes_sub: "Indian IT majors only, snapshot 1 Sep 2026 · English only",
+    disc_strong: "What this is, and isn't.",
+    disc_body: " Personal research aid, not investment advice — no trade execution, no distribution to others. The \"10,000\" section shows real historical statistics, not predictions; past ranges are not guarantees of future ones. Live prices are unofficial, ~15–20 min delayed, and shown in each company's own listing currency (no FX conversion). Sell-side notes cover only the original 9 Indian majors and are a manual snapshot from 1 Sep 2026, not live. Publishing predictive analysis to others or facilitating trades on it are separately regulated activities in India (SEBI Research Analyst / Investment Adviser rules) — this dashboard does neither.",
+    sources_title: "Sources", src_yahoo: "Live prices & historical ranges: Yahoo Finance, via yfinance",
+    live_prefix: "Live as of", live_suffix: "· Yahoo Finance, ~15–20 min delayed",
+    live_loading: "Loading latest prices…", live_fail: "Couldn't load data/latest.json yet.",
+    results: (n, total) => `${n} of ${total} companies`,
+    hl_day: "daily", hl_week: "weekly", hl_twoWeek: "10-trading-day",
+  },
+  hi: {
+    eyebrow: "व्यक्तिगत रिसर्च डेस्क",
+    dek: "आईटी से जुड़ी 100 कंपनियां — भारतीय दिग्गज, ER&D/OEM, वैश्विक सिस्टम इंटीग्रेटर्स और GCC-पैरेंट कंपनियां — लाइव कीमतों और अल्पकालिक परिणामों की वास्तविक ऐतिहासिक रेंज के साथ, अनुमान नहीं।",
+    cat_all: "सभी श्रेणियां", cat_indian: "भारतीय आईटी", cat_erd: "ER&D / OEM", cat_gsi: "GSI", cat_gcc: "GCC पैरेंट",
+    search_ph: "कंपनी या टिकर खोजें…",
+    watchlist_only: "केवल वॉचलिस्ट",
+    scen_title: "अगर आप आज 10,000 निवेश करें", h_day: "दिन", h_week: "सप्ताह", h_2week: "2 सप्ताह",
+    callout_strong: "कोई भी आपको यह पक्के तौर पर नहीं बता सकता कि आपको क्या मिलेगा।",
+    callout_body: " अल्पकालिक शेयर मूल्य में उतार-चढ़ाव अस्थिरता (volatility) से तय होता है, किसी अनुमानित पैटर्न से नहीं — यह पेशेवर ट्रेडिंग डेस्क के लिए भी सच है। नीचे दिखाई गई जानकारी इस होल्डिंग अवधि में पिछले लगभग दो वर्षों में वास्तव में सामने आए परिणामों की असली ऐतिहासिक रेंज है: सबसे खराब स्थिति, सामान्य रेंज (80% परिणाम), और सबसे अच्छी स्थिति। यह जोखिम की एक तस्वीर है, वादा नहीं।",
+    worst: "सबसे खराब", best: "सबसे अच्छा", typical: "सामान्य रेंज",
+    scen_note_placeholder: "अधिकतर टिकरों के लिए पहला लाइव डेटा अभी बाकी है — वर्कफ़्लो चलने के बाद वास्तविक ऐतिहासिक आंकड़े दिखेंगे।",
+    scen_note_real: (h, n) => `पिछले लगभग ${n} ट्रेडिंग दिनों के वास्तविक ऐतिहासिक ${h} रिटर्न पर आधारित। राशि प्रत्येक कंपनी की अपनी लिस्टिंग मुद्रा में 10,000 इकाई है — मुद्राओं के बीच रूपांतरित नहीं की गई है।`,
+    board_title: "बोर्ड", board_sub: "1/3/5-वर्ष मूल्य इतिहास, प्रत्येक की अपनी मुद्रा में — सॉर्ट करने के लिए कॉलम पर क्लिक करें",
+    th_company: "कंपनी", th_price: "कीमत", th_1d: "1 दिन", th_1y: "1-वर्ष", th_3y: "3-वर्ष", th_5y: "5-वर्ष", th_div: "डिविडेंड यील्ड", th_signal: "विश्लेषक राय",
+    th_roe: "ROE", th_margin: "मार्जिन", th_de: "D/E", th_trend: "ट्रेंड", th_rsi: "RSI",
+    trend_up: "MA से ऊपर", trend_down: "MA से नीचे", trend_mixed: "मिश्रित",
+    board_note: "कीमतें और रिटर्न स्वतः अपडेट होते हैं (Yahoo Finance, ~15–20 मिनट विलंबित)। ROE/मार्जिन/D-E की उपलब्धता बाज़ार के अनुसार अलग-अलग होती है और कुछ टिकरों के लिए अनुपलब्ध हो सकती है। ट्रेंड कीमत की तुलना उसके 50/200-दिन के औसत से करता है; RSI एक 14-दिन का मोमेंटम रीडिंग है — दोनों ही वर्णनात्मक हैं, खरीद/बिक्री का संकेत नहीं। विश्लेषक राय केवल मूल 9 भारतीय दिग्गज कंपनियों के लिए एक मैन्युअल स्नैपशॉट है, लाइव नहीं।",
+    pending: "पहला डेटा बाकी", no_data: "इस बार डेटा नहीं",
+    compare_title: "तुलना और सहसंबंध", compare_sub: "2 या 3 कंपनियां चुनें और देखें कि वे एक साथ कैसा प्रदर्शन करती हैं और कितनी निकटता से चलती हैं",
+    compare_search_ph: "जोड़ने के लिए खोजें…", compare_empty: "तुलना के लिए 2 या 3 कंपनियां चुनें।",
+    compare_loading: "इतिहास लोड हो रहा है…",
+    compare_pending: "इन कंपनियों के लिए अभी तक ऐतिहासिक डेटा नहीं है — या तो दैनिक हिस्ट्री वर्कफ़्लो इस रिपॉज़िटरी में नहीं चला है, या अभी तक इन तक नहीं पहुंचा है।",
+    compare_partial: (tickers) => `इनके लिए अभी इतिहास नहीं है: ${tickers}. बाकी दिखाए जा रहे हैं।`,
+    compare_note: "साझा अवधि की शुरुआत में 100 पर इंडेक्स किया गया है, ताकि अलग-अलग कीमत स्तर और मुद्राएं आकार के आधार पर तुलनीय हों, स्तर के आधार पर नहीं। सहसंबंध समान अवधि के दैनिक रिटर्न का उपयोग करता है। यह दृश्य लाइव कीमतों से अलग, दिन में एक बार अपडेट होता है।",
+    outlook_title: "सेक्टर किस दिशा में जा रहा है",
+    stat1_l: "निफ्टी आईटी, YTD", stat1_c: "GenAI डिफ्लेशन आशंकाओं पर वैल्यूएशन में सुधार",
+    stat2_l: "भारत आईटी खर्च '26", stat2_c: "Gartner — डेटा-सेंटर और AI निर्माण",
+    stat3_l: "2030 तक AI अवसर", stat3_c: "विश्लेषकों के अनुसार अतिरिक्त अवसर",
+    stat4_l: "सेक्टर राय", stat4_v: "न्यूट्रल", stat4_c: "FY28–29 में रिकवरी की उम्मीद",
+    phase1: "डिफ्लेशन शुरू — पुराने सेवा कार्य पर AI मूल्य-दबाव।",
+    phase2: "अधिकतम व्यवधान — पुराना काम AI कार्य से तेज़ी से घटता है।",
+    phase3: "रिकवरी — AI राजस्व इतना बढ़ जाता है कि नुकसान फायदे में बदल जाता है।",
+    outlook_note: "TCS सबसे तेज़ी से AI का मुद्रीकरण कर रहा है ($2.6B वार्षिक दर); Wipro अभी भी AI-इंफ्रास्ट्रक्चर लागत वहन कर रहा है। भारतीय दिग्गजों में बहु-वर्षीय विजेता — Persistent, Coforge, Tech Mahindra — सबसे बड़ी AI बुक वाले नहीं हैं; ये मिड-कैप हैं जिन्हें तेज़ी से बढ़ते niche मिले।",
+    notes_title: "कंपनी नोट्स", notes_sub: "केवल भारतीय आईटी दिग्गज, स्नैपशॉट 1 सितंबर 2026 · केवल अंग्रेज़ी में",
+    disc_strong: "यह क्या है, और क्या नहीं।",
+    disc_body: " व्यक्तिगत रिसर्च टूल, निवेश सलाह नहीं — न कोई ट्रेड निष्पादन, न किसी और को वितरण। \"10,000\" सेक्शन वास्तविक ऐतिहासिक आंकड़े दिखाता है, भविष्यवाणी नहीं; पिछली रेंज भविष्य की गारंटी नहीं है। लाइव कीमतें अनौपचारिक हैं, ~15–20 मिनट विलंबित हैं, और हर कंपनी की अपनी लिस्टिंग मुद्रा में दिखाई गई हैं (कोई FX रूपांतरण नहीं)। विश्लेषक नोट्स केवल मूल 9 भारतीय दिग्गजों को कवर करते हैं और 1 सितंबर 2026 का एक मैन्युअल स्नैपशॉट हैं, लाइव नहीं। दूसरों को भविष्यवाणी विश्लेषण प्रकाशित करना या उसके आधार पर ट्रेड कराना भारत में अलग से विनियमित गतिविधियां हैं (SEBI रिसर्च एनालिस्ट / इन्वेस्टमेंट एडवाइज़र नियम) — यह डैशबोर्ड दोनों में से कोई नहीं करता।",
+    sources_title: "स्रोत", src_yahoo: "लाइव कीमतें और ऐतिहासिक रेंज: Yahoo Finance, yfinance के माध्यम से",
+    live_prefix: "लाइव, यह डेटा", live_suffix: "· Yahoo Finance, ~15–20 मिनट विलंबित",
+    live_loading: "नवीनतम कीमतें लोड हो रही हैं…", live_fail: "data/latest.json अभी लोड नहीं हुआ।",
+    results: (n, total) => `${total} में से ${n} कंपनियां`,
+    hl_day: "दैनिक", hl_week: "साप्ताहिक", hl_twoWeek: "10-ट्रेडिंग-दिन",
+  }
+};
+let lang = localStorage.getItem("ledger-lang") || "en";
+function t(key, ...args) {
+  const v = (I18N[lang] && I18N[lang][key] !== undefined) ? I18N[lang][key] : I18N.en[key];
+  return typeof v === "function" ? v(...args) : v;
+}
+function applyStaticI18n() {
+  document.getElementById("body-root").setAttribute("lang", lang);
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
+  document.querySelectorAll("#lang-toggle button").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+}
+
+// ============================== data + currency ==============================
+const CCY_SYMBOL = { INR: "₹", USD: "$", EUR: "€", GBP: "£", JPY: "¥" };
+function fmtAmount(v, ccy) {
+  const sym = CCY_SYMBOL[ccy] || (ccy ? ccy + " " : "");
+  return sym + Math.round(v).toLocaleString("en-IN");
+}
+function fmtPrice(v, ccy) {
+  const sym = CCY_SYMBOL[ccy] || (ccy ? ccy + " " : "");
+  return sym + v.toLocaleString("en-IN", { minimumFractionDigits: 2 });
+}
+function fmtPct(v) {
+  if (v === null || v === undefined || Number.isNaN(v)) return "—";
+  return `${v > 0 ? "+" : ""}${v.toFixed(1)}%`;
+}
+
 const META = {
   "TCS.NS":        { signal: "mixed",   label: "Mixed",   src: "ICICI: Buy ₹3,140 · Systematix: Hold ₹2,350" },
   "INFY.NS":       { signal: "neutral", label: "Neutral", src: "Systematix: Hold ₹1,150" },
@@ -305,13 +510,52 @@ const SCEN_DOMAIN = { day: 10, week: 20, twoWeek: 35 };
 const INVEST = 10000;
 let currentHorizon = "day";
 let latestData = null;
+let currentCategory = "all";
+let currentSearch = "";
+let watchlistOnly = false;
+let sortKey = null;
+let sortDir = 1;
 
-function fmtPct(v) {
-  if (v === null || v === undefined || Number.isNaN(v)) return "—";
-  return `${v > 0 ? "+" : ""}${v.toFixed(1)}%`;
+// ============================== watchlist (per-browser, localStorage) ==============================
+const WATCHLIST_KEY = "ledger-watchlist";
+function loadWatchlist() {
+  try { return new Set(JSON.parse(localStorage.getItem(WATCHLIST_KEY) || "[]")); }
+  catch { return new Set(); }
 }
-function fmtRupee(v) {
-  return "₹" + Math.round(v).toLocaleString("en-IN");
+let watchlist = loadWatchlist();
+function isWatchlisted(ticker) { return watchlist.has(ticker); }
+function toggleWatchlist(ticker) {
+  if (watchlist.has(ticker)) watchlist.delete(ticker); else watchlist.add(ticker);
+  try { localStorage.setItem(WATCHLIST_KEY, JSON.stringify([...watchlist])); } catch {}
+}
+
+function visibleCompanies() {
+  if (!latestData) return [];
+  return latestData.companies.filter(c => {
+    if (currentCategory !== "all" && c.category !== currentCategory) return false;
+    if (watchlistOnly && !isWatchlisted(c.ticker)) return false;
+    if (currentSearch) {
+      const q = currentSearch.toLowerCase();
+      if (!c.name.toLowerCase().includes(q) && !c.ticker.toLowerCase().includes(q) && !(c.full || "").toLowerCase().includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function sortedCompanies(list) {
+  if (!sortKey) return list;
+  return [...list].sort((a, b) => {
+    if (sortKey === "name") {
+      return a.name.toLowerCase().localeCompare(b.name.toLowerCase()) * sortDir;
+    }
+    const av = a[sortKey], bv = b[sortKey];
+    const aMissing = av === null || av === undefined || Number.isNaN(av) || !a.ok;
+    const bMissing = bv === null || bv === undefined || Number.isNaN(bv) || !b.ok;
+    if (aMissing && bMissing) return 0;
+    if (aMissing) return 1;   // rows with no data always sort last
+    if (bMissing) return -1;
+    return (av - bv) * sortDir;
+  });
 }
 
 function returnBarCell(value, domain) {
@@ -326,41 +570,75 @@ function returnBarCell(value, domain) {
   return `<div class="track">${side}</div><div class="barlabel ${value < 0 ? "down" : "up"}">${fmtPct(value)}${clipped ? ' <span class="clip">››</span>' : ""}</div>`;
 }
 
-function renderBoard(data) {
+function fmtFund(v, suffix) {
+  return (v === null || v === undefined || Number.isNaN(v)) ? "—" : v.toFixed(2) + suffix;
+}
+
+function trendBadge(c) {
+  if (c.ma50 == null || c.ma200 == null || c.price == null) return `<span class="chip pending">—</span>`;
+  const aboveBoth = c.price > c.ma50 && c.price > c.ma200;
+  const belowBoth = c.price < c.ma50 && c.price < c.ma200;
+  const cls = aboveBoth ? "good" : belowBoth ? "bad" : "neutral";
+  const label = aboveBoth ? t("trend_up") : belowBoth ? t("trend_down") : t("trend_mixed");
+  return `<span class="chip ${cls}">${label}</span>`;
+}
+
+function starCell(ticker) {
+  const active = isWatchlisted(ticker);
+  return `<button class="star-btn ${active ? "active" : ""}" data-ticker="${ticker}" title="Watchlist" aria-pressed="${active}">${active ? "★" : "☆"}</button>`;
+}
+
+function renderBoard(list) {
   const body = document.getElementById("board-body");
-  body.innerHTML = data.companies.map(c => {
-    const meta = META[c.ticker] || { signal: "neutral", label: "—", src: "" };
+  if (list.length === 0) {
+    body.innerHTML = `<tr><td colspan="15" class="fetch-error">—</td></tr>`;
+    return;
+  }
+  body.innerHTML = list.map(c => {
+    const meta = META[c.ticker] || null;
     if (!c.ok) {
-      return `<tr><td><span class="co-name">${c.name}</span><span class="co-tick">${c.ticker}</span></td><td colspan="8" class="fetch-error">No data this run${c.error ? ": " + c.error : ""}</td></tr>`;
+      const msg = c.error === "pending first live fetch" ? t("pending") : t("no_data");
+      return `<tr><td class="star-cell">${starCell(c.ticker)}</td><td><span class="co-name">${c.name}</span><span class="co-tick">${c.ticker}</span><span class="co-cat">${c.category || ""}</span></td><td colspan="13" class="fetch-error">${msg}</td></tr>`;
     }
     const chgCls = c.dayChangePct > 0 ? "up" : c.dayChangePct < 0 ? "down" : "";
+    const signalCell = meta
+      ? `<span class="chip ${meta.signal}">${meta.label}</span><span class="signal-src">${meta.src}</span>`
+      : `<span class="chip pending">—</span>`;
     return `
       <tr>
-        <td><span class="co-name">${c.name}</span><span class="co-tick">NSE: ${c.ticker.replace(".NS", "")}</span></td>
-        <td class="price">${c.price?.toLocaleString("en-IN", { minimumFractionDigits: 2 }) ?? "—"}</td>
+        <td class="star-cell">${starCell(c.ticker)}</td>
+        <td><span class="co-name">${c.name}</span><span class="co-tick">${c.ticker}</span><span class="co-cat">${c.category || ""}</span></td>
+        <td class="price">${c.price !== undefined ? fmtPrice(c.price, c.ccy) : "—"}</td>
         <td class="chg ${chgCls}">${fmtPct(c.dayChangePct)}</td>
         <td class="barcell">${returnBarCell(c.return1y, RETURN_DOMAIN.return1y)}</td>
         <td class="barcell">${returnBarCell(c.return3y, RETURN_DOMAIN.return3y)}</td>
         <td class="barcell">${returnBarCell(c.return5y, RETURN_DOMAIN.return5y)}</td>
         <td class="num">${c.pe ? c.pe.toFixed(2) : "—"}</td>
         <td class="num">${c.divYieldPct ? c.divYieldPct.toFixed(2) + "%" : "—"}</td>
-        <td><span class="chip ${meta.signal}">${meta.label}</span><span class="signal-src">${meta.src}</span></td>
+        <td class="num">${fmtFund(c.roePct, "%")}</td>
+        <td class="num">${fmtFund(c.netMarginPct, "%")}</td>
+        <td class="num">${fmtFund(c.debtEquity, "x")}</td>
+        <td>${trendBadge(c)}</td>
+        <td class="num">${fmtFund(c.rsi14, "")}</td>
+        <td>${signalCell}</td>
       </tr>`;
   }).join("");
 }
 
-function renderScenario(data, horizon) {
+function renderScenario(list, horizon) {
   const domain = SCEN_DOMAIN[horizon];
   const body = document.getElementById("scenario-body");
   const note = document.getElementById("scenario-note");
-  const withScenario = data.companies.filter(c => c.ok && c.scenario && c.scenario[horizon]);
-  const isPlaceholder = data.companies.some(c => c.scenario && c.scenario.placeholder);
+  const withScenario = list.filter(c => c.ok && c.scenario && c.scenario[horizon]);
+  const anyPending = list.some(c => !c.ok);
 
   if (withScenario.length === 0) {
-    body.innerHTML = `<div class="fetch-error">No scenario data yet — this fills in once the workflow has run at least once with the updated script.</div>`;
+    body.innerHTML = `<div class="fetch-error">${t("scen_note_placeholder")}</div>`;
     note.textContent = "";
     return;
   }
+
+  const horizonLabel = t(horizon === "day" ? "hl_day" : horizon === "week" ? "hl_week" : "hl_twoWeek");
 
   body.innerHTML = withScenario.map(c => {
     const s = c.scenario[horizon];
@@ -374,14 +652,13 @@ function renderScenario(data, horizon) {
       boxes += `<div class="range-box neg" style="left:${p10}%; width:${zero - p10}%"></div>`;
       boxes += `<div class="range-box pos" style="left:${zero}%; width:${p90 - zero}%"></div>`;
     } else {
-      const cls = s.median < 0 ? "neg" : "pos";
-      boxes += `<div class="range-box ${cls}" style="left:${p10}%; width:${p90 - p10}%"></div>`;
+      boxes += `<div class="range-box ${s.median < 0 ? "neg" : "pos"}" style="left:${p10}%; width:${p90 - p10}%"></div>`;
     }
 
     return `
       <div class="scen-row">
-        <div><span class="scen-name">${c.name}</span><span class="scen-tick">NSE: ${c.ticker.replace(".NS", "")}</span></div>
-        <div class="scen-outcome worst"><span class="rupee">${fmtRupee(INVEST * (1 + s.min / 100))}</span><span class="pct">${fmtPct(s.min)} worst</span></div>
+        <div><span class="scen-name">${c.name}</span><span class="scen-tick">${c.ticker}</span><span class="scen-cat">${c.category || ""}</span></div>
+        <div class="scen-outcome worst"><span class="amt">${fmtAmount(INVEST * (1 + s.min / 100), c.ccy)}</span><span class="pct">${fmtPct(s.min)} ${t("worst")}</span></div>
         <div class="scen-range">
           <div class="range-track">
             <div class="range-whisker" style="left:${whiskerLeft}%; width:${whiskerRight - whiskerLeft}%"></div>
@@ -389,22 +666,32 @@ function renderScenario(data, horizon) {
             <div class="range-zero"></div>
             <div class="range-median" style="left:${med}%"></div>
           </div>
-          <div class="range-caption"><span>${fmtRupee(INVEST * (1 + s.p10 / 100))}</span><span>typical range</span><span>${fmtRupee(INVEST * (1 + s.p90 / 100))}</span></div>
+          <div class="range-caption"><span>${fmtAmount(INVEST * (1 + s.p10 / 100), c.ccy)}</span><span>${t("typical")}</span><span>${fmtAmount(INVEST * (1 + s.p90 / 100), c.ccy)}</span></div>
         </div>
-        <div class="scen-outcome best"><span class="rupee">${fmtRupee(INVEST * (1 + s.max / 100))}</span><span class="pct">${fmtPct(s.max)} best</span></div>
+        <div class="scen-outcome best"><span class="amt">${fmtAmount(INVEST * (1 + s.max / 100), c.ccy)}</span><span class="pct">${fmtPct(s.max)} ${t("best")}</span></div>
       </div>`;
   }).join("");
 
   const sample = withScenario[0]?.scenario?.sampleDays;
-  note.textContent = isPlaceholder
-    ? "Seed values shown are modeled from assumed volatility, not real history — replaced by actual historical statistics on the first GitHub Actions run."
-    : `Based on real historical ${horizon === "day" ? "daily" : horizon === "week" ? "weekly" : "10-trading-day"} returns over the trailing ~${sample ?? 500} trading days. Figures scale linearly to any amount — for ₹1,00,000, multiply by 10.`;
+  note.textContent = anyPending
+    ? t("scen_note_real", horizonLabel, sample ?? 500) + " " + t("scen_note_placeholder")
+    : t("scen_note_real", horizonLabel, sample ?? 500);
 }
 
 function renderAll() {
   if (!latestData) return;
-  renderBoard(latestData);
-  renderScenario(latestData, currentHorizon);
+  const list = sortedCompanies(visibleCompanies());
+  document.getElementById("result-count").textContent = t("results", list.length, latestData.companies.length);
+  renderBoard(list);
+  renderScenario(list, currentHorizon);
+}
+
+function updateSortIndicators() {
+  document.querySelectorAll(".board th.sortable").forEach(th => {
+    const active = th.dataset.sort === sortKey;
+    th.classList.toggle("sorted", active);
+    if (active) th.dataset.dir = sortDir === 1 ? "asc" : "desc"; else th.removeAttribute("data-dir");
+  });
 }
 
 document.getElementById("horizon-toggle").addEventListener("click", (e) => {
@@ -412,12 +699,224 @@ document.getElementById("horizon-toggle").addEventListener("click", (e) => {
   if (!btn) return;
   currentHorizon = btn.dataset.h;
   document.querySelectorAll("#horizon-toggle button").forEach(b => b.classList.toggle("active", b === btn));
-  renderScenario(latestData, currentHorizon);
+  renderScenario(sortedCompanies(visibleCompanies()), currentHorizon);
+});
+document.getElementById("category-filter").addEventListener("change", (e) => { currentCategory = e.target.value; renderAll(); });
+document.getElementById("search-box").addEventListener("input", (e) => { currentSearch = e.target.value; renderAll(); });
+document.getElementById("watchlist-filter").addEventListener("change", (e) => { watchlistOnly = e.target.checked; renderAll(); });
+document.querySelector(".board thead").addEventListener("click", (e) => {
+  const th = e.target.closest("th.sortable");
+  if (!th) return;
+  const key = th.dataset.sort;
+  if (sortKey === key) { sortDir *= -1; } else { sortKey = key; sortDir = 1; }
+  updateSortIndicators();
+  renderAll();
+});
+document.getElementById("board-body").addEventListener("click", (e) => {
+  const btn = e.target.closest(".star-btn");
+  if (!btn) return;
+  toggleWatchlist(btn.dataset.ticker);
+  renderAll();
+});
+document.getElementById("lang-toggle").addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-lang]");
+  if (!btn) return;
+  lang = btn.dataset.lang;
+  localStorage.setItem("ledger-lang", lang);
+  applyStaticI18n();
+  renderAll();
+  renderCompareList();
+  renderCompareResult();
+});
+
+// ============================== compare & correlate ==============================
+let selectedCompare = [];
+let compareSearch = "";
+let historyData = null;
+let historyLoading = null;
+const SERIES_COLORS = ["var(--accent)", "var(--series-2)", "var(--series-3)"];
+
+function renderCompareList() {
+  const container = document.getElementById("compare-list");
+  if (!latestData) { container.innerHTML = ""; return; }
+  const q = compareSearch.toLowerCase();
+  const rows = latestData.companies.filter(c =>
+    !q || c.name.toLowerCase().includes(q) || c.ticker.toLowerCase().includes(q) || (c.full || "").toLowerCase().includes(q));
+  const atMax = selectedCompare.length >= 3;
+  container.innerHTML = rows.map(c => {
+    const checked = selectedCompare.includes(c.ticker);
+    const disabled = atMax && !checked;
+    return `<label class="compare-row ${disabled ? "disabled" : ""}">
+      <input type="checkbox" data-ticker="${c.ticker}" ${checked ? "checked" : ""} ${disabled ? "disabled" : ""}>
+      <span class="crow-name">${c.name}</span><span class="crow-tick">${c.ticker}</span>
+    </label>`;
+  }).join("");
+}
+
+function ensureHistoryLoaded() {
+  if (historyData) return Promise.resolve(historyData);
+  if (historyLoading) return historyLoading;
+  historyLoading = fetch("data/history.json", { cache: "no-store" })
+    .then(r => r.ok ? r.json() : { companies: {} })
+    .catch(() => ({ companies: {} }))
+    .then(d => { historyData = d; return d; });
+  return historyLoading;
+}
+
+function pearson(a, b) {
+  const n = Math.min(a.length, b.length);
+  if (n < 2) return null;
+  const meanA = a.slice(0, n).reduce((s, v) => s + v, 0) / n;
+  const meanB = b.slice(0, n).reduce((s, v) => s + v, 0) / n;
+  let num = 0, denA = 0, denB = 0;
+  for (let i = 0; i < n; i++) {
+    const da = a[i] - meanA, db = b[i] - meanB;
+    num += da * db; denA += da * da; denB += db * db;
+  }
+  const den = Math.sqrt(denA * denB);
+  return den === 0 ? null : num / den;
+}
+
+function dailyReturns(closes) {
+  const r = [];
+  for (let i = 1; i < closes.length; i++) { if (closes[i - 1]) r.push(closes[i] / closes[i - 1] - 1); }
+  return r;
+}
+
+function wireCompareHover(aligned, xFn, W, padL, padR) {
+  const svg = document.getElementById("compare-svg");
+  const tooltip = document.getElementById("compare-tooltip");
+  const crosshair = document.getElementById("compare-crosshair");
+  if (!svg) return;
+  const n = aligned[0].dates.length;
+  svg.addEventListener("mousemove", (e) => {
+    const rect = svg.getBoundingClientRect();
+    const relX = ((e.clientX - rect.left) / rect.width) * W;
+    const frac = Math.min(1, Math.max(0, (relX - padL) / (W - padL - padR)));
+    const i = Math.round(frac * (n - 1));
+    const xPix = xFn(i);
+    crosshair.setAttribute("x1", xPix); crosshair.setAttribute("x2", xPix);
+    crosshair.style.display = "block";
+    const lines = aligned.map((s, idx) =>
+      `<div><span class="swatch" style="background:${SERIES_COLORS[idx]}"></span>${s.ticker}: ${s.indexed[i] != null ? s.indexed[i].toFixed(1) : "—"}</div>`).join("");
+    tooltip.innerHTML = `<div>${aligned[0].dates[i]}</div>${lines}`;
+    tooltip.style.display = "block";
+    const leftPx = Math.min(rect.width - 150, Math.max(0, (xPix / W) * rect.width));
+    tooltip.style.left = leftPx + "px";
+    tooltip.style.top = "4px";
+  });
+  svg.addEventListener("mouseleave", () => { tooltip.style.display = "none"; crosshair.style.display = "none"; });
+}
+
+function renderCompareChart(el, aligned, missing) {
+  const W = 760, H = 240, padL = 44, padR = 16, padT = 14, padB = 24;
+  const n = aligned[0].dates.length;
+  const allVals = aligned.flatMap(s => s.indexed.filter(v => v != null));
+  const minV = Math.min(100, ...allVals), maxV = Math.max(100, ...allVals);
+  const pad = (maxV - minV) * 0.08 || 5;
+  const yMin = minV - pad, yMax = maxV + pad;
+  const xFn = i => padL + (n > 1 ? (i / (n - 1)) * (W - padL - padR) : 0);
+  const yFn = v => padT + (1 - (v - yMin) / (yMax - yMin)) * (H - padT - padB);
+  const gridY100 = yFn(100);
+
+  const lines = aligned.map((s, idx) => {
+    const pts = s.indexed.map((v, i) => v == null ? null : `${xFn(i)},${yFn(v)}`).filter(Boolean).join(" ");
+    return `<polyline points="${pts}" fill="none" stroke="${SERIES_COLORS[idx]}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />`;
+  }).join("");
+
+  const tickIdx = n > 1 ? [0, Math.floor((n - 1) / 2), n - 1] : [0];
+  const xLabels = tickIdx.map(i =>
+    `<text x="${xFn(i)}" y="${H - 6}" font-size="10" text-anchor="${i === 0 ? "start" : i === n - 1 ? "end" : "middle"}" fill="var(--muted)" font-family="var(--mono)">${aligned[0].dates[i]}</text>`
+  ).join("");
+
+  const legend = aligned.map((s, idx) =>
+    `<span><span class="swatch" style="background:${SERIES_COLORS[idx]}"></span>${s.meta.name} <span class="crow-tick">${s.ticker}</span></span>`
+  ).join("");
+
+  const corrPairs = [];
+  for (let i = 0; i < aligned.length; i++) {
+    for (let j = i + 1; j < aligned.length; j++) {
+      const c = pearson(dailyReturns(aligned[i].closes), dailyReturns(aligned[j].closes));
+      corrPairs.push(`<span><b>${aligned[i].ticker}</b> ↔ <b>${aligned[j].ticker}</b>: ${c == null ? "—" : c.toFixed(2)}</span>`);
+    }
+  }
+
+  const missingNote = missing.length ? `<p class="table-note">${t("compare_partial", missing.map(m => m.ticker).join(", "))}</p>` : "";
+
+  el.innerHTML = `
+    <div class="compare-legend">${legend}</div>
+    <div class="compare-chart">
+      <svg viewBox="0 0 ${W} ${H}" id="compare-svg">
+        <line x1="${padL}" y1="${gridY100}" x2="${W - padR}" y2="${gridY100}" stroke="var(--line)" stroke-width="1" />
+        <text x="${padL - 6}" y="${gridY100 + 3}" font-size="10" text-anchor="end" fill="var(--muted)" font-family="var(--mono)">100</text>
+        ${lines}
+        ${xLabels}
+        <line id="compare-crosshair" x1="0" y1="${padT}" x2="0" y2="${H - padB}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3,3" style="display:none" />
+      </svg>
+      <div class="compare-tooltip" id="compare-tooltip" style="display:none"></div>
+    </div>
+    <div class="compare-corr">${corrPairs.join("")}</div>
+    ${missingNote}`;
+
+  wireCompareHover(aligned, xFn, W, padL, padR);
+}
+
+function renderCompareResult() {
+  const el = document.getElementById("compare-result");
+  if (selectedCompare.length < 2) {
+    el.innerHTML = `<div class="fetch-error">${t("compare_empty")}</div>`;
+    return;
+  }
+  el.innerHTML = `<div class="fetch-error">${t("compare_loading")}</div>`;
+  const requestedTickers = [...selectedCompare];
+  ensureHistoryLoaded().then(hd => {
+    // if the selection changed while this was loading, let the latest call win
+    if (requestedTickers.join(",") !== selectedCompare.join(",")) return;
+    const metaByTicker = Object.fromEntries(latestData.companies.map(c => [c.ticker, c]));
+    const series = selectedCompare.map(tk => ({ ticker: tk, meta: metaByTicker[tk], hist: hd.companies && hd.companies[tk] }));
+    const have = series.filter(s => s.hist && s.hist.dates && s.hist.dates.length > 0);
+    const missing = series.filter(s => !s.hist || !s.hist.dates || s.hist.dates.length === 0);
+    if (have.length < 2) {
+      el.innerHTML = `<div class="fetch-error">${t("compare_pending")}</div>`;
+      return;
+    }
+    const dateSets = have.map(s => new Set(s.hist.dates));
+    const commonDates = have[0].hist.dates.filter(d => dateSets.every(set => set.has(d))).sort();
+    if (commonDates.length < 2) {
+      el.innerHTML = `<div class="fetch-error">${t("compare_pending")}</div>`;
+      return;
+    }
+    const aligned = have.map(s => {
+      const idx = new Map(s.hist.dates.map((d, i) => [d, i]));
+      const closes = commonDates.map(d => s.hist.close[idx.get(d)]);
+      const base = closes[0];
+      const indexed = closes.map(c => base ? (c / base) * 100 : null);
+      return { ...s, dates: commonDates, closes, indexed };
+    });
+    renderCompareChart(el, aligned, missing);
+  });
+}
+
+document.getElementById("compare-search").addEventListener("input", (e) => { compareSearch = e.target.value; renderCompareList(); });
+document.getElementById("compare-list").addEventListener("change", (e) => {
+  const cb = e.target.closest("input[type=checkbox]");
+  if (!cb) return;
+  const ticker = cb.dataset.ticker;
+  if (cb.checked) {
+    if (selectedCompare.length >= 3) { cb.checked = false; return; }
+    selectedCompare.push(ticker);
+  } else {
+    selectedCompare = selectedCompare.filter(tk => tk !== ticker);
+  }
+  renderCompareList();
+  renderCompareResult();
 });
 
 async function loadData() {
   const dot = document.getElementById("live-dot");
   const text = document.getElementById("live-text");
+  applyStaticI18n();
+  text.textContent = t("live_loading");
   try {
     const res = await fetch("data/latest.json", { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -426,13 +925,15 @@ async function loadData() {
     const generated = new Date(latestData.generatedAt);
     const ageMin = (Date.now() - generated.getTime()) / 60000;
     dot.classList.toggle("stale", ageMin > 90);
-    text.textContent = `Live as of ${generated.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })} · Yahoo Finance, ~15–20 min delayed`;
+    text.textContent = `${t("live_prefix")} ${generated.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })} ${t("live_suffix")}`;
 
     renderAll();
+    renderCompareList();
+    renderCompareResult();
   } catch (err) {
     dot.classList.add("stale");
-    text.textContent = "Couldn't load data/latest.json yet.";
-    document.getElementById("board-body").innerHTML = `<tr><td colspan="9" class="fetch-error">${err.message}</td></tr>`;
+    text.textContent = t("live_fail");
+    document.getElementById("board-body").innerHTML = `<tr><td colspan="15" class="fetch-error">${err.message}</td></tr>`;
     document.getElementById("scenario-body").innerHTML = `<div class="fetch-error">${err.message}</div>`;
   }
 }
