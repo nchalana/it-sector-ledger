@@ -1,393 +1,408 @@
 {
-  "generatedAt": "2026-09-01T10:30:00+00:00",
-  "source": "Seed: original 9 use a 1 Sep 2026 research pass with modeled scenario placeholders; the other 91 are pending their first GitHub Actions run (no fabricated numbers).",
+  "generatedAt": "2026-09-03T17:51:42+00:00",
+  "source": "Yahoo Finance (yfinance) - unofficial, ~15-20 min delayed; native currency per listing",
   "companies": [
     {
       "ticker": "TCS.NS",
       "name": "TCS",
       "full": "Tata Consultancy Services",
+      "category": "Indian IT",
+      "ccy": "INR",
+      "penceQuoted": false,
       "ok": true,
-      "price": 2355.0,
-      "dayChangePct": 1.85,
+      "price": 2320.1,
+      "dayChangePct": -1.19,
       "week52High": 3350.0,
       "week52Low": 1976.8,
-      "return1y": -22.92,
-      "return3y": -28.52,
-      "return5y": -36.63,
-      "pe": 16.93,
-      "divYieldPct": 4.78,
-      "asOf": "2026-09-01",
+      "return1y": -25.1,
+      "return3y": -32.13,
+      "return5y": -39.61,
+      "pe": 16.86242,
+      "divYieldPct": 2.77,
+      "ma50": 2266.87,
+      "ma200": 2601.37,
+      "rsi14": 49.8,
+      "asOf": "2026-09-03",
       "scenario": {
         "day": {
-          "min": -5.0,
-          "p10": -2.4,
+          "min": -8.4,
+          "p10": -1.8,
           "median": -0.1,
-          "p90": 2.2,
-          "max": 4.8
+          "p90": 1.5,
+          "max": 6.5
         },
         "week": {
-          "min": -11.5,
-          "p10": -5.5,
-          "median": -0.5,
-          "p90": 4.6,
-          "max": 10.6
+          "min": -12.1,
+          "p10": -4.9,
+          "median": -0.7,
+          "p90": 3.7,
+          "max": 10.8
         },
         "twoWeek": {
-          "min": -16.5,
-          "p10": -8.1,
-          "median": -0.9,
-          "p90": 6.2,
-          "max": 14.7
+          "min": -15.7,
+          "p10": -7.0,
+          "median": -1.1,
+          "p90": 4.1,
+          "max": 11.8
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       },
-      "category": "Indian IT",
-      "ccy": "INR"
+      "roePct": 47.74,
+      "netMarginPct": 18.05,
+      "debtEquity": 0.1
     },
     {
       "ticker": "INFY.NS",
       "name": "Infosys",
       "full": "Infosys Ltd",
+      "category": "Indian IT",
+      "ccy": "INR",
+      "penceQuoted": false,
       "ok": true,
-      "price": 1156.0,
-      "dayChangePct": 1.96,
+      "price": 1130.3,
+      "dayChangePct": -0.85,
       "week52High": 1728.0,
       "week52Low": 982.4,
-      "return1y": -23.46,
-      "return3y": -20.52,
-      "return5y": -31.6,
-      "pe": 15.42,
-      "divYieldPct": 4.28,
-      "asOf": "2026-09-01",
+      "return1y": -23.58,
+      "return3y": -22.85,
+      "return5y": -33.54,
+      "pe": 14.667792,
+      "divYieldPct": 4.39,
+      "ma50": 1108.43,
+      "ma200": 1308.78,
+      "rsi14": 49.1,
+      "asOf": "2026-09-03",
       "scenario": {
         "day": {
-          "min": -5.0,
-          "p10": -2.4,
+          "min": -7.3,
+          "p10": -2.0,
           "median": -0.1,
-          "p90": 2.2,
-          "max": 4.8
+          "p90": 1.9,
+          "max": 7.9
         },
         "week": {
-          "min": -11.5,
-          "p10": -5.5,
-          "median": -0.5,
-          "p90": 4.6,
-          "max": 10.6
+          "min": -12.4,
+          "p10": -5.4,
+          "median": -0.2,
+          "p90": 3.9,
+          "max": 10.3
         },
         "twoWeek": {
-          "min": -16.5,
-          "p10": -8.1,
-          "median": -0.9,
-          "p90": 6.2,
-          "max": 14.7
+          "min": -16.6,
+          "p10": -7.5,
+          "median": -0.2,
+          "p90": 4.9,
+          "max": 12.9
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       },
-      "category": "Indian IT",
-      "ccy": "INR"
+      "roePct": 32.0,
+      "netMarginPct": 16.37,
+      "debtEquity": 0.1
     },
     {
       "ticker": "WIPRO.NS",
       "name": "Wipro",
       "full": "Wipro Ltd",
+      "category": "Indian IT",
+      "ccy": "INR",
+      "penceQuoted": false,
       "ok": true,
-      "price": 184.5,
-      "dayChangePct": 1.96,
+      "price": 175.72,
+      "dayChangePct": -0.77,
       "week52High": 273.1,
       "week52Low": 169.0,
-      "return1y": -26.31,
-      "return3y": -9.65,
-      "return5y": -42.43,
-      "pe": 13.55,
-      "divYieldPct": 6.45,
-      "asOf": "2026-09-01",
+      "return1y": -29.59,
+      "return3y": -19.04,
+      "return5y": -46.35,
+      "pe": 13.9571085,
+      "divYieldPct": 4.52,
+      "ma50": 179.15,
+      "ma200": 209.12,
+      "rsi14": 41.2,
+      "asOf": "2026-09-03",
       "scenario": {
         "day": {
-          "min": -5.4,
-          "p10": -2.5,
-          "median": -0.1,
-          "p90": 2.3,
-          "max": 5.2
+          "min": -8.4,
+          "p10": -2.1,
+          "median": -0.0,
+          "p90": 1.8,
+          "max": 6.5
         },
         "week": {
-          "min": -12.4,
-          "p10": -5.9,
-          "median": -0.5,
-          "p90": 4.9,
-          "max": 11.3
+          "min": -13.4,
+          "p10": -4.4,
+          "median": -0.2,
+          "p90": 3.5,
+          "max": 13.5
         },
         "twoWeek": {
-          "min": -17.8,
-          "p10": -8.7,
-          "median": -1.0,
-          "p90": 6.6,
-          "max": 15.7
+          "min": -13.5,
+          "p10": -7.9,
+          "median": -0.4,
+          "p90": 5.1,
+          "max": 12.1
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       },
-      "category": "Indian IT",
-      "ccy": "INR"
+      "roePct": 16.13,
+      "netMarginPct": 13.92,
+      "debtEquity": 0.27
     },
     {
       "ticker": "HCLTECH.NS",
       "name": "HCL Technologies",
       "full": "HCL Technologies Ltd",
+      "category": "Indian IT",
+      "ccy": "INR",
+      "penceQuoted": false,
       "ok": true,
-      "price": 1362.0,
-      "dayChangePct": 3.8,
+      "price": 1319.0,
+      "dayChangePct": -0.94,
       "week52High": 1780.1,
       "week52Low": 1030.0,
-      "return1y": -10.64,
-      "return3y": 11.95,
-      "return5y": 10.99,
-      "pe": 21.18,
-      "divYieldPct": 4.16,
-      "asOf": "2026-09-01",
+      "return1y": -10.03,
+      "return3y": 7.02,
+      "return5y": 12.28,
+      "pe": 20.51003,
+      "divYieldPct": 4.51,
+      "ma50": 1262.64,
+      "ma200": 1385.43,
+      "rsi14": 51.9,
+      "asOf": "2026-09-03",
       "scenario": {
         "day": {
-          "min": -5.0,
-          "p10": -2.3,
+          "min": -10.8,
+          "p10": -1.8,
           "median": -0.0,
-          "p90": 2.2,
-          "max": 4.9
+          "p90": 1.7,
+          "max": 7.7
         },
         "week": {
-          "min": -11.3,
-          "p10": -5.3,
-          "median": -0.2,
-          "p90": 4.8,
-          "max": 10.8
+          "min": -17.0,
+          "p10": -5.1,
+          "median": 0.0,
+          "p90": 4.3,
+          "max": 11.7
         },
         "twoWeek": {
-          "min": -16.0,
-          "p10": -7.6,
-          "median": -0.4,
-          "p90": 6.7,
-          "max": 15.2
+          "min": -17.9,
+          "p10": -7.9,
+          "median": 0.2,
+          "p90": 5.8,
+          "max": 15.5
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       },
-      "category": "Indian IT",
-      "ccy": "INR"
+      "roePct": 24.07,
+      "netMarginPct": 12.97,
+      "debtEquity": 0.07
     },
     {
       "ticker": "TECHM.NS",
       "name": "Tech Mahindra",
       "full": "Tech Mahindra Ltd",
+      "category": "Indian IT",
+      "ccy": "INR",
+      "penceQuoted": false,
       "ok": true,
-      "price": 1628.0,
-      "dayChangePct": -0.79,
+      "price": 1598.0,
+      "dayChangePct": -1.54,
       "week52High": 1854.0,
       "week52Low": 1304.1,
-      "return1y": 8.14,
-      "return3y": 35.45,
-      "return5y": 12.46,
-      "pe": 32.27,
-      "divYieldPct": 2.91,
-      "asOf": "2026-09-01",
+      "return1y": 5.95,
+      "return3y": 27.15,
+      "return5y": 10.82,
+      "pe": 27.65663,
+      "divYieldPct": 3.14,
+      "ma50": 1560.75,
+      "ma200": 1515.64,
+      "rsi14": 49.5,
+      "asOf": "2026-09-03",
       "scenario": {
         "day": {
-          "min": -5.6,
-          "p10": -2.6,
-          "median": 0.0,
-          "p90": 2.6,
-          "max": 5.7
+          "min": -6.6,
+          "p10": -1.9,
+          "median": -0.0,
+          "p90": 2.0,
+          "max": 5.3
         },
         "week": {
-          "min": -12.5,
-          "p10": -5.6,
-          "median": 0.2,
-          "p90": 5.9,
-          "max": 12.8
+          "min": -11.7,
+          "p10": -4.8,
+          "median": 0.1,
+          "p90": 4.6,
+          "max": 11.9
         },
         "twoWeek": {
-          "min": -17.5,
-          "p10": -7.8,
+          "min": -18.2,
+          "p10": -7.1,
           "median": 0.3,
-          "p90": 8.5,
-          "max": 18.2
+          "p90": 7.1,
+          "max": 16.6
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       },
-      "category": "Indian IT",
-      "ccy": "INR"
+      "roePct": null,
+      "netMarginPct": 8.68,
+      "debtEquity": 0.07
     },
     {
       "ticker": "LTIM.NS",
       "name": "LTIMindtree",
       "full": "LTIMindtree Ltd",
-      "ok": true,
-      "price": 4625.0,
-      "dayChangePct": 1.87,
-      "week52High": 6429.5,
-      "week52Low": 3528.0,
-      "return1y": -12.64,
-      "return3y": -14.39,
-      "return5y": -14.02,
-      "pe": null,
-      "divYieldPct": null,
-      "asOf": "2026-09-01",
-      "scenario": {
-        "day": {
-          "min": -5.3,
-          "p10": -2.5,
-          "median": -0.1,
-          "p90": 2.4,
-          "max": 5.2
-        },
-        "week": {
-          "min": -12.1,
-          "p10": -5.7,
-          "median": -0.3,
-          "p90": 5.2,
-          "max": 11.6
-        },
-        "twoWeek": {
-          "min": -17.2,
-          "p10": -8.2,
-          "median": -0.5,
-          "p90": 7.2,
-          "max": 16.2
-        },
-        "sampleDays": 504,
-        "placeholder": true
-      },
       "category": "Indian IT",
-      "ccy": "INR"
+      "ccy": "INR",
+      "penceQuoted": false,
+      "ok": false,
+      "error": "no price history returned"
     },
     {
       "ticker": "PERSISTENT.NS",
       "name": "Persistent Systems",
       "full": "Persistent Systems Ltd",
+      "category": "Indian IT",
+      "ccy": "INR",
+      "penceQuoted": false,
       "ok": true,
-      "price": 5594.5,
-      "dayChangePct": 4.77,
+      "price": 5657.0,
+      "dayChangePct": -0.58,
       "week52High": 6599.0,
       "week52Low": 4244.5,
-      "return1y": 3.22,
-      "return3y": 108.33,
-      "return5y": 236.81,
-      "pe": 47.62,
-      "divYieldPct": 0.71,
-      "asOf": "2026-09-01",
+      "return1y": 5.4,
+      "return3y": 95.66,
+      "return5y": 228.77,
+      "pe": 46.239986,
+      "divYieldPct": 0.63,
+      "ma50": 5281.93,
+      "ma200": 5445.15,
+      "rsi14": 54.5,
+      "asOf": "2026-09-03",
       "scenario": {
         "day": {
-          "min": -6.7,
-          "p10": -3.1,
+          "min": -11.2,
+          "p10": -2.3,
           "median": 0.0,
-          "p90": 3.1,
-          "max": 6.7
+          "p90": 2.5,
+          "max": 10.9
         },
         "week": {
-          "min": -14.9,
-          "p10": -6.8,
-          "median": 0.1,
-          "p90": 6.9,
-          "max": 15.1
+          "min": -18.3,
+          "p10": -5.9,
+          "median": 0.5,
+          "p90": 6.4,
+          "max": 12.9
         },
         "twoWeek": {
-          "min": -21.1,
-          "p10": -9.6,
-          "median": 0.1,
-          "p90": 9.8,
-          "max": 21.3
+          "min": -20.8,
+          "p10": -8.7,
+          "median": 0.7,
+          "p90": 9.0,
+          "max": 20.8
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       },
-      "category": "Indian IT",
-      "ccy": "INR"
+      "roePct": 25.2,
+      "netMarginPct": 12.24,
+      "debtEquity": 0.07
     },
     {
       "ticker": "COFORGE.NS",
       "name": "Coforge",
       "full": "Coforge Ltd",
+      "category": "Indian IT",
+      "ccy": "INR",
+      "penceQuoted": false,
       "ok": true,
-      "price": 1989.0,
-      "dayChangePct": 0.19,
+      "price": 1971.8,
+      "dayChangePct": 0.31,
       "week52High": 2021.2,
       "week52Low": 1008.1,
-      "return1y": 12.51,
-      "return3y": 81.59,
-      "return5y": 90.57,
-      "pe": 53.86,
-      "divYieldPct": 0.63,
-      "asOf": "2026-09-01",
+      "return1y": 13.86,
+      "return3y": 79.61,
+      "return5y": 88.03,
+      "pe": 40.44718,
+      "divYieldPct": 0.81,
+      "ma50": 1682.8,
+      "ma200": 1522.92,
+      "rsi14": 69.2,
+      "asOf": "2026-09-03",
       "scenario": {
         "day": {
-          "min": -6.7,
-          "p10": -3.0,
-          "median": 0.0,
-          "p90": 3.1,
-          "max": 6.8
+          "min": -9.4,
+          "p10": -2.4,
+          "median": 0.1,
+          "p90": 2.4,
+          "max": 11.8
         },
         "week": {
-          "min": -14.7,
+          "min": -21.8,
           "p10": -6.6,
-          "median": 0.2,
-          "p90": 7.1,
-          "max": 15.2
+          "median": 1.2,
+          "p90": 6.6,
+          "max": 21.3
         },
         "twoWeek": {
-          "min": -20.7,
-          "p10": -9.2,
-          "median": 0.5,
-          "p90": 10.2,
-          "max": 21.7
+          "min": -21.8,
+          "p10": -10.1,
+          "median": 2.3,
+          "p90": 9.9,
+          "max": 23.1
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       },
-      "category": "Indian IT",
-      "ccy": "INR"
+      "roePct": null,
+      "netMarginPct": 9.64,
+      "debtEquity": 0.08
     },
     {
       "ticker": "MPHASIS.NS",
       "name": "Mphasis",
       "full": "Mphasis Ltd",
+      "category": "Indian IT",
+      "ccy": "INR",
+      "penceQuoted": false,
       "ok": true,
-      "price": 2505.5,
-      "dayChangePct": null,
-      "week52High": null,
-      "week52Low": null,
-      "return1y": -10.1,
-      "return3y": 1.0,
-      "return5y": -2.9,
-      "pe": 25.04,
-      "divYieldPct": null,
-      "asOf": "2026-09-01",
+      "price": 2471.0,
+      "dayChangePct": -0.36,
+      "week52High": 3037.2,
+      "week52Low": 2013.0,
+      "return1y": -14.58,
+      "return3y": -0.86,
+      "return5y": -16.3,
+      "pe": 24.724834,
+      "divYieldPct": 2.5,
+      "ma50": 2382.13,
+      "ma200": 2452.93,
+      "rsi14": 54.6,
+      "asOf": "2026-09-03",
       "scenario": {
         "day": {
-          "min": -5.3,
-          "p10": -2.5,
+          "min": -6.1,
+          "p10": -2.4,
           "median": -0.0,
           "p90": 2.4,
-          "max": 5.3
+          "max": 6.1
         },
         "week": {
-          "min": -12.0,
-          "p10": -5.6,
-          "median": -0.2,
+          "min": -15.9,
+          "p10": -5.5,
+          "median": -0.1,
           "p90": 5.2,
-          "max": 11.6
+          "max": 15.2
         },
         "twoWeek": {
-          "min": -17.1,
-          "p10": -8.1,
-          "median": -0.4,
-          "p90": 7.3,
-          "max": 16.3
+          "min": -16.4,
+          "p10": -8.4,
+          "median": -0.5,
+          "p90": 7.5,
+          "max": 18.9
         },
-        "sampleDays": 504,
-        "placeholder": true
+        "sampleDays": 504
       },
-      "category": "Indian IT",
-      "ccy": "INR"
+      "roePct": 17.74,
+      "netMarginPct": 11.56,
+      "debtEquity": 0.25
     },
     {
       "ticker": "LTTS.NS",
@@ -395,8 +410,48 @@
       "full": "L&T Technology Services Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 3501.2,
+      "dayChangePct": -0.11,
+      "week52High": 4726.0,
+      "week52Low": 3010.0,
+      "return1y": -16.55,
+      "return3y": -22.56,
+      "return5y": -19.31,
+      "pe": 29.038733,
+      "divYieldPct": 1.65,
+      "ma50": 3441.35,
+      "ma200": 3674.7,
+      "rsi14": 47.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -8.5,
+          "p10": -2.4,
+          "median": -0.1,
+          "p90": 2.1,
+          "max": 9.6
+        },
+        "week": {
+          "min": -12.5,
+          "p10": -6.2,
+          "median": -0.2,
+          "p90": 4.9,
+          "max": 14.3
+        },
+        "twoWeek": {
+          "min": -19.3,
+          "p10": -8.2,
+          "median": -0.9,
+          "p90": 6.0,
+          "max": 15.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 11.68,
+      "debtEquity": 0.09
     },
     {
       "ticker": "TATAELXSI.NS",
@@ -404,8 +459,48 @@
       "full": "Tata Elxsi Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 3580.0,
+      "dayChangePct": -0.8,
+      "week52High": 5950.0,
+      "week52Low": 3353.9,
+      "return1y": -34.04,
+      "return3y": -51.09,
+      "return5y": -26.73,
+      "pe": 34.088745,
+      "divYieldPct": 2.08,
+      "ma50": 3668.08,
+      "ma200": 4447.43,
+      "rsi14": 41.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -6.8,
+          "p10": -2.3,
+          "median": -0.2,
+          "p90": 2.0,
+          "max": 9.5
+        },
+        "week": {
+          "min": -11.3,
+          "p10": -6.1,
+          "median": -0.9,
+          "p90": 4.5,
+          "max": 20.1
+        },
+        "twoWeek": {
+          "min": -16.4,
+          "p10": -8.2,
+          "median": -2.1,
+          "p90": 6.7,
+          "max": 23.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 16.74,
+      "debtEquity": 0.05
     },
     {
       "ticker": "KPITTECH.NS",
@@ -413,8 +508,48 @@
       "full": "KPIT Technologies Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 583.5,
+      "dayChangePct": -0.77,
+      "week52High": 1328.0,
+      "week52Low": 543.0,
+      "return1y": -52.03,
+      "return3y": -50.48,
+      "return5y": 76.98,
+      "pe": 27.407232,
+      "divYieldPct": 1.28,
+      "ma50": 594.14,
+      "ma200": 826.09,
+      "rsi14": 43.4,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -17.0,
+          "p10": -2.8,
+          "median": -0.2,
+          "p90": 2.6,
+          "max": 8.8
+        },
+        "week": {
+          "min": -24.8,
+          "p10": -7.7,
+          "median": -0.3,
+          "p90": 5.5,
+          "max": 15.1
+        },
+        "twoWeek": {
+          "min": -26.5,
+          "p10": -12.1,
+          "median": -0.9,
+          "p90": 7.9,
+          "max": 17.6
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 8.84,
+      "debtEquity": 0.24
     },
     {
       "ticker": "CYIENT.NS",
@@ -422,8 +557,48 @@
       "full": "Cyient Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 1111.3,
+      "dayChangePct": -0.97,
+      "week52High": 1284.7,
+      "week52Low": 750.3,
+      "return1y": -7.64,
+      "return3y": -37.3,
+      "return5y": 12.24,
+      "pe": 32.685295,
+      "divYieldPct": 2.85,
+      "ma50": 897.78,
+      "ma200": 966.71,
+      "rsi14": 71.8,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -23.4,
+          "p10": -2.3,
+          "median": -0.2,
+          "p90": 2.4,
+          "max": 7.7
+        },
+        "week": {
+          "min": -24.0,
+          "p10": -6.4,
+          "median": -0.6,
+          "p90": 5.6,
+          "max": 29.2
+        },
+        "twoWeek": {
+          "min": -23.1,
+          "p10": -9.8,
+          "median": -1.4,
+          "p90": 7.2,
+          "max": 35.6
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 4.96,
+      "debtEquity": 0.08
     },
     {
       "ticker": "TATATECH.NS",
@@ -431,8 +606,48 @@
       "full": "Tata Technologies Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 805.1,
+      "dayChangePct": -1.0,
+      "week52High": 891.0,
+      "week52Low": 507.4,
+      "return1y": 17.57,
+      "return3y": null,
+      "return5y": null,
+      "pe": 58.59534,
+      "divYieldPct": 1.03,
+      "ma50": 772.14,
+      "ma200": 670.6,
+      "rsi14": 50.2,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -6.2,
+          "p10": -2.1,
+          "median": -0.1,
+          "p90": 2.1,
+          "max": 8.9
+        },
+        "week": {
+          "min": -11.8,
+          "p10": -5.4,
+          "median": -0.3,
+          "p90": 5.5,
+          "max": 16.7
+        },
+        "twoWeek": {
+          "min": -13.4,
+          "p10": -7.2,
+          "median": -1.0,
+          "p90": 7.5,
+          "max": 23.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 9.4,
+      "debtEquity": 0.24
     },
     {
       "ticker": "MASTEK.NS",
@@ -440,8 +655,48 @@
       "full": "Mastek Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 1792.6,
+      "dayChangePct": 1.68,
+      "week52High": 2609.9,
+      "week52Low": 1334.2,
+      "return1y": -30.44,
+      "return3y": -23.43,
+      "return5y": -35.93,
+      "pe": 13.37861,
+      "divYieldPct": 1.36,
+      "ma50": 1736.64,
+      "ma200": 1794.02,
+      "rsi14": 52.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -8.0,
+          "p10": -2.7,
+          "median": -0.2,
+          "p90": 2.9,
+          "max": 18.0
+        },
+        "week": {
+          "min": -13.6,
+          "p10": -6.7,
+          "median": -0.5,
+          "p90": 6.7,
+          "max": 19.2
+        },
+        "twoWeek": {
+          "min": -19.9,
+          "p10": -9.5,
+          "median": -1.0,
+          "p90": 8.4,
+          "max": 26.5
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 11.09,
+      "debtEquity": 0.15
     },
     {
       "ticker": "ZENSARTECH.NS",
@@ -449,8 +704,48 @@
       "full": "Zensar Technologies Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 465.45,
+      "dayChangePct": 1.06,
+      "week52High": 868.95,
+      "week52Low": 423.0,
+      "return1y": -40.22,
+      "return3y": -13.19,
+      "return5y": 4.98,
+      "pe": 13.787027,
+      "divYieldPct": 3.17,
+      "ma50": 489.62,
+      "ma200": 570.29,
+      "rsi14": 41.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.9,
+          "p10": -2.8,
+          "median": -0.2,
+          "p90": 2.5,
+          "max": 13.6
+        },
+        "week": {
+          "min": -13.5,
+          "p10": -6.7,
+          "median": -0.5,
+          "p90": 5.6,
+          "max": 18.8
+        },
+        "twoWeek": {
+          "min": -18.0,
+          "p10": -9.5,
+          "median": -1.4,
+          "p90": 7.8,
+          "max": 28.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 13.36,
+      "debtEquity": 0.02
     },
     {
       "ticker": "HAPPSTMNDS.NS",
@@ -458,8 +753,48 @@
       "full": "Happiest Minds Technologies Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 353.95,
+      "dayChangePct": -0.25,
+      "week52High": 583.4,
+      "week52Low": 330.2,
+      "return1y": -38.27,
+      "return3y": -61.38,
+      "return5y": -76.45,
+      "pe": 23.91554,
+      "divYieldPct": 2.06,
+      "ma50": 386.36,
+      "ma200": 400.31,
+      "rsi14": 34.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -10.9,
+          "p10": -2.2,
+          "median": -0.2,
+          "p90": 1.8,
+          "max": 17.6
+        },
+        "week": {
+          "min": -20.8,
+          "p10": -5.6,
+          "median": -0.8,
+          "p90": 4.3,
+          "max": 20.6
+        },
+        "twoWeek": {
+          "min": -16.4,
+          "p10": -7.5,
+          "median": -1.7,
+          "p90": 5.3,
+          "max": 21.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 13.32,
+      "netMarginPct": 9.32,
+      "debtEquity": 0.99
     },
     {
       "ticker": "SONATSOFTW.NS",
@@ -467,8 +802,48 @@
       "full": "Sonata Software Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 284.0,
+      "dayChangePct": -1.83,
+      "week52High": 421.5,
+      "week52Low": 207.15,
+      "return1y": -21.01,
+      "return3y": -46.78,
+      "return5y": -11.51,
+      "pe": 16.985647,
+      "divYieldPct": 2.73,
+      "ma50": 302.27,
+      "ma200": 296.36,
+      "rsi14": 38.8,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.3,
+          "p10": -3.2,
+          "median": -0.2,
+          "p90": 2.7,
+          "max": 19.6
+        },
+        "week": {
+          "min": -22.0,
+          "p10": -8.2,
+          "median": -1.1,
+          "p90": 6.9,
+          "max": 28.6
+        },
+        "twoWeek": {
+          "min": -24.3,
+          "p10": -11.2,
+          "median": -1.7,
+          "p90": 10.4,
+          "max": 34.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 4.21,
+      "debtEquity": 0.38
     },
     {
       "ticker": "BSOFT.NS",
@@ -476,8 +851,48 @@
       "full": "Birlasoft Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 293.25,
+      "dayChangePct": -0.39,
+      "week52High": 474.0,
+      "week52Low": 270.2,
+      "return1y": -22.23,
+      "return3y": -43.48,
+      "return5y": -29.29,
+      "pe": 14.353891,
+      "divYieldPct": 2.21,
+      "ma50": 297.51,
+      "ma200": 359.98,
+      "rsi14": 43.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -8.0,
+          "p10": -2.6,
+          "median": -0.2,
+          "p90": 2.5,
+          "max": 9.4
+        },
+        "week": {
+          "min": -19.2,
+          "p10": -5.9,
+          "median": -0.9,
+          "p90": 5.2,
+          "max": 13.8
+        },
+        "twoWeek": {
+          "min": -21.3,
+          "p10": -9.3,
+          "median": -1.7,
+          "p90": 7.5,
+          "max": 16.8
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 10.6,
+      "debtEquity": 0.03
     },
     {
       "ticker": "NEWGEN.NS",
@@ -485,8 +900,48 @@
       "full": "Newgen Software Technologies Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 517.65,
+      "dayChangePct": -0.32,
+      "week52High": 1041.95,
+      "week52Low": 401.05,
+      "return1y": -42.76,
+      "return3y": 22.89,
+      "return5y": 71.14,
+      "pe": 23.349121,
+      "divYieldPct": 1.16,
+      "ma50": 526.33,
+      "ma200": 574.85,
+      "rsi14": 45.4,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -16.2,
+          "p10": -3.3,
+          "median": -0.4,
+          "p90": 3.7,
+          "max": 17.3
+        },
+        "week": {
+          "min": -32.4,
+          "p10": -8.5,
+          "median": -0.8,
+          "p90": 8.5,
+          "max": 23.0
+        },
+        "twoWeek": {
+          "min": -38.4,
+          "p10": -12.3,
+          "median": -1.6,
+          "p90": 13.8,
+          "max": 30.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 19.48,
+      "debtEquity": 0.02
     },
     {
       "ticker": "INTELLECT.NS",
@@ -494,8 +949,48 @@
       "full": "Intellect Design Arena Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 678.3,
+      "dayChangePct": -0.14,
+      "week52High": 1244.6,
+      "week52Low": 595.2,
+      "return1y": -28.83,
+      "return3y": -7.03,
+      "return5y": 4.31,
+      "pe": 27.284794,
+      "divYieldPct": 0.59,
+      "ma50": 724.21,
+      "ma200": 787.22,
+      "rsi14": 38.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.4,
+          "p10": -3.1,
+          "median": -0.2,
+          "p90": 2.9,
+          "max": 17.4
+        },
+        "week": {
+          "min": -16.8,
+          "p10": -7.7,
+          "median": -0.5,
+          "p90": 7.7,
+          "max": 27.5
+        },
+        "twoWeek": {
+          "min": -25.7,
+          "p10": -10.4,
+          "median": -1.5,
+          "p90": 11.3,
+          "max": 36.6
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 11.09,
+      "debtEquity": 0.05
     },
     {
       "ticker": "FSL.NS",
@@ -503,8 +998,48 @@
       "full": "Firstsource Solutions Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 265.3,
+      "dayChangePct": -1.89,
+      "week52High": 379.7,
+      "week52Low": 202.0,
+      "return1y": -28.1,
+      "return3y": 55.46,
+      "return5y": 39.34,
+      "pe": 27.867645,
+      "divYieldPct": 2.03,
+      "ma50": 268.31,
+      "ma200": 272.2,
+      "rsi14": 44.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -13.4,
+          "p10": -3.1,
+          "median": -0.1,
+          "p90": 3.0,
+          "max": 16.6
+        },
+        "week": {
+          "min": -21.0,
+          "p10": -7.4,
+          "median": -0.4,
+          "p90": 7.8,
+          "max": 28.2
+        },
+        "twoWeek": {
+          "min": -23.4,
+          "p10": -9.6,
+          "median": -0.5,
+          "p90": 10.5,
+          "max": 31.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 6.67,
+      "debtEquity": 0.67
     },
     {
       "ticker": "RSYSTEMS.NS",
@@ -512,8 +1047,48 @@
       "full": "R Systems International Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 252.64,
+      "dayChangePct": -0.52,
+      "week52High": 485.0,
+      "week52Low": 213.52,
+      "return1y": -46.28,
+      "return3y": -47.98,
+      "return5y": 24.88,
+      "pe": 16.226076,
+      "divYieldPct": 4.73,
+      "ma50": 245.95,
+      "ma200": 302.17,
+      "rsi14": 55.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -8.5,
+          "p10": -2.9,
+          "median": -0.2,
+          "p90": 3.3,
+          "max": 15.3
+        },
+        "week": {
+          "min": -22.0,
+          "p10": -7.4,
+          "median": -1.3,
+          "p90": 7.2,
+          "max": 20.7
+        },
+        "twoWeek": {
+          "min": -23.5,
+          "p10": -10.0,
+          "median": -1.2,
+          "p90": 7.5,
+          "max": 22.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 17.33,
+      "netMarginPct": 8.59,
+      "debtEquity": 0.29
     },
     {
       "ticker": "DATAMATICS.NS",
@@ -521,8 +1096,48 @@
       "full": "Datamatics Global Services Ltd",
       "category": "ER&D / OEM",
       "ccy": "INR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 774.85,
+      "dayChangePct": 1.43,
+      "week52High": 1054.0,
+      "week52Low": 632.0,
+      "return1y": -23.54,
+      "return3y": 38.87,
+      "return5y": 147.67,
+      "pe": 21.17655,
+      "divYieldPct": 0.65,
+      "ma50": 832.15,
+      "ma200": 779.75,
+      "rsi14": 33.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.5,
+          "p10": -3.0,
+          "median": -0.1,
+          "p90": 3.5,
+          "max": 14.4
+        },
+        "week": {
+          "min": -16.7,
+          "p10": -7.0,
+          "median": -0.5,
+          "p90": 9.1,
+          "max": 21.2
+        },
+        "twoWeek": {
+          "min": -17.4,
+          "p10": -8.7,
+          "median": -0.3,
+          "p90": 11.0,
+          "max": 36.0
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 10.63,
+      "debtEquity": 0.14
     },
     {
       "ticker": "ACN",
@@ -530,8 +1145,48 @@
       "full": "Accenture plc",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 194.77,
+      "dayChangePct": 3.78,
+      "week52High": 291.09,
+      "week52Low": 118.15,
+      "return1y": -23.36,
+      "return3y": -40.57,
+      "return5y": -43.27,
+      "pe": 15.556709,
+      "divYieldPct": 3.47,
+      "ma50": 159.31,
+      "ma200": 203.46,
+      "rsi14": 68.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -18.0,
+          "p10": -2.6,
+          "median": -0.0,
+          "p90": 2.2,
+          "max": 8.3
+        },
+        "week": {
+          "min": -26.7,
+          "p10": -6.5,
+          "median": -0.0,
+          "p90": 4.8,
+          "max": 23.6
+        },
+        "twoWeek": {
+          "min": -30.0,
+          "p10": -9.3,
+          "median": -0.7,
+          "p90": 7.5,
+          "max": 26.4
+        },
+        "sampleDays": 504
+      },
+      "roePct": 24.41,
+      "netMarginPct": 10.66,
+      "debtEquity": 0.25
     },
     {
       "ticker": "CTSH",
@@ -539,8 +1194,48 @@
       "full": "Cognizant Technology Solutions",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 65.11,
+      "dayChangePct": 2.7,
+      "week52High": 87.03,
+      "week52Low": 37.08,
+      "return1y": -9.34,
+      "return3y": -9.23,
+      "return5y": -14.94,
+      "pe": 13.973176,
+      "divYieldPct": 2.08,
+      "ma50": 52.0,
+      "ma200": 62.82,
+      "rsi14": 72.2,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -10.5,
+          "p10": -2.2,
+          "median": 0.1,
+          "p90": 2.0,
+          "max": 11.3
+        },
+        "week": {
+          "min": -19.8,
+          "p10": -5.8,
+          "median": -0.1,
+          "p90": 5.2,
+          "max": 29.6
+        },
+        "twoWeek": {
+          "min": -25.7,
+          "p10": -8.3,
+          "median": -0.5,
+          "p90": 8.5,
+          "max": 32.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 14.92,
+      "netMarginPct": 10.26,
+      "debtEquity": 0.14
     },
     {
       "ticker": "IBM",
@@ -548,8 +1243,48 @@
       "full": "International Business Machines",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 234.43,
+      "dayChangePct": 1.18,
+      "week52High": 332.46,
+      "week52Low": 199.19,
+      "return1y": -3.96,
+      "return3y": 58.46,
+      "return5y": 75.68,
+      "pe": 20.819715,
+      "divYieldPct": 2.92,
+      "ma50": 241.81,
+      "ma200": 262.63,
+      "rsi14": 49.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -25.2,
+          "p10": -2.0,
+          "median": 0.1,
+          "p90": 2.2,
+          "max": 13.0
+        },
+        "week": {
+          "min": -30.1,
+          "p10": -5.7,
+          "median": 0.3,
+          "p90": 6.2,
+          "max": 31.3
+        },
+        "twoWeek": {
+          "min": -31.9,
+          "p10": -8.2,
+          "median": 0.5,
+          "p90": 9.4,
+          "max": 47.8
+        },
+        "sampleDays": 504
+      },
+      "roePct": 34.46,
+      "netMarginPct": 15.52,
+      "debtEquity": 1.89
     },
     {
       "ticker": "DXC",
@@ -557,8 +1292,48 @@
       "full": "DXC Technology Company",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 11.71,
+      "dayChangePct": 0.69,
+      "week52High": 15.68,
+      "week52Low": 7.9,
+      "return1y": -19.24,
+      "return3y": -44.53,
+      "return5y": -67.49,
+      "pe": 15.824325,
+      "divYieldPct": null,
+      "ma50": 10.3,
+      "ma200": 11.9,
+      "rsi14": 63.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -21.5,
+          "p10": -3.6,
+          "median": 0.0,
+          "p90": 3.3,
+          "max": 10.4
+        },
+        "week": {
+          "min": -31.6,
+          "p10": -7.9,
+          "median": -0.3,
+          "p90": 6.6,
+          "max": 25.1
+        },
+        "twoWeek": {
+          "min": -29.8,
+          "p10": -9.3,
+          "median": -1.4,
+          "p90": 8.7,
+          "max": 26.6
+        },
+        "sampleDays": 504
+      },
+      "roePct": 4.03,
+      "netMarginPct": 0.99,
+      "debtEquity": 1.25
     },
     {
       "ticker": "KD",
@@ -566,8 +1341,48 @@
       "full": "Kyndryl Holdings Inc",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 13.3,
+      "dayChangePct": 1.57,
+      "week52High": 33.9,
+      "week52Low": 10.1,
+      "return1y": -58.47,
+      "return3y": -21.14,
+      "return5y": null,
+      "pe": 35.932434,
+      "divYieldPct": null,
+      "ma50": 12.64,
+      "ma200": 16.28,
+      "rsi14": 53.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -54.9,
+          "p10": -3.3,
+          "median": 0.1,
+          "p90": 3.1,
+          "max": 14.2
+        },
+        "week": {
+          "min": -54.6,
+          "p10": -7.7,
+          "median": 0.2,
+          "p90": 8.5,
+          "max": 28.3
+        },
+        "twoWeek": {
+          "min": -56.7,
+          "p10": -10.6,
+          "median": 0.2,
+          "p90": 11.6,
+          "max": 27.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 6.93,
+      "netMarginPct": 0.58,
+      "debtEquity": 4.22
     },
     {
       "ticker": "G",
@@ -575,8 +1390,48 @@
       "full": "Genpact Ltd",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 38.08,
+      "dayChangePct": 1.59,
+      "week52High": 48.64,
+      "week52Low": 26.85,
+      "return1y": -15.74,
+      "return3y": 0.67,
+      "return5y": -27.14,
+      "pe": 11.334822,
+      "divYieldPct": 2.0,
+      "ma50": 32.99,
+      "ma200": 37.67,
+      "rsi14": 67.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -15.2,
+          "p10": -2.0,
+          "median": -0.1,
+          "p90": 2.0,
+          "max": 15.9
+        },
+        "week": {
+          "min": -16.1,
+          "p10": -5.1,
+          "median": 0.1,
+          "p90": 5.3,
+          "max": 22.3
+        },
+        "twoWeek": {
+          "min": -18.6,
+          "p10": -7.4,
+          "median": -0.6,
+          "p90": 9.3,
+          "max": 22.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": 22.45,
+      "netMarginPct": 11.1,
+      "debtEquity": 0.54
     },
     {
       "ticker": "WNS",
@@ -584,8 +1439,9 @@
       "full": "WNS (Holdings) Ltd",
       "category": "GSI",
       "ccy": "USD",
+      "penceQuoted": false,
       "ok": false,
-      "error": "pending first live fetch"
+      "error": "no price history returned"
     },
     {
       "ticker": "EXLS",
@@ -593,8 +1449,48 @@
       "full": "ExlService Holdings Inc",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 37.07,
+      "dayChangePct": 0.43,
+      "week52High": 45.08,
+      "week52Low": 24.85,
+      "return1y": -15.02,
+      "return3y": 26.52,
+      "return5y": 50.37,
+      "pe": 23.462025,
+      "divYieldPct": null,
+      "ma50": 32.02,
+      "ma200": 33.5,
+      "rsi14": 61.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -18.7,
+          "p10": -1.9,
+          "median": 0.0,
+          "p90": 2.0,
+          "max": 17.9
+        },
+        "week": {
+          "min": -21.8,
+          "p10": -5.0,
+          "median": 0.3,
+          "p90": 4.6,
+          "max": 34.1
+        },
+        "twoWeek": {
+          "min": -27.1,
+          "p10": -6.8,
+          "median": 0.4,
+          "p90": 7.1,
+          "max": 30.5
+        },
+        "sampleDays": 504
+      },
+      "roePct": 25.94,
+      "netMarginPct": 11.17,
+      "debtEquity": 0.57
     },
     {
       "ticker": "DOX",
@@ -602,8 +1498,48 @@
       "full": "Amdocs Ltd",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 63.53,
+      "dayChangePct": 1.71,
+      "week52High": 86.14,
+      "week52Low": 49.74,
+      "return1y": -24.92,
+      "return3y": -29.32,
+      "return5y": -18.87,
+      "pe": 15.0902605,
+      "divYieldPct": 3.64,
+      "ma50": 55.75,
+      "ma200": 66.46,
+      "rsi14": 70.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -8.6,
+          "p10": -1.8,
+          "median": 0.0,
+          "p90": 1.6,
+          "max": 6.9
+        },
+        "week": {
+          "min": -12.3,
+          "p10": -3.9,
+          "median": 0.0,
+          "p90": 3.4,
+          "max": 10.9
+        },
+        "twoWeek": {
+          "min": -15.7,
+          "p10": -7.0,
+          "median": 0.1,
+          "p90": 4.3,
+          "max": 16.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 13.31,
+      "netMarginPct": 9.75,
+      "debtEquity": 0.33
     },
     {
       "ticker": "EPAM",
@@ -611,8 +1547,48 @@
       "full": "EPAM Systems Inc",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 120.76,
+      "dayChangePct": 3.04,
+      "week52High": 222.53,
+      "week52Low": 73.06,
+      "return1y": -30.62,
+      "return3y": -53.29,
+      "return5y": -81.23,
+      "pe": 16.385347,
+      "divYieldPct": null,
+      "ma50": 96.96,
+      "ma200": 138.92,
+      "rsi14": 70.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -17.0,
+          "p10": -2.8,
+          "median": 0.0,
+          "p90": 3.0,
+          "max": 14.9
+        },
+        "week": {
+          "min": -22.1,
+          "p10": -8.3,
+          "median": -0.2,
+          "p90": 7.5,
+          "max": 28.5
+        },
+        "twoWeek": {
+          "min": -32.4,
+          "p10": -13.2,
+          "median": -0.9,
+          "p90": 12.4,
+          "max": 31.5
+        },
+        "sampleDays": 504
+      },
+      "roePct": 11.18,
+      "netMarginPct": 7.15,
+      "debtEquity": 0.04
     },
     {
       "ticker": "GLOB",
@@ -620,8 +1596,48 @@
       "full": "Globant SA",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 40.49,
+      "dayChangePct": 4.14,
+      "week52High": 72.1,
+      "week52Low": 27.56,
+      "return1y": -36.77,
+      "return3y": -79.98,
+      "return5y": -87.77,
+      "pe": 15.816407,
+      "divYieldPct": null,
+      "ma50": 35.05,
+      "ma200": 47.82,
+      "rsi14": 58.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -27.8,
+          "p10": -4.0,
+          "median": -0.2,
+          "p90": 3.6,
+          "max": 14.2
+        },
+        "week": {
+          "min": -33.7,
+          "p10": -11.3,
+          "median": -0.5,
+          "p90": 7.9,
+          "max": 27.6
+        },
+        "twoWeek": {
+          "min": -36.0,
+          "p10": -16.7,
+          "median": -1.3,
+          "p90": 9.4,
+          "max": 25.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 5.48,
+      "netMarginPct": 4.63,
+      "debtEquity": 0.24
     },
     {
       "ticker": "DAVA",
@@ -629,8 +1645,48 @@
       "full": "Endava plc",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 3.14,
+      "dayChangePct": 2.61,
+      "week52High": 11.11,
+      "week52Low": 2.55,
+      "return1y": -78.16,
+      "return3y": -93.65,
+      "return5y": -97.69,
+      "pe": null,
+      "divYieldPct": null,
+      "ma50": 2.96,
+      "ma200": 4.52,
+      "rsi14": 52.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -30.7,
+          "p10": -4.3,
+          "median": -0.2,
+          "p90": 4.0,
+          "max": 16.0
+        },
+        "week": {
+          "min": -34.6,
+          "p10": -11.9,
+          "median": -1.3,
+          "p90": 8.6,
+          "max": 24.9
+        },
+        "twoWeek": {
+          "min": -35.6,
+          "p10": -19.8,
+          "median": -2.4,
+          "p90": 8.9,
+          "max": 19.5
+        },
+        "sampleDays": 504
+      },
+      "roePct": -99.81,
+      "netMarginPct": -56.12,
+      "debtEquity": 1.38
     },
     {
       "ticker": "CNXC",
@@ -638,8 +1694,48 @@
       "full": "Concentrix Corporation",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 32.93,
+      "dayChangePct": 1.73,
+      "week52High": 57.88,
+      "week52Low": 19.12,
+      "return1y": -36.64,
+      "return3y": -59.13,
+      "return5y": -81.06,
+      "pe": null,
+      "divYieldPct": 4.45,
+      "ma50": 25.25,
+      "ma200": 30.64,
+      "rsi14": 76.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -19.9,
+          "p10": -4.2,
+          "median": -0.1,
+          "p90": 3.8,
+          "max": 42.4
+        },
+        "week": {
+          "min": -23.9,
+          "p10": -11.1,
+          "median": 0.4,
+          "p90": 8.4,
+          "max": 44.3
+        },
+        "twoWeek": {
+          "min": -26.8,
+          "p10": -15.4,
+          "median": -0.6,
+          "p90": 11.3,
+          "max": 50.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": -37.66,
+      "netMarginPct": -13.15,
+      "debtEquity": 2.04
     },
     {
       "ticker": "UIS",
@@ -647,8 +1743,48 @@
       "full": "Unisys Corporation",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 2.62,
+      "dayChangePct": 0.57,
+      "week52High": 4.98,
+      "week52Low": 1.97,
+      "return1y": -31.46,
+      "return3y": -33.88,
+      "return5y": -89.29,
+      "pe": null,
+      "divYieldPct": null,
+      "ma50": 3.2,
+      "ma200": 2.89,
+      "rsi14": 38.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -21.1,
+          "p10": -4.0,
+          "median": -0.3,
+          "p90": 4.1,
+          "max": 33.8
+        },
+        "week": {
+          "min": -35.7,
+          "p10": -10.9,
+          "median": -1.4,
+          "p90": 10.4,
+          "max": 62.0
+        },
+        "twoWeek": {
+          "min": -39.7,
+          "p10": -16.4,
+          "median": -1.5,
+          "p90": 17.6,
+          "max": 59.9
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": -21.65,
+      "debtEquity": null
     },
     {
       "ticker": "GIB",
@@ -656,8 +1792,48 @@
       "full": "CGI Inc",
       "category": "GSI",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 74.78,
+      "dayChangePct": 2.64,
+      "week52High": 97.5,
+      "week52Low": 59.63,
+      "return1y": -22.46,
+      "return3y": -28.0,
+      "return5y": -18.74,
+      "pe": 12.870052,
+      "divYieldPct": 0.67,
+      "ma50": 70.33,
+      "ma200": 75.93,
+      "rsi14": 56.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -10.8,
+          "p10": -1.8,
+          "median": 0.0,
+          "p90": 1.6,
+          "max": 5.6
+        },
+        "week": {
+          "min": -14.1,
+          "p10": -4.4,
+          "median": -0.2,
+          "p90": 3.2,
+          "max": 14.8
+        },
+        "twoWeek": {
+          "min": -15.4,
+          "p10": -6.1,
+          "median": -0.5,
+          "p90": 4.2,
+          "max": 16.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 17.03,
+      "netMarginPct": 10.54,
+      "debtEquity": 0.44
     },
     {
       "ticker": "CAP.PA",
@@ -665,8 +1841,48 @@
       "full": "Capgemini SE",
       "category": "GSI",
       "ccy": "EUR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 110.0,
+      "dayChangePct": 4.66,
+      "week52High": 153.05,
+      "week52Low": 85.62,
+      "return1y": -9.61,
+      "return3y": -35.79,
+      "return5y": -42.57,
+      "pe": 13.977129,
+      "divYieldPct": 3.24,
+      "ma50": 100.18,
+      "ma200": 111.5,
+      "rsi14": 57.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -10.2,
+          "p10": -2.5,
+          "median": 0.0,
+          "p90": 2.5,
+          "max": 7.0
+        },
+        "week": {
+          "min": -15.5,
+          "p10": -6.8,
+          "median": -0.4,
+          "p90": 5.4,
+          "max": 21.0
+        },
+        "twoWeek": {
+          "min": -24.3,
+          "p10": -9.5,
+          "median": -0.7,
+          "p90": 7.7,
+          "max": 26.9
+        },
+        "sampleDays": 504
+      },
+      "roePct": 12.2,
+      "netMarginPct": 5.87,
+      "debtEquity": 0.88
     },
     {
       "ticker": "ATO.PA",
@@ -674,8 +1890,48 @@
       "full": "Atos SE",
       "category": "GSI",
       "ccy": "EUR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 27.3,
+      "dayChangePct": 0.89,
+      "week52High": 63.24,
+      "week52Low": 26.5,
+      "return1y": -27.39,
+      "return3y": -95.22,
+      "return5y": -99.19,
+      "pe": null,
+      "divYieldPct": null,
+      "ma50": 30.81,
+      "ma200": 39.54,
+      "rsi14": 33.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -98.5,
+          "p10": -5.0,
+          "median": -0.1,
+          "p90": 5.7,
+          "max": 8527.9
+        },
+        "week": {
+          "min": -99.7,
+          "p10": -11.3,
+          "median": -0.6,
+          "p90": 15.0,
+          "max": 8331.7
+        },
+        "twoWeek": {
+          "min": -99.8,
+          "p10": -13.6,
+          "median": -0.5,
+          "p90": 25.3,
+          "max": 8011.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": -16.39,
+      "debtEquity": null
     },
     {
       "ticker": "SOP.PA",
@@ -683,8 +1939,48 @@
       "full": "Sopra Steria Group",
       "category": "GSI",
       "ccy": "EUR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 176.1,
+      "dayChangePct": 3.1,
+      "week52High": 202.2,
+      "week52Low": 109.4,
+      "return1y": 14.35,
+      "return3y": -13.59,
+      "return5y": 0.92,
+      "pe": 11.3320465,
+      "divYieldPct": 3.1,
+      "ma50": 167.99,
+      "ma200": 144.54,
+      "rsi14": 49.2,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.1,
+          "p10": -2.5,
+          "median": 0.1,
+          "p90": 2.6,
+          "max": 17.5
+        },
+        "week": {
+          "min": -14.3,
+          "p10": -6.6,
+          "median": -0.2,
+          "p90": 5.8,
+          "max": 31.6
+        },
+        "twoWeek": {
+          "min": -21.6,
+          "p10": -9.0,
+          "median": -0.1,
+          "p90": 9.0,
+          "max": 30.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 14.58,
+      "netMarginPct": 5.22,
+      "debtEquity": 0.65
     },
     {
       "ticker": "6702.T",
@@ -692,8 +1988,48 @@
       "full": "Fujitsu Ltd",
       "category": "GSI",
       "ccy": "JPY",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": NaN,
+      "dayChangePct": NaN,
+      "week52High": 4668.0,
+      "week52Low": 3016.0,
+      "return1y": NaN,
+      "return3y": NaN,
+      "return5y": NaN,
+      "pe": 21.704317,
+      "divYieldPct": 1.45,
+      "ma50": 3519.2,
+      "ma200": 3707.18,
+      "rsi14": 55.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -13.9,
+          "p10": -2.5,
+          "median": 0.1,
+          "p90": 3.0,
+          "max": 9.6
+        },
+        "week": {
+          "min": -18.5,
+          "p10": -5.5,
+          "median": 0.6,
+          "p90": 6.7,
+          "max": 20.3
+        },
+        "twoWeek": {
+          "min": -16.7,
+          "p10": -7.8,
+          "median": 1.3,
+          "p90": 9.6,
+          "max": 21.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 16.2,
+      "netMarginPct": 9.0,
+      "debtEquity": 0.07
     },
     {
       "ticker": "6501.T",
@@ -701,8 +2037,48 @@
       "full": "Hitachi Ltd",
       "category": "GSI",
       "ccy": "JPY",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": NaN,
+      "dayChangePct": NaN,
+      "week52High": 6039.0,
+      "week52Low": 3822.0,
+      "return1y": NaN,
+      "return3y": NaN,
+      "return5y": NaN,
+      "pe": 30.307493,
+      "divYieldPct": 1.05,
+      "ma50": 5081.69,
+      "ma200": 5011.31,
+      "rsi14": 50.4,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.8,
+          "p10": -2.9,
+          "median": 0.0,
+          "p90": 3.5,
+          "max": 14.4
+        },
+        "week": {
+          "min": -22.1,
+          "p10": -6.5,
+          "median": 0.8,
+          "p90": 7.5,
+          "max": 19.4
+        },
+        "twoWeek": {
+          "min": -28.0,
+          "p10": -6.8,
+          "median": 0.8,
+          "p90": 11.0,
+          "max": 27.0
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 7.24,
+      "debtEquity": 0.16
     },
     {
       "ticker": "6701.T",
@@ -710,8 +2086,48 @@
       "full": "NEC Corporation",
       "category": "GSI",
       "ccy": "JPY",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": NaN,
+      "dayChangePct": NaN,
+      "week52High": 6194.0,
+      "week52Low": 3606.0,
+      "return1y": NaN,
+      "return3y": NaN,
+      "return5y": NaN,
+      "pe": 23.302454,
+      "divYieldPct": 0.84,
+      "ma50": 4514.53,
+      "ma200": 4672.75,
+      "rsi14": 52.2,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.8,
+          "p10": -2.9,
+          "median": 0.1,
+          "p90": 3.1,
+          "max": 18.4
+        },
+        "week": {
+          "min": -20.6,
+          "p10": -5.3,
+          "median": 0.6,
+          "p90": 7.6,
+          "max": 20.5
+        },
+        "twoWeek": {
+          "min": -26.1,
+          "p10": -7.0,
+          "median": 1.9,
+          "p90": 11.8,
+          "max": 22.5
+        },
+        "sampleDays": 504
+      },
+      "roePct": 14.16,
+      "netMarginPct": 8.15,
+      "debtEquity": 0.25
     },
     {
       "ticker": "JPM",
@@ -719,8 +2135,48 @@
       "full": "JPMorgan Chase & Co",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 362.07,
+      "dayChangePct": 1.64,
+      "week52High": 366.5,
+      "week52Low": 279.1,
+      "return1y": 20.89,
+      "return3y": 146.61,
+      "return5y": 127.02,
+      "pe": 15.519504,
+      "divYieldPct": 1.68,
+      "ma50": 348.82,
+      "ma200": 317.78,
+      "rsi14": 60.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -8.1,
+          "p10": -1.5,
+          "median": 0.2,
+          "p90": 1.7,
+          "max": 11.5
+        },
+        "week": {
+          "min": -13.4,
+          "p10": -3.2,
+          "median": 0.7,
+          "p90": 4.8,
+          "max": 12.3
+        },
+        "twoWeek": {
+          "min": -13.6,
+          "p10": -4.5,
+          "median": 1.4,
+          "p90": 6.9,
+          "max": 11.5
+        },
+        "sampleDays": 504
+      },
+      "roePct": 17.79,
+      "netMarginPct": 34.92,
+      "debtEquity": null
     },
     {
       "ticker": "GS",
@@ -728,8 +2184,48 @@
       "full": "The Goldman Sachs Group",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 1035.25,
+      "dayChangePct": 3.07,
+      "week52High": 1153.99,
+      "week52Low": 727.15,
+      "return1y": 41.71,
+      "return3y": 216.2,
+      "return5y": 151.7,
+      "pe": 15.953922,
+      "divYieldPct": 1.99,
+      "ma50": 1044.18,
+      "ma200": 946.75,
+      "rsi14": 50.2,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.2,
+          "p10": -1.9,
+          "median": 0.2,
+          "p90": 2.2,
+          "max": 13.1
+        },
+        "week": {
+          "min": -15.7,
+          "p10": -4.0,
+          "median": 0.7,
+          "p90": 5.7,
+          "max": 17.8
+        },
+        "twoWeek": {
+          "min": -21.1,
+          "p10": -5.0,
+          "median": 1.9,
+          "p90": 9.6,
+          "max": 15.4
+        },
+        "sampleDays": 504
+      },
+      "roePct": 16.9,
+      "netMarginPct": 31.04,
+      "debtEquity": 7.25
     },
     {
       "ticker": "MS",
@@ -737,8 +2233,48 @@
       "full": "Morgan Stanley",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 216.43,
+      "dayChangePct": 2.18,
+      "week52High": 232.25,
+      "week52Low": 146.29,
+      "return1y": 45.71,
+      "return3y": 152.4,
+      "return5y": 107.61,
+      "pe": 17.496363,
+      "divYieldPct": 2.17,
+      "ma50": 215.64,
+      "ma200": 190.63,
+      "rsi14": 53.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.5,
+          "p10": -1.9,
+          "median": 0.1,
+          "p90": 2.2,
+          "max": 11.6
+        },
+        "week": {
+          "min": -13.5,
+          "p10": -3.7,
+          "median": 0.8,
+          "p90": 5.4,
+          "max": 15.0
+        },
+        "twoWeek": {
+          "min": -19.9,
+          "p10": -4.6,
+          "median": 1.6,
+          "p90": 8.8,
+          "max": 16.4
+        },
+        "sampleDays": 504
+      },
+      "roePct": 17.97,
+      "netMarginPct": 25.9,
+      "debtEquity": 5.17
     },
     {
       "ticker": "C",
@@ -746,8 +2282,48 @@
       "full": "Citigroup Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 137.93,
+      "dayChangePct": 2.67,
+      "week52High": 147.96,
+      "week52Low": 93.4,
+      "return1y": 45.14,
+      "return3y": 231.64,
+      "return5y": 93.8,
+      "pe": 14.863146,
+      "divYieldPct": 1.99,
+      "ma50": 135.64,
+      "ma200": 122.82,
+      "rsi14": 58.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -12.1,
+          "p10": -2.0,
+          "median": 0.3,
+          "p90": 2.2,
+          "max": 9.2
+        },
+        "week": {
+          "min": -17.3,
+          "p10": -3.9,
+          "median": 0.8,
+          "p90": 6.1,
+          "max": 12.2
+        },
+        "twoWeek": {
+          "min": -21.1,
+          "p10": -5.3,
+          "median": 1.9,
+          "p90": 9.6,
+          "max": 20.8
+        },
+        "sampleDays": 504
+      },
+      "roePct": 8.53,
+      "netMarginPct": 21.83,
+      "debtEquity": null
     },
     {
       "ticker": "BAC",
@@ -755,8 +2331,48 @@
       "full": "Bank of America Corp",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 63.15,
+      "dayChangePct": 0.88,
+      "week52High": 65.23,
+      "week52Low": 46.12,
+      "return1y": 26.15,
+      "return3y": 117.91,
+      "return5y": 53.84,
+      "pe": 14.584296,
+      "divYieldPct": 2.04,
+      "ma50": 61.53,
+      "ma200": 54.82,
+      "rsi14": 56.2,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.1,
+          "p10": -1.5,
+          "median": 0.1,
+          "p90": 1.7,
+          "max": 8.4
+        },
+        "week": {
+          "min": -16.6,
+          "p10": -3.6,
+          "median": 0.8,
+          "p90": 4.5,
+          "max": 11.5
+        },
+        "twoWeek": {
+          "min": -19.1,
+          "p10": -5.6,
+          "median": 1.4,
+          "p90": 7.7,
+          "max": 13.6
+        },
+        "sampleDays": 504
+      },
+      "roePct": 11.2,
+      "netMarginPct": 29.52,
+      "debtEquity": null
     },
     {
       "ticker": "WFC",
@@ -764,8 +2380,48 @@
       "full": "Wells Fargo & Company",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 89.06,
+      "dayChangePct": -0.24,
+      "week52High": 97.76,
+      "week52Low": 72.78,
+      "return1y": 10.62,
+      "return3y": 113.83,
+      "return5y": 101.63,
+      "pe": 12.944767,
+      "divYieldPct": 2.24,
+      "ma50": 86.49,
+      "ma200": 84.95,
+      "rsi14": 60.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.1,
+          "p10": -1.9,
+          "median": 0.2,
+          "p90": 2.0,
+          "max": 13.1
+        },
+        "week": {
+          "min": -13.7,
+          "p10": -4.7,
+          "median": 0.9,
+          "p90": 5.4,
+          "max": 13.9
+        },
+        "twoWeek": {
+          "min": -16.4,
+          "p10": -7.1,
+          "median": 1.2,
+          "p90": 8.2,
+          "max": 17.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 12.57,
+      "netMarginPct": 27.23,
+      "debtEquity": null
     },
     {
       "ticker": "AXP",
@@ -773,8 +2429,48 @@
       "full": "American Express Company",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 330.51,
+      "dayChangePct": 0.16,
+      "week52High": 387.49,
+      "week52Low": 290.97,
+      "return1y": 2.1,
+      "return3y": 107.06,
+      "return5y": 107.48,
+      "pe": 20.067396,
+      "divYieldPct": 1.15,
+      "ma50": 341.78,
+      "ma200": 337.19,
+      "rsi14": 43.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -10.0,
+          "p10": -1.8,
+          "median": 0.1,
+          "p90": 2.1,
+          "max": 13.4
+        },
+        "week": {
+          "min": -14.5,
+          "p10": -4.0,
+          "median": 0.2,
+          "p90": 5.4,
+          "max": 11.4
+        },
+        "twoWeek": {
+          "min": -17.1,
+          "p10": -5.4,
+          "median": 0.3,
+          "p90": 7.6,
+          "max": 14.6
+        },
+        "sampleDays": 504
+      },
+      "roePct": 34.38,
+      "netMarginPct": 16.14,
+      "debtEquity": 1.72
     },
     {
       "ticker": "BCS",
@@ -782,8 +2478,48 @@
       "full": "Barclays plc (US ADR)",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 26.82,
+      "dayChangePct": 2.35,
+      "week52High": 28.69,
+      "week52Low": 19.29,
+      "return1y": 36.26,
+      "return3y": 255.17,
+      "return5y": 158.33,
+      "pe": 10.234734,
+      "divYieldPct": 2.33,
+      "ma50": 27.43,
+      "ma200": 24.87,
+      "rsi14": 46.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.1,
+          "p10": -2.3,
+          "median": 0.2,
+          "p90": 2.5,
+          "max": 10.0
+        },
+        "week": {
+          "min": -17.6,
+          "p10": -4.0,
+          "median": 0.9,
+          "p90": 5.8,
+          "max": 16.1
+        },
+        "twoWeek": {
+          "min": -21.9,
+          "p10": -4.3,
+          "median": 1.9,
+          "p90": 8.6,
+          "max": 23.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": 10.09,
+      "netMarginPct": 27.87,
+      "debtEquity": null
     },
     {
       "ticker": "HSBC",
@@ -791,8 +2527,48 @@
       "full": "HSBC Holdings plc (US ADR)",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 106.27,
+      "dayChangePct": 1.27,
+      "week52High": 107.92,
+      "week52Low": 64.4,
+      "return1y": 64.17,
+      "return3y": 183.01,
+      "return5y": 299.36,
+      "pe": 15.181428,
+      "divYieldPct": 3.57,
+      "ma50": 101.51,
+      "ma200": 88.93,
+      "rsi14": 63.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.7,
+          "p10": -1.7,
+          "median": 0.3,
+          "p90": 1.8,
+          "max": 7.2
+        },
+        "week": {
+          "min": -18.5,
+          "p10": -2.9,
+          "median": 1.3,
+          "p90": 5.0,
+          "max": 11.8
+        },
+        "twoWeek": {
+          "min": -20.0,
+          "p10": -3.3,
+          "median": 2.1,
+          "p90": 6.7,
+          "max": 20.0
+        },
+        "sampleDays": 504
+      },
+      "roePct": 13.1,
+      "netMarginPct": 37.8,
+      "debtEquity": null
     },
     {
       "ticker": "STAN.L",
@@ -800,8 +2576,48 @@
       "full": "Standard Chartered plc",
       "category": "GCC Parent",
       "ccy": "GBP",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": true,
+      "ok": true,
+      "price": 22.3,
+      "dayChangePct": 1.18,
+      "week52High": 22.78,
+      "week52Low": 13.52,
+      "return1y": 63.97,
+      "return3y": 214.35,
+      "return5y": 391.84,
+      "pe": 14.113923,
+      "divYieldPct": 2.33,
+      "ma50": 21.53,
+      "ma200": 18.78,
+      "rsi14": 57.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -13.3,
+          "p10": -1.7,
+          "median": 0.3,
+          "p90": 2.3,
+          "max": 9.6
+        },
+        "week": {
+          "min": -23.7,
+          "p10": -3.1,
+          "median": 1.2,
+          "p90": 5.9,
+          "max": 15.9
+        },
+        "twoWeek": {
+          "min": -26.0,
+          "p10": -3.6,
+          "median": 2.5,
+          "p90": 8.8,
+          "max": 24.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 9.84,
+      "netMarginPct": 26.03,
+      "debtEquity": null
     },
     {
       "ticker": "DBK.DE",
@@ -809,8 +2625,48 @@
       "full": "Deutsche Bank AG",
       "category": "GCC Parent",
       "ccy": "EUR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 35.55,
+      "dayChangePct": 1.94,
+      "week52High": 35.59,
+      "week52Low": 23.82,
+      "return1y": 19.3,
+      "return3y": 253.45,
+      "return5y": 237.22,
+      "pe": 10.805471,
+      "divYieldPct": 2.87,
+      "ma50": 32.18,
+      "ma200": 30.15,
+      "rsi14": 72.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.8,
+          "p10": -2.1,
+          "median": 0.2,
+          "p90": 2.4,
+          "max": 12.4
+        },
+        "week": {
+          "min": -19.8,
+          "p10": -4.6,
+          "median": 1.1,
+          "p90": 6.5,
+          "max": 16.0
+        },
+        "twoWeek": {
+          "min": -22.3,
+          "p10": -5.3,
+          "median": 1.8,
+          "p90": 10.0,
+          "max": 25.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 8.89,
+      "netMarginPct": 22.72,
+      "debtEquity": null
     },
     {
       "ticker": "UBS",
@@ -818,8 +2674,48 @@
       "full": "UBS Group AG",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 55.51,
+      "dayChangePct": 1.11,
+      "week52High": 55.99,
+      "week52Low": 36.29,
+      "return1y": 39.61,
+      "return3y": 110.74,
+      "return5y": 231.8,
+      "pe": 18.88095,
+      "divYieldPct": 2.0,
+      "ma50": 52.69,
+      "ma200": 45.79,
+      "rsi14": 62.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.3,
+          "p10": -2.0,
+          "median": 0.2,
+          "p90": 2.2,
+          "max": 8.8
+        },
+        "week": {
+          "min": -15.2,
+          "p10": -4.2,
+          "median": 0.7,
+          "p90": 5.7,
+          "max": 10.6
+        },
+        "twoWeek": {
+          "min": -22.4,
+          "p10": -6.0,
+          "median": 1.7,
+          "p90": 8.6,
+          "max": 18.8
+        },
+        "sampleDays": 504
+      },
+      "roePct": 10.67,
+      "netMarginPct": 17.95,
+      "debtEquity": null
     },
     {
       "ticker": "V",
@@ -827,8 +2723,48 @@
       "full": "Visa Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 377.75,
+      "dayChangePct": -0.17,
+      "week52High": 385.57,
+      "week52Low": 293.89,
+      "return1y": 7.66,
+      "return3y": 52.25,
+      "return5y": 67.81,
+      "pe": 32.094307,
+      "divYieldPct": 0.71,
+      "ma50": 362.28,
+      "ma200": 333.82,
+      "rsi14": 58.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.7,
+          "p10": -1.4,
+          "median": 0.1,
+          "p90": 1.5,
+          "max": 8.3
+        },
+        "week": {
+          "min": -11.0,
+          "p10": -3.1,
+          "median": 0.4,
+          "p90": 3.7,
+          "max": 9.6
+        },
+        "twoWeek": {
+          "min": -10.5,
+          "p10": -4.3,
+          "median": 0.8,
+          "p90": 5.4,
+          "max": 9.9
+        },
+        "sampleDays": 504
+      },
+      "roePct": 61.19,
+      "netMarginPct": 50.78,
+      "debtEquity": 0.68
     },
     {
       "ticker": "MA",
@@ -836,8 +2772,48 @@
       "full": "Mastercard Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 585.6,
+      "dayChangePct": -0.43,
+      "week52High": 601.62,
+      "week52Low": 464.52,
+      "return1y": -1.29,
+      "return3y": 40.92,
+      "return5y": 72.12,
+      "pe": 32.22922,
+      "divYieldPct": 0.59,
+      "ma50": 555.91,
+      "ma200": 530.14,
+      "rsi14": 57.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.7,
+          "p10": -1.5,
+          "median": 0.1,
+          "p90": 1.6,
+          "max": 7.4
+        },
+        "week": {
+          "min": -12.5,
+          "p10": -3.3,
+          "median": 0.4,
+          "p90": 3.7,
+          "max": 10.3
+        },
+        "twoWeek": {
+          "min": -12.0,
+          "p10": -4.3,
+          "median": 0.5,
+          "p90": 5.3,
+          "max": 10.4
+        },
+        "sampleDays": 504
+      },
+      "roePct": 241.2,
+      "netMarginPct": 46.34,
+      "debtEquity": 4.4
     },
     {
       "ticker": "PYPL",
@@ -845,8 +2821,48 @@
       "full": "PayPal Holdings Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 56.33,
+      "dayChangePct": 3.05,
+      "week52High": 79.21,
+      "week52Low": 38.46,
+      "return1y": -19.11,
+      "return3y": -11.38,
+      "return5y": -80.52,
+      "pe": 10.649339,
+      "divYieldPct": 1.07,
+      "ma50": 54.76,
+      "ma200": 51.05,
+      "rsi14": 47.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -20.3,
+          "p10": -2.6,
+          "median": 0.0,
+          "p90": 2.3,
+          "max": 17.2
+        },
+        "week": {
+          "min": -24.9,
+          "p10": -6.6,
+          "median": -0.1,
+          "p90": 5.4,
+          "max": 25.2
+        },
+        "twoWeek": {
+          "min": -30.2,
+          "p10": -9.4,
+          "median": -0.0,
+          "p90": 9.0,
+          "max": 28.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 24.5,
+      "netMarginPct": 14.36,
+      "debtEquity": 0.72
     },
     {
       "ticker": "BLK",
@@ -854,8 +2870,48 @@
       "full": "BlackRock Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 1119.98,
+      "dayChangePct": 1.17,
+      "week52High": 1219.94,
+      "week52Low": 917.39,
+      "return1y": 1.86,
+      "return3y": 58.59,
+      "return5y": 19.49,
+      "pe": 26.832294,
+      "divYieldPct": 2.07,
+      "ma50": 1088.94,
+      "ma200": 1058.74,
+      "rsi14": 46.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.7,
+          "p10": -1.7,
+          "median": 0.0,
+          "p90": 1.8,
+          "max": 10.0
+        },
+        "week": {
+          "min": -13.6,
+          "p10": -4.1,
+          "median": 0.6,
+          "p90": 4.8,
+          "max": 10.4
+        },
+        "twoWeek": {
+          "min": -16.2,
+          "p10": -5.4,
+          "median": 0.8,
+          "p90": 6.8,
+          "max": 13.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 12.28,
+      "netMarginPct": 24.09,
+      "debtEquity": 0.23
     },
     {
       "ticker": "SCHW",
@@ -863,8 +2919,48 @@
       "full": "The Charles Schwab Corporation",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 110.35,
+      "dayChangePct": 1.95,
+      "week52High": 114.53,
+      "week52Low": 83.96,
+      "return1y": 14.69,
+      "return3y": 82.4,
+      "return5y": 53.07,
+      "pe": 20.100183,
+      "divYieldPct": 1.18,
+      "ma50": 104.3,
+      "ma200": 97.26,
+      "rsi14": 57.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.8,
+          "p10": -1.6,
+          "median": 0.2,
+          "p90": 1.8,
+          "max": 7.6
+        },
+        "week": {
+          "min": -13.2,
+          "p10": -3.2,
+          "median": 0.6,
+          "p90": 4.5,
+          "max": 12.6
+        },
+        "twoWeek": {
+          "min": -13.4,
+          "p10": -4.9,
+          "median": 0.9,
+          "p90": 7.7,
+          "max": 15.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 20.27,
+      "netMarginPct": 38.79,
+      "debtEquity": 1.51
     },
     {
       "ticker": "MSFT",
@@ -872,8 +2968,48 @@
       "full": "Microsoft Corporation",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 510.95,
+      "dayChangePct": 2.84,
+      "week52High": 553.72,
+      "week52Low": 349.2,
+      "return1y": 1.11,
+      "return3y": 55.46,
+      "return5y": 69.67,
+      "pe": 28.481041,
+      "divYieldPct": 0.73,
+      "ma50": 441.25,
+      "ma200": 431.09,
+      "rsi14": 66.4,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -10.0,
+          "p10": -1.8,
+          "median": 0.0,
+          "p90": 1.9,
+          "max": 15.5
+        },
+        "week": {
+          "min": -14.4,
+          "p10": -4.5,
+          "median": 0.3,
+          "p90": 4.4,
+          "max": 25.3
+        },
+        "twoWeek": {
+          "min": -16.0,
+          "p10": -5.7,
+          "median": 0.1,
+          "p90": 6.2,
+          "max": 31.0
+        },
+        "sampleDays": 504
+      },
+      "roePct": 34.04,
+      "netMarginPct": 40.3,
+      "debtEquity": 0.29
     },
     {
       "ticker": "GOOGL",
@@ -881,8 +3017,48 @@
       "full": "Alphabet Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 342.71,
+      "dayChangePct": 1.66,
+      "week52High": 408.61,
+      "week52Low": 226.11,
+      "return1y": 48.58,
+      "return3y": 152.63,
+      "return5y": 138.43,
+      "pe": 17.204569,
+      "divYieldPct": 0.26,
+      "ma50": 348.68,
+      "ma200": 335.67,
+      "rsi14": 48.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.3,
+          "p10": -2.0,
+          "median": 0.1,
+          "p90": 2.5,
+          "max": 10.0
+        },
+        "week": {
+          "min": -10.4,
+          "p10": -4.8,
+          "median": 0.7,
+          "p90": 7.0,
+          "max": 14.4
+        },
+        "twoWeek": {
+          "min": -15.2,
+          "p10": -5.9,
+          "median": 1.6,
+          "p90": 10.7,
+          "max": 21.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 48.68,
+      "netMarginPct": 54.77,
+      "debtEquity": 0.19
     },
     {
       "ticker": "AMZN",
@@ -890,8 +3066,48 @@
       "full": "Amazon.com Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 258.24,
+      "dayChangePct": 1.28,
+      "week52High": 287.2,
+      "week52Low": 196.0,
+      "return1y": 14.27,
+      "return3y": 86.97,
+      "return5y": 48.5,
+      "pe": 20.792269,
+      "divYieldPct": null,
+      "ma50": 253.31,
+      "ma200": 238.99,
+      "rsi14": 49.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.0,
+          "p10": -2.3,
+          "median": 0.0,
+          "p90": 2.4,
+          "max": 15.3
+        },
+        "week": {
+          "min": -14.1,
+          "p10": -4.8,
+          "median": 0.4,
+          "p90": 5.7,
+          "max": 22.7
+        },
+        "twoWeek": {
+          "min": -17.4,
+          "p10": -6.7,
+          "median": 0.8,
+          "p90": 9.5,
+          "max": 23.9
+        },
+        "sampleDays": 504
+      },
+      "roePct": 30.56,
+      "netMarginPct": 17.44,
+      "debtEquity": 0.46
     },
     {
       "ticker": "META",
@@ -899,8 +3115,48 @@
       "full": "Meta Platforms Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 614.56,
+      "dayChangePct": 3.66,
+      "week52High": 790.8,
+      "week52Low": 520.26,
+      "return1y": -16.62,
+      "return3y": 107.36,
+      "return5y": 63.33,
+      "pe": 23.138556,
+      "divYieldPct": 0.35,
+      "ma50": 594.09,
+      "ma200": 622.24,
+      "rsi14": 61.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.3,
+          "p10": -2.4,
+          "median": 0.1,
+          "p90": 2.5,
+          "max": 14.8
+        },
+        "week": {
+          "min": -16.5,
+          "p10": -5.8,
+          "median": 0.2,
+          "p90": 7.3,
+          "max": 15.2
+        },
+        "twoWeek": {
+          "min": -19.0,
+          "p10": -9.0,
+          "median": 0.1,
+          "p90": 10.6,
+          "max": 23.6
+        },
+        "sampleDays": 504
+      },
+      "roePct": 29.85,
+      "netMarginPct": 29.83,
+      "debtEquity": 0.43
     },
     {
       "ticker": "AAPL",
@@ -908,8 +3164,48 @@
       "full": "Apple Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 327.08,
+      "dayChangePct": 0.65,
+      "week52High": 344.57,
+      "week52Low": 225.95,
+      "return1y": 37.16,
+      "return3y": 72.64,
+      "return5y": 111.97,
+      "pe": 37.551666,
+      "divYieldPct": 0.33,
+      "ma50": 314.23,
+      "ma200": 283.6,
+      "rsi14": 62.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.2,
+          "p10": -1.8,
+          "median": 0.1,
+          "p90": 2.0,
+          "max": 15.3
+        },
+        "week": {
+          "min": -22.7,
+          "p10": -4.5,
+          "median": 0.7,
+          "p90": 5.0,
+          "max": 17.2
+        },
+        "twoWeek": {
+          "min": -22.9,
+          "p10": -5.5,
+          "median": 0.9,
+          "p90": 7.2,
+          "max": 18.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 148.75,
+      "netMarginPct": 27.62,
+      "debtEquity": 0.78
     },
     {
       "ticker": "ORCL",
@@ -917,8 +3213,48 @@
       "full": "Oracle Corporation",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 154.4,
+      "dayChangePct": 5.93,
+      "week52High": 345.72,
+      "week52Low": 114.5,
+      "return1y": -30.9,
+      "return3y": 27.68,
+      "return5y": 71.56,
+      "pe": 26.483704,
+      "divYieldPct": 1.37,
+      "ma50": 139.72,
+      "ma200": 169.09,
+      "rsi14": 57.8,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -13.8,
+          "p10": -4.0,
+          "median": 0.1,
+          "p90": 3.5,
+          "max": 35.9
+        },
+        "week": {
+          "min": -22.1,
+          "p10": -9.0,
+          "median": -0.3,
+          "p90": 10.4,
+          "max": 46.9
+        },
+        "twoWeek": {
+          "min": -24.3,
+          "p10": -12.9,
+          "median": -0.5,
+          "p90": 15.9,
+          "max": 40.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": 53.38,
+      "netMarginPct": 25.37,
+      "debtEquity": 3.89
     },
     {
       "ticker": "CRM",
@@ -926,8 +3262,48 @@
       "full": "Salesforce Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 265.47,
+      "dayChangePct": 3.32,
+      "week52High": 269.11,
+      "week52Low": 146.32,
+      "return1y": 3.52,
+      "return3y": 19.83,
+      "return5y": -0.6,
+      "pe": 24.31044,
+      "divYieldPct": 0.69,
+      "ma50": 189.49,
+      "ma200": 200.64,
+      "rsi14": 82.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -8.7,
+          "p10": -2.9,
+          "median": -0.0,
+          "p90": 2.8,
+          "max": 22.6
+        },
+        "week": {
+          "min": -15.2,
+          "p10": -6.6,
+          "median": 0.2,
+          "p90": 6.7,
+          "max": 25.5
+        },
+        "twoWeek": {
+          "min": -21.5,
+          "p10": -9.4,
+          "median": -0.3,
+          "p90": 8.8,
+          "max": 34.9
+        },
+        "sampleDays": 504
+      },
+      "roePct": 19.38,
+      "netMarginPct": 21.99,
+      "debtEquity": 1.1
     },
     {
       "ticker": "NOW",
@@ -935,8 +3311,48 @@
       "full": "ServiceNow Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 144.81,
+      "dayChangePct": 5.92,
+      "week52High": 194.73,
+      "week52Low": 81.24,
+      "return1y": -21.25,
+      "return3y": 22.54,
+      "return5y": 6.69,
+      "pe": 90.50625,
+      "divYieldPct": null,
+      "ma50": 115.97,
+      "ma200": 118.71,
+      "rsi14": 65.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -17.7,
+          "p10": -3.0,
+          "median": 0.0,
+          "p90": 2.9,
+          "max": 15.5
+        },
+        "week": {
+          "min": -18.6,
+          "p10": -8.7,
+          "median": -0.1,
+          "p90": 8.0,
+          "max": 33.0
+        },
+        "twoWeek": {
+          "min": -24.3,
+          "p10": -10.6,
+          "median": -0.4,
+          "p90": 11.2,
+          "max": 42.9
+        },
+        "sampleDays": 504
+      },
+      "roePct": 14.24,
+      "netMarginPct": 11.34,
+      "debtEquity": 0.68
     },
     {
       "ticker": "ADBE",
@@ -944,8 +3360,48 @@
       "full": "Adobe Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 286.04,
+      "dayChangePct": 2.23,
+      "week52High": 370.86,
+      "week52Low": 190.12,
+      "return1y": -17.92,
+      "return3y": -49.21,
+      "return5y": -57.09,
+      "pe": 16.354202,
+      "divYieldPct": null,
+      "ma50": 245.49,
+      "ma200": 268.43,
+      "rsi14": 62.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -13.9,
+          "p10": -2.6,
+          "median": -0.0,
+          "p90": 2.3,
+          "max": 7.4
+        },
+        "week": {
+          "min": -19.8,
+          "p10": -7.4,
+          "median": -0.4,
+          "p90": 5.9,
+          "max": 20.6
+        },
+        "twoWeek": {
+          "min": -24.7,
+          "p10": -10.0,
+          "median": -1.1,
+          "p90": 7.9,
+          "max": 22.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 62.95,
+      "netMarginPct": 28.69,
+      "debtEquity": 0.61
     },
     {
       "ticker": "SAP",
@@ -953,8 +3409,48 @@
       "full": "SAP SE (US ADR)",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 216.2,
+      "dayChangePct": 3.1,
+      "week52High": 281.37,
+      "week52Low": 144.97,
+      "return1y": -20.21,
+      "return3y": 56.45,
+      "return5y": 44.29,
+      "pe": 27.86018,
+      "divYieldPct": 1.4,
+      "ma50": 184.74,
+      "ma200": 196.56,
+      "rsi14": 61.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -15.2,
+          "p10": -2.4,
+          "median": 0.0,
+          "p90": 2.3,
+          "max": 9.3
+        },
+        "week": {
+          "min": -15.7,
+          "p10": -5.5,
+          "median": 0.2,
+          "p90": 4.9,
+          "max": 25.0
+        },
+        "twoWeek": {
+          "min": -19.1,
+          "p10": -7.1,
+          "median": 0.3,
+          "p90": 7.5,
+          "max": 36.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 18.32,
+      "netMarginPct": 20.41,
+      "debtEquity": 0.22
     },
     {
       "ticker": "INTU",
@@ -962,8 +3458,48 @@
       "full": "Intuit Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 349.98,
+      "dayChangePct": 2.05,
+      "week52High": 705.08,
+      "week52Low": 252.84,
+      "return1y": -47.66,
+      "return3y": -36.32,
+      "return5y": -37.86,
+      "pe": 21.262457,
+      "divYieldPct": 1.61,
+      "ma50": 312.33,
+      "ma200": 430.38,
+      "rsi14": 55.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -20.0,
+          "p10": -2.8,
+          "median": -0.0,
+          "p90": 2.6,
+          "max": 12.6
+        },
+        "week": {
+          "min": -24.5,
+          "p10": -6.8,
+          "median": -0.2,
+          "p90": 5.9,
+          "max": 20.8
+        },
+        "twoWeek": {
+          "min": -25.8,
+          "p10": -11.2,
+          "median": -0.7,
+          "p90": 8.1,
+          "max": 31.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 23.6,
+      "netMarginPct": 21.29,
+      "debtEquity": 0.44
     },
     {
       "ticker": "NVDA",
@@ -971,8 +3507,48 @@
       "full": "NVIDIA Corporation",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 229.44,
+      "dayChangePct": 2.24,
+      "week52High": 236.54,
+      "week52Low": 164.07,
+      "return1y": 34.47,
+      "return3y": 372.98,
+      "return5y": 904.42,
+      "pe": 29.043037,
+      "divYieldPct": 0.45,
+      "ma50": 209.89,
+      "ma200": 196.47,
+      "rsi14": 59.8,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -17.0,
+          "p10": -3.1,
+          "median": 0.2,
+          "p90": 3.4,
+          "max": 18.7
+        },
+        "week": {
+          "min": -15.9,
+          "p10": -6.4,
+          "median": 0.9,
+          "p90": 8.1,
+          "max": 17.6
+        },
+        "twoWeek": {
+          "min": -21.1,
+          "p10": -6.3,
+          "median": 1.5,
+          "p90": 11.3,
+          "max": 24.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 117.21,
+      "netMarginPct": 63.66,
+      "debtEquity": 0.17
     },
     {
       "ticker": "INTC",
@@ -980,8 +3556,48 @@
       "full": "Intel Corporation",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 91.43,
+      "dayChangePct": 1.54,
+      "week52High": 142.35,
+      "week52Low": 23.75,
+      "return1y": 280.98,
+      "return3y": 149.75,
+      "return5y": 70.87,
+      "pe": null,
+      "divYieldPct": null,
+      "ma50": 101.34,
+      "ma200": 73.85,
+      "rsi14": 45.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -17.0,
+          "p10": -4.2,
+          "median": -0.1,
+          "p90": 5.5,
+          "max": 23.6
+        },
+        "week": {
+          "min": -21.0,
+          "p10": -8.9,
+          "median": 0.1,
+          "p90": 14.9,
+          "max": 45.2
+        },
+        "twoWeek": {
+          "min": -26.2,
+          "p10": -12.1,
+          "median": 1.4,
+          "p90": 24.3,
+          "max": 73.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": -10.71,
+      "netMarginPct": -19.79,
+      "debtEquity": 0.49
     },
     {
       "ticker": "QCOM",
@@ -989,8 +3605,48 @@
       "full": "Qualcomm Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 169.33,
+      "dayChangePct": -0.37,
+      "week52High": 259.92,
+      "week52Low": 121.99,
+      "return1y": 7.66,
+      "return3y": 46.75,
+      "return5y": 17.08,
+      "pe": 19.352,
+      "divYieldPct": 2.17,
+      "ma50": 170.05,
+      "ma200": 167.82,
+      "rsi14": 53.8,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.5,
+          "p10": -2.8,
+          "median": 0.1,
+          "p90": 2.7,
+          "max": 15.2
+        },
+        "week": {
+          "min": -23.5,
+          "p10": -6.1,
+          "median": 0.0,
+          "p90": 6.6,
+          "max": 41.1
+        },
+        "twoWeek": {
+          "min": -22.2,
+          "p10": -8.8,
+          "median": -0.1,
+          "p90": 8.0,
+          "max": 58.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 33.75,
+      "netMarginPct": 21.01,
+      "debtEquity": 0.55
     },
     {
       "ticker": "TXN",
@@ -998,8 +3654,48 @@
       "full": "Texas Instruments Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 253.46,
+      "dayChangePct": -0.53,
+      "week52High": 334.03,
+      "week52Low": 152.73,
+      "return1y": 29.49,
+      "return3y": 49.24,
+      "return5y": 33.48,
+      "pe": 38.57839,
+      "divYieldPct": 2.23,
+      "ma50": 281.09,
+      "ma200": 238.86,
+      "rsi14": 36.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -13.3,
+          "p10": -2.4,
+          "median": 0.0,
+          "p90": 2.7,
+          "max": 19.4
+        },
+        "week": {
+          "min": -18.0,
+          "p10": -5.2,
+          "median": -0.0,
+          "p90": 7.2,
+          "max": 26.5
+        },
+        "twoWeek": {
+          "min": -20.6,
+          "p10": -8.6,
+          "median": -0.1,
+          "p90": 11.3,
+          "max": 31.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 35.18,
+      "netMarginPct": 31.11,
+      "debtEquity": 0.78
     },
     {
       "ticker": "VZ",
@@ -1007,8 +3703,48 @@
       "full": "Verizon Communications Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 50.63,
+      "dayChangePct": 0.82,
+      "week52High": 51.68,
+      "week52Low": 38.39,
+      "return1y": 15.75,
+      "return3y": 45.24,
+      "return5y": -8.66,
+      "pe": 13.184896,
+      "divYieldPct": 5.64,
+      "ma50": 46.33,
+      "ma200": 45.67,
+      "rsi14": 68.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -6.6,
+          "p10": -1.5,
+          "median": 0.0,
+          "p90": 1.6,
+          "max": 11.8
+        },
+        "week": {
+          "min": -9.6,
+          "p10": -3.7,
+          "median": 0.2,
+          "p90": 3.9,
+          "max": 19.3
+        },
+        "twoWeek": {
+          "min": -10.3,
+          "p10": -5.1,
+          "median": -0.0,
+          "p90": 5.5,
+          "max": 24.3
+        },
+        "sampleDays": 504
+      },
+      "roePct": 15.84,
+      "netMarginPct": 11.64,
+      "debtEquity": 1.84
     },
     {
       "ticker": "T",
@@ -1016,8 +3752,48 @@
       "full": "AT&T Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 26.18,
+      "dayChangePct": 0.91,
+      "week52High": 29.79,
+      "week52Low": 19.89,
+      "return1y": -9.83,
+      "return3y": 78.74,
+      "return5y": 25.79,
+      "pe": 8.641914,
+      "divYieldPct": 4.28,
+      "ma50": 23.39,
+      "ma200": 25.14,
+      "rsi14": 70.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -6.9,
+          "p10": -1.7,
+          "median": 0.1,
+          "p90": 1.7,
+          "max": 6.3
+        },
+        "week": {
+          "min": -9.6,
+          "p10": -3.9,
+          "median": 0.5,
+          "p90": 4.0,
+          "max": 16.7
+        },
+        "twoWeek": {
+          "min": -12.2,
+          "p10": -5.7,
+          "median": 0.5,
+          "p90": 6.7,
+          "max": 19.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": 18.34,
+      "netMarginPct": 16.94,
+      "debtEquity": 1.29
     },
     {
       "ticker": "NOK",
@@ -1025,8 +3801,48 @@
       "full": "Nokia Corporation (US ADR)",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 9.73,
+      "dayChangePct": -1.17,
+      "week52High": 17.45,
+      "week52Low": 4.48,
+      "return1y": 122.03,
+      "return3y": 143.73,
+      "return5y": 61.01,
+      "pe": 69.46429,
+      "divYieldPct": 1.66,
+      "ma50": 10.61,
+      "ma200": 9.59,
+      "rsi14": 42.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -13.5,
+          "p10": -2.8,
+          "median": 0.2,
+          "p90": 3.2,
+          "max": 22.2
+        },
+        "week": {
+          "min": -19.9,
+          "p10": -6.0,
+          "median": 0.7,
+          "p90": 8.5,
+          "max": 39.2
+        },
+        "twoWeek": {
+          "min": -26.8,
+          "p10": -9.1,
+          "median": 2.4,
+          "p90": 13.7,
+          "max": 42.0
+        },
+        "sampleDays": 504
+      },
+      "roePct": 3.45,
+      "netMarginPct": 3.47,
+      "debtEquity": 0.16
     },
     {
       "ticker": "ERIC",
@@ -1034,8 +3850,48 @@
       "full": "Telefonaktiebolaget LM Ericsson (US ADR)",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 10.15,
+      "dayChangePct": 1.05,
+      "week52High": 13.77,
+      "week52Low": 7.79,
+      "return1y": 29.24,
+      "return3y": 97.37,
+      "return5y": -16.09,
+      "pe": 13.175325,
+      "divYieldPct": 3.18,
+      "ma50": 10.28,
+      "ma200": 10.87,
+      "rsi14": 48.9,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -14.4,
+          "p10": -1.9,
+          "median": 0.0,
+          "p90": 2.0,
+          "max": 20.6
+        },
+        "week": {
+          "min": -18.2,
+          "p10": -4.7,
+          "median": 0.4,
+          "p90": 4.8,
+          "max": 19.2
+        },
+        "twoWeek": {
+          "min": -19.6,
+          "p10": -6.5,
+          "median": 0.9,
+          "p90": 8.8,
+          "max": 22.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 26.08,
+      "netMarginPct": 10.83,
+      "debtEquity": 0.38
     },
     {
       "ticker": "WMT",
@@ -1043,8 +3899,48 @@
       "full": "Walmart Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 108.85,
+      "dayChangePct": 2.6,
+      "week52High": 135.16,
+      "week52Low": 98.88,
+      "return1y": 9.46,
+      "return3y": 102.11,
+      "return5y": 118.79,
+      "pe": 39.438404,
+      "divYieldPct": 0.93,
+      "ma50": 111.06,
+      "ma200": 118.65,
+      "rsi14": 49.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.2,
+          "p10": -1.6,
+          "median": 0.1,
+          "p90": 1.7,
+          "max": 9.5
+        },
+        "week": {
+          "min": -11.7,
+          "p10": -3.4,
+          "median": 0.6,
+          "p90": 4.5,
+          "max": 14.9
+        },
+        "twoWeek": {
+          "min": -15.2,
+          "p10": -5.4,
+          "median": 0.9,
+          "p90": 6.8,
+          "max": 16.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 22.31,
+      "netMarginPct": 3.0,
+      "debtEquity": 0.72
     },
     {
       "ticker": "TGT",
@@ -1052,8 +3948,48 @@
       "full": "Target Corporation",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 164.67,
+      "dayChangePct": 0.8,
+      "week52High": 170.75,
+      "week52Low": 83.44,
+      "return1y": 78.31,
+      "return3y": 31.19,
+      "return5y": -32.6,
+      "pe": 17.08195,
+      "divYieldPct": 2.84,
+      "ma50": 146.55,
+      "ma200": 122.13,
+      "rsi14": 63.4,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -22.0,
+          "p10": -2.5,
+          "median": 0.1,
+          "p90": 2.5,
+          "max": 10.1
+        },
+        "week": {
+          "min": -21.5,
+          "p10": -4.8,
+          "median": 0.1,
+          "p90": 5.5,
+          "max": 12.5
+        },
+        "twoWeek": {
+          "min": -19.4,
+          "p10": -7.1,
+          "median": 0.9,
+          "p90": 7.4,
+          "max": 13.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 26.41,
+      "netMarginPct": 4.08,
+      "debtEquity": 1.08
     },
     {
       "ticker": "HD",
@@ -1061,8 +3997,48 @@
       "full": "The Home Depot Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 318.66,
+      "dayChangePct": 0.05,
+      "week52High": 426.75,
+      "week52Low": 289.1,
+      "return1y": -21.84,
+      "return3y": -4.33,
+      "return5y": -3.54,
+      "pe": 22.283676,
+      "divYieldPct": 2.93,
+      "ma50": 339.61,
+      "ma200": 344.09,
+      "rsi14": 34.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -6.0,
+          "p10": -1.9,
+          "median": -0.1,
+          "p90": 1.9,
+          "max": 6.0
+        },
+        "week": {
+          "min": -10.1,
+          "p10": -4.2,
+          "median": 0.0,
+          "p90": 4.1,
+          "max": 9.0
+        },
+        "twoWeek": {
+          "min": -12.2,
+          "p10": -6.2,
+          "median": -0.3,
+          "p90": 6.1,
+          "max": 10.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": 104.3,
+      "netMarginPct": 8.41,
+      "debtEquity": 3.8
     },
     {
       "ticker": "LOW",
@@ -1070,8 +4046,48 @@
       "full": "Lowe's Companies Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 202.56,
+      "dayChangePct": 1.36,
+      "week52High": 293.06,
+      "week52Low": 199.34,
+      "return1y": -22.3,
+      "return3y": -12.88,
+      "return5y": -1.66,
+      "pe": 17.12257,
+      "divYieldPct": 2.5,
+      "ma50": 213.97,
+      "ma200": 236.44,
+      "rsi14": 37.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -5.6,
+          "p10": -1.9,
+          "median": -0.0,
+          "p90": 2.0,
+          "max": 5.4
+        },
+        "week": {
+          "min": -9.5,
+          "p10": -4.5,
+          "median": -0.1,
+          "p90": 4.1,
+          "max": 11.3
+        },
+        "twoWeek": {
+          "min": -11.7,
+          "p10": -7.1,
+          "median": -0.3,
+          "p90": 6.3,
+          "max": 14.9
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 7.35,
+      "debtEquity": null
     },
     {
       "ticker": "NKE",
@@ -1079,8 +4095,48 @@
       "full": "Nike Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 38.58,
+      "dayChangePct": 0.89,
+      "week52High": 76.97,
+      "week52Low": 37.95,
+      "return1y": -48.38,
+      "return3y": -62.31,
+      "return5y": -76.37,
+      "pe": 18.37143,
+      "divYieldPct": 4.29,
+      "ma50": 41.55,
+      "ma200": 51.54,
+      "rsi14": 40.5,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -15.5,
+          "p10": -2.4,
+          "median": -0.2,
+          "p90": 2.5,
+          "max": 15.2
+        },
+        "week": {
+          "min": -18.3,
+          "p10": -6.6,
+          "median": -0.9,
+          "p90": 5.3,
+          "max": 25.6
+        },
+        "twoWeek": {
+          "min": -22.7,
+          "p10": -9.4,
+          "median": -1.5,
+          "p90": 7.4,
+          "max": 28.4
+        },
+        "sampleDays": 504
+      },
+      "roePct": 22.14,
+      "netMarginPct": 6.7,
+      "debtEquity": 0.74
     },
     {
       "ticker": "SBUX",
@@ -1088,8 +4144,48 @@
       "full": "Starbucks Corporation",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 106.15,
+      "dayChangePct": -0.53,
+      "week52High": 110.51,
+      "week52Low": 77.99,
+      "return1y": 21.66,
+      "return3y": 8.32,
+      "return5y": -9.42,
+      "pe": 61.358383,
+      "divYieldPct": 2.32,
+      "ma50": 105.34,
+      "ma200": 97.42,
+      "rsi14": 50.4,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.2,
+          "p10": -2.0,
+          "median": -0.1,
+          "p90": 2.0,
+          "max": 11.3
+        },
+        "week": {
+          "min": -18.9,
+          "p10": -4.8,
+          "median": 0.5,
+          "p90": 5.1,
+          "max": 11.2
+        },
+        "twoWeek": {
+          "min": -18.8,
+          "p10": -6.6,
+          "median": 1.0,
+          "p90": 6.3,
+          "max": 17.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 5.17,
+      "debtEquity": null
     },
     {
       "ticker": "UNH",
@@ -1097,8 +4193,48 @@
       "full": "UnitedHealth Group Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 403.98,
+      "dayChangePct": 1.08,
+      "week52High": 461.62,
+      "week52Low": 255.97,
+      "return1y": 31.21,
+      "return3y": -15.17,
+      "return5y": -4.47,
+      "pe": 25.9791,
+      "divYieldPct": 2.32,
+      "ma50": 412.42,
+      "ma200": 350.77,
+      "rsi14": 51.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -22.4,
+          "p10": -2.1,
+          "median": -0.0,
+          "p90": 2.3,
+          "max": 12.0
+        },
+        "week": {
+          "min": -29.0,
+          "p10": -6.1,
+          "median": 0.0,
+          "p90": 6.0,
+          "max": 22.2
+        },
+        "twoWeek": {
+          "min": -31.5,
+          "p10": -11.1,
+          "median": 0.4,
+          "p90": 8.4,
+          "max": 28.0
+        },
+        "sampleDays": 504
+      },
+      "roePct": 14.15,
+      "netMarginPct": 3.14,
+      "debtEquity": 0.69
     },
     {
       "ticker": "PFE",
@@ -1106,8 +4242,48 @@
       "full": "Pfizer Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 28.77,
+      "dayChangePct": -0.86,
+      "week52High": 29.21,
+      "week52Low": 23.58,
+      "return1y": 16.06,
+      "return3y": -19.59,
+      "return5y": -38.58,
+      "pe": 37.855396,
+      "divYieldPct": 5.93,
+      "ma50": 25.81,
+      "ma200": 26.13,
+      "rsi14": 67.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -5.4,
+          "p10": -1.9,
+          "median": 0.0,
+          "p90": 1.7,
+          "max": 6.8
+        },
+        "week": {
+          "min": -11.1,
+          "p10": -3.8,
+          "median": 0.2,
+          "p90": 3.7,
+          "max": 15.2
+        },
+        "twoWeek": {
+          "min": -14.5,
+          "p10": -4.5,
+          "median": 0.2,
+          "p90": 5.3,
+          "max": 13.9
+        },
+        "sampleDays": 504
+      },
+      "roePct": 5.01,
+      "netMarginPct": 6.8,
+      "debtEquity": 0.74
     },
     {
       "ticker": "NVS",
@@ -1115,8 +4291,48 @@
       "full": "Novartis AG (US ADR)",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 162.91,
+      "dayChangePct": 0.28,
+      "week52High": 170.46,
+      "week52Low": 121.57,
+      "return1y": 27.05,
+      "return3y": 61.75,
+      "return5y": 78.24,
+      "pe": 24.646746,
+      "divYieldPct": 2.92,
+      "ma50": 155.52,
+      "ma200": 149.58,
+      "rsi14": 60.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -5.7,
+          "p10": -1.5,
+          "median": 0.0,
+          "p90": 1.7,
+          "max": 6.0
+        },
+        "week": {
+          "min": -7.9,
+          "p10": -3.8,
+          "median": 0.6,
+          "p90": 3.9,
+          "max": 7.8
+        },
+        "twoWeek": {
+          "min": -9.3,
+          "p10": -4.9,
+          "median": 0.9,
+          "p90": 5.7,
+          "max": 12.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 30.35,
+      "netMarginPct": 22.5,
+      "debtEquity": 1.17
     },
     {
       "ticker": "AZN",
@@ -1124,8 +4340,48 @@
       "full": "AstraZeneca plc (US ADR)",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 164.51,
+      "dayChangePct": 1.78,
+      "week52High": 212.71,
+      "week52Low": 145.8,
+      "return1y": 0.17,
+      "return3y": 20.71,
+      "return5y": 39.81,
+      "pe": 24.6265,
+      "divYieldPct": 1.98,
+      "ma50": 169.96,
+      "ma200": 184.05,
+      "rsi14": 49.3,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.4,
+          "p10": -2.0,
+          "median": 0.0,
+          "p90": 1.9,
+          "max": 10.0
+        },
+        "week": {
+          "min": -14.8,
+          "p10": -4.4,
+          "median": 0.0,
+          "p90": 4.6,
+          "max": 15.7
+        },
+        "twoWeek": {
+          "min": -17.0,
+          "p10": -7.1,
+          "median": 0.3,
+          "p90": 7.1,
+          "max": 15.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 21.96,
+      "netMarginPct": 17.02,
+      "debtEquity": 0.64
     },
     {
       "ticker": "MDT",
@@ -1133,8 +4389,48 @@
       "full": "Medtronic plc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 92.66,
+      "dayChangePct": 0.52,
+      "week52High": 106.33,
+      "week52Low": 73.31,
+      "return1y": 0.44,
+      "return3y": 12.82,
+      "return5y": -31.17,
+      "pe": 24.841824,
+      "divYieldPct": 3.12,
+      "ma50": 86.45,
+      "ma200": 89.73,
+      "rsi14": 60.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.3,
+          "p10": -1.5,
+          "median": 0.0,
+          "p90": 1.6,
+          "max": 5.7
+        },
+        "week": {
+          "min": -7.5,
+          "p10": -3.3,
+          "median": -0.0,
+          "p90": 3.8,
+          "max": 11.2
+        },
+        "twoWeek": {
+          "min": -10.8,
+          "p10": -5.0,
+          "median": -0.0,
+          "p90": 5.6,
+          "max": 14.6
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 13.93,
+      "debtEquity": 0.58
     },
     {
       "ticker": "ABBV",
@@ -1142,8 +4438,48 @@
       "full": "AbbVie Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 260.75,
+      "dayChangePct": -0.37,
+      "week52High": 267.47,
+      "week52Low": 190.75,
+      "return1y": 23.08,
+      "return3y": 75.94,
+      "return5y": 133.61,
+      "pe": 73.86686,
+      "divYieldPct": 2.64,
+      "ma50": 253.81,
+      "ma200": 228.11,
+      "rsi14": 56.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -12.6,
+          "p10": -1.8,
+          "median": 0.0,
+          "p90": 2.0,
+          "max": 6.4
+        },
+        "week": {
+          "min": -17.3,
+          "p10": -3.7,
+          "median": 0.3,
+          "p90": 4.5,
+          "max": 17.0
+        },
+        "twoWeek": {
+          "min": -18.9,
+          "p10": -5.3,
+          "median": 1.1,
+          "p90": 7.1,
+          "max": 18.0
+        },
+        "sampleDays": 504
+      },
+      "roePct": null,
+      "netMarginPct": 9.8,
+      "debtEquity": null
     },
     {
       "ticker": "GE",
@@ -1151,8 +4487,48 @@
       "full": "GE Aerospace",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 331.57,
+      "dayChangePct": 0.63,
+      "week52High": 388.84,
+      "week52Low": 268.91,
+      "return1y": 20.16,
+      "return3y": 263.67,
+      "return5y": 408.07,
+      "pe": 39.1464,
+      "divYieldPct": 0.57,
+      "ma50": 358.33,
+      "ma200": 320.94,
+      "rsi14": 37.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -11.1,
+          "p10": -2.2,
+          "median": 0.2,
+          "p90": 2.4,
+          "max": 10.6
+        },
+        "week": {
+          "min": -16.9,
+          "p10": -4.9,
+          "median": 1.1,
+          "p90": 6.3,
+          "max": 12.6
+        },
+        "twoWeek": {
+          "min": -20.2,
+          "p10": -7.5,
+          "median": 2.1,
+          "p90": 10.3,
+          "max": 17.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": 48.23,
+      "netMarginPct": 17.72,
+      "debtEquity": 1.13
     },
     {
       "ticker": "BA",
@@ -1160,8 +4536,48 @@
       "full": "The Boeing Company",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 210.2,
+      "dayChangePct": 0.64,
+      "week52High": 254.35,
+      "week52Low": 176.77,
+      "return1y": -9.54,
+      "return3y": -5.91,
+      "return5y": -3.65,
+      "pe": 75.61151,
+      "divYieldPct": null,
+      "ma50": 219.52,
+      "ma200": 220.14,
+      "rsi14": 41.0,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -10.5,
+          "p10": -2.6,
+          "median": 0.0,
+          "p90": 2.5,
+          "max": 15.4
+        },
+        "week": {
+          "min": -21.2,
+          "p10": -5.7,
+          "median": 0.1,
+          "p90": 6.5,
+          "max": 14.8
+        },
+        "twoWeek": {
+          "min": -23.7,
+          "p10": -8.0,
+          "median": 0.4,
+          "p90": 10.3,
+          "max": 23.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 173.54,
+      "netMarginPct": 2.59,
+      "debtEquity": 7.91
     },
     {
       "ticker": "AIR.PA",
@@ -1169,8 +4585,48 @@
       "full": "Airbus SE",
       "category": "GCC Parent",
       "ccy": "EUR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 197.0,
+      "dayChangePct": 0.05,
+      "week52High": 221.3,
+      "week52Low": 157.42,
+      "return1y": 6.66,
+      "return3y": 46.82,
+      "return5y": 72.08,
+      "pe": 26.266666,
+      "divYieldPct": 1.63,
+      "ma50": 203.78,
+      "ma200": 189.91,
+      "rsi14": 37.6,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.0,
+          "p10": -2.0,
+          "median": 0.0,
+          "p90": 2.2,
+          "max": 7.8
+        },
+        "week": {
+          "min": -18.0,
+          "p10": -4.1,
+          "median": 0.4,
+          "p90": 5.5,
+          "max": 13.5
+        },
+        "twoWeek": {
+          "min": -21.7,
+          "p10": -5.3,
+          "median": 1.2,
+          "p90": 8.2,
+          "max": 16.2
+        },
+        "sampleDays": 504
+      },
+      "roePct": 23.19,
+      "netMarginPct": 7.71,
+      "debtEquity": 0.55
     },
     {
       "ticker": "SIE.DE",
@@ -1178,8 +4634,48 @@
       "full": "Siemens AG",
       "category": "GCC Parent",
       "ccy": "EUR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 270.6,
+      "dayChangePct": -1.17,
+      "week52High": 291.7,
+      "week52Low": 198.0,
+      "return1y": 17.93,
+      "return3y": 95.89,
+      "return5y": 89.79,
+      "pe": 27.005987,
+      "divYieldPct": 1.95,
+      "ma50": 276.83,
+      "ma200": 253.03,
+      "rsi14": 40.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -9.3,
+          "p10": -2.0,
+          "median": 0.1,
+          "p90": 2.3,
+          "max": 10.2
+        },
+        "week": {
+          "min": -17.5,
+          "p10": -3.9,
+          "median": 0.5,
+          "p90": 5.6,
+          "max": 13.0
+        },
+        "twoWeek": {
+          "min": -21.6,
+          "p10": -5.3,
+          "median": 1.4,
+          "p90": 8.8,
+          "max": 16.7
+        },
+        "sampleDays": 504
+      },
+      "roePct": 12.47,
+      "netMarginPct": 9.8,
+      "debtEquity": 0.66
     },
     {
       "ticker": "PHIA.AS",
@@ -1187,8 +4683,48 @@
       "full": "Koninklijke Philips NV",
       "category": "GCC Parent",
       "ccy": "EUR",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 22.35,
+      "dayChangePct": -2.23,
+      "week52High": 27.7,
+      "week52Low": 20.9,
+      "return1y": -3.79,
+      "return3y": 13.11,
+      "return5y": -39.55,
+      "pe": 19.605265,
+      "divYieldPct": 3.72,
+      "ma50": 23.44,
+      "ma200": 23.85,
+      "rsi14": 34.7,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -16.9,
+          "p10": -1.8,
+          "median": 0.0,
+          "p90": 1.8,
+          "max": 11.8
+        },
+        "week": {
+          "min": -19.0,
+          "p10": -4.8,
+          "median": 0.3,
+          "p90": 4.2,
+          "max": 13.9
+        },
+        "twoWeek": {
+          "min": -18.4,
+          "p10": -6.4,
+          "median": 0.1,
+          "p90": 5.8,
+          "max": 16.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 10.15,
+      "netMarginPct": 6.31,
+      "debtEquity": 0.65
     },
     {
       "ticker": "HON",
@@ -1196,8 +4732,48 @@
       "full": "Honeywell International Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 207.67,
+      "dayChangePct": 0.78,
+      "week52High": 260.28,
+      "week52Low": 195.87,
+      "return1y": -1.83,
+      "return3y": 11.52,
+      "return5y": -8.0,
+      "pe": 7.9842367,
+      "divYieldPct": 1.36,
+      "ma50": 229.99,
+      "ma200": 229.68,
+      "rsi14": 31.8,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -7.6,
+          "p10": -1.8,
+          "median": -0.0,
+          "p90": 1.8,
+          "max": 8.9
+        },
+        "week": {
+          "min": -14.3,
+          "p10": -4.5,
+          "median": 0.1,
+          "p90": 4.5,
+          "max": 12.0
+        },
+        "twoWeek": {
+          "min": -13.8,
+          "p10": -6.3,
+          "median": 0.2,
+          "p90": 6.9,
+          "max": 14.1
+        },
+        "sampleDays": 504
+      },
+      "roePct": 46.58,
+      "netMarginPct": 21.58,
+      "debtEquity": 1.85
     },
     {
       "ticker": "CAT",
@@ -1205,8 +4781,48 @@
       "full": "Caterpillar Inc",
       "category": "GCC Parent",
       "ccy": "USD",
-      "ok": false,
-      "error": "pending first live fetch"
+      "penceQuoted": false,
+      "ok": true,
+      "price": 796.58,
+      "dayChangePct": 0.54,
+      "week52High": 1073.46,
+      "week52Low": 414.29,
+      "return1y": 91.89,
+      "return3y": 178.28,
+      "return5y": 278.66,
+      "pe": 34.320553,
+      "divYieldPct": 0.82,
+      "ma50": 877.48,
+      "ma200": 771.89,
+      "rsi14": 40.1,
+      "asOf": "2026-09-03",
+      "scenario": {
+        "day": {
+          "min": -8.6,
+          "p10": -2.3,
+          "median": 0.1,
+          "p90": 2.6,
+          "max": 11.6
+        },
+        "week": {
+          "min": -17.1,
+          "p10": -4.2,
+          "median": 0.8,
+          "p90": 7.0,
+          "max": 14.4
+        },
+        "twoWeek": {
+          "min": -20.0,
+          "p10": -6.5,
+          "median": 2.4,
+          "p90": 10.7,
+          "max": 23.5
+        },
+        "sampleDays": 504
+      },
+      "roePct": 56.97,
+      "netMarginPct": 14.51,
+      "debtEquity": 2.33
     }
   ]
 }
