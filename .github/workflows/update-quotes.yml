@@ -2,8 +2,10 @@ name: Update stock quotes
 
 on:
   schedule:
+    # Every 30 minutes, Mon-Fri, 03:45-10:15 UTC
+    # = 9:15am-3:45pm IST, i.e. NSE trading hours with a small buffer.
     - cron: "*/30 3-10 * * 1-5"
-  workflow_dispatch: {}
+  workflow_dispatch: {} # lets you trigger a run manually from the Actions tab
 
 permissions:
   contents: write
